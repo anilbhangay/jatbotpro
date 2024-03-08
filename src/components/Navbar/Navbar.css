@@ -1,0 +1,52 @@
+
+.head-section { 
+    position: fixed;
+    top: 0px;
+    width: 97%;
+    background-color: #ffffff;
+    z-index: 999; 
+ } 
+
+.head-section .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #000;
+    margin-top: -11px;
+    margin-bottom: 10px;
+}
+
+.navbar .logo a {
+    font-size: 35px;
+    text-decoration: none;
+    color: #000;
+}
+
+.navbar a .icon-bell {
+    font-size: 24px;
+    color: #000;
+    cursor: pointer;
+}
+
+.navbar a .icon-bell:hover {
+    color: var(--orange);
+}
+
+ .navbar  .butn  {
+    padding: 10px 14px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: sans-serif;
+    background-color: var(--orange);
+    border: none;
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.navbar .butn:hover {
+    background-color: #fff;
+    border: 2px solid var(--orange);
+}
+
+
+    

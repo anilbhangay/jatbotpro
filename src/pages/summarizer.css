@@ -1,0 +1,337 @@
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+
+    .main-section {
+        margin: 90px 0;
+        width: 970px; 
+        height: 500px;
+        border-radius: 12px;
+        box-shadow: 0px 5px 15px rgba(41, 41, 44, 0.2);
+        padding: 20px 40px 0px;
+        background-color: #fff;
+    }
+
+    .mode-part span {
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    .header h3 {
+        position: fixed;
+        top: 8px;
+        left: 0px;
+        right: 0px;
+        font-size: 17px;
+        font-family: sans-serif;
+        text-align: center;
+        z-index: 999;
+    }
+
+    /* .mode-container {
+        margin-top: -1px;
+    } */
+
+    .mode-container .mode-part {
+        margin: 0px 7px;
+        width: 926px;
+        height: 55px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+        border: 1px solid var(--orange);   
+    }
+
+    .mode-part .text {
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+    }
+
+    .mode-part button {
+        padding: 8px 15px;
+        background-color: var(--orange);
+        font-family: sans-serif;
+        font-size: 13px;
+        font-weight: bold;
+        border-radius: 22px;
+        border: 1px solid var(--orange);
+        cursor: pointer;
+    }
+
+    .mode-part button:hover {
+        background-color: #fff;
+        border: 1px solid var(--orange);
+    }
+
+    .mode-part .numberbox {
+        font-size: 4px;
+        padding: 3px 0px;
+    }
+
+    .mode-part  input {
+        cursor: pointer;
+    }
+
+    .mode-part label {
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .upload-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .upload-section .left-side { 
+        width: 500px;
+        height: 443px;
+        display: grid; 
+        justify-content: center;   
+        align-items: center;
+        border: 1px solid var(--orange);
+        border-top: none;
+        overflow: auto;
+    }
+
+    .upload-section .right-side {
+        position: relative;
+        width: 500px;
+        height: 443px;
+        border: 1px solid var(--orange);
+        border-top: none;
+        border-left: none;
+        overflow: auto;
+    }
+
+    .upload-doc {
+        position: relative;
+        top: 60px;
+        text-align: center;
+        padding: 30px;
+        font-size: 16px;
+        font-weight: bold;
+        border: 1px solid var(--orange);
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    .upload-doc .icon {
+        margin-top: 12px;
+        display: flex;
+        margin-left: 30%;
+        font-size: 17px;
+    }
+
+    .left-side .keywords-container {
+        width: 92%;
+        background-color: #fff;
+        border-top: 1px solid #ccc;
+        padding: 18px;
+        margin-top: 194px;
+    }
+     
+    .keywords .word-sent {
+        display: flex;
+        font-size: 15px;
+        font-weight: 700;
+        color: black;
+    }
+
+    .right-side .sent-word {
+        margin-top: 80%;
+        display: flex;
+        justify-content: left;
+        font-size: 15px;
+        font-weight: 700;
+        color: black;
+    }
+
+    .right-side .all-icons {
+        display: flex;
+        justify-content: right;
+        margin-top: -35px;
+    }
+
+    .icon-1 {
+      cursor: pointer;
+    }
+
+    .stat-icon {
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    .down-icon {
+        position: relative;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    .copy-icon {
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    .tooltip {
+        position: absolute;
+        right: 14%;
+        bottom: 55px;
+        transform: translateX(-50%);
+        background-color: #333;
+        color: #fff;
+        border-radius: 5px;
+        padding: 5px 10px;
+        font-size: 13px;
+        z-index: 999;
+    }
+
+    .down-icon:hover .tooltip {
+        display: block;
+    }
+
+    .export-tooltip {
+        position: absolute;
+        right: 20%;
+    }
+
+    .stat-tooltip {
+        position: absolute;
+        right: 23%;
+    }
+
+   .delete-tooltip {
+        position: absolute; 
+        bottom: 68%;
+        right: 10%;
+   }
+
+   .upload-tooltip {
+        position: absolute;
+        bottom: 52%; 
+        right: 62%;
+   }
+
+   .statistics-slider {
+        position: fixed;
+        top: 0;
+        right: -300px;
+        width: 350px;
+        height: 100%;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        z-index: 999;
+        padding: 8px 0px;
+        transition: right 0.3s ease;
+   }
+
+   .statistics-slider.show {
+        right: 0px;
+   }
+
+   .statistics-slider  h2 {
+        font-size: 22px;
+        font-weight: 600;
+        color: #000000;
+   }
+
+   .statistics-slider .stat-text {
+        padding: 5px 12px;
+   }
+
+    .statistics-slider .stat-text h4 {
+        font-size: 15px;
+    }
+
+   .statistics-slider span {
+        font-size: 25px;
+        float: right;
+        cursor: pointer;
+    }
+
+   .statistics-slider span:hover {
+        background-color: #EEEEEE;
+        border-radius: 50%;
+   }
+   
+   .statistics-slider .word-sec {
+        display: flex;
+        align-items: center;
+        background-color: #ccc;
+        border-radius: 12px;
+        margin-bottom: 10px;
+   }
+
+
+   .statistics-slider .sent-sec {
+        display: flex;
+        align-items: center;
+        background-color: #ccc;
+        border-radius: 12px;
+        margin-bottom: 10px;
+   }
+    
+    .statistics-slider .percent {
+        display: flex;
+        align-items: center;
+        background-color: #ccc;
+        border-radius: 12px;
+    }
+    
+    .stat-text .word-sec .arrow {
+        padding: 0px;
+        font-size: 16px;
+        color: gray;
+    }
+
+    .stat-text .sent-sec .arrow {
+        padding: 0px;
+        font-size: 16px;
+        color: gray;
+    }
+
+    .stat-text .word-sec .Lnum-word {
+        padding-left: 50px;
+        padding-right: 0px;
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--orange);
+    }   
+
+    .stat-text .word-sec .Rnum-word {
+        padding-left: 0px;
+         font-size: 18px;
+         font-weight: 600;
+         color: var(--orange);
+    }
+
+    .stat-text .sent-sec .Lnum-sent {
+          padding-left: 24px;
+          padding-right: 4px;
+          font-size: 18px;
+          font-weight: 600;
+          color: var(--orange);
+    }
+
+    .stat-text .sent-sec .Rnum-sent {
+          padding-left: 0px;
+          font-size: 18px;
+          font-weight: 600;
+          color: var(--orange);
+    } 
+
+    .stat-text .percent .per {
+          padding-left: 65px;
+          font-size: 18px;
+          font-weight: 600;
+          color: var(--orange);
+    }
+    
