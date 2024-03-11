@@ -349,13 +349,16 @@ function Tabs() {
           {!uploadButtonVisible && (
              <div className="keywords-container">
               <div className="keywords">
-               <h4>Select keywords : </h4> 
+               <h4>Select keywords : </h4>   
                 <p className='btn'>{leftSide.keywords && leftSide.keywords.split(',').map((keyword, index) => (
                   <button key={index} className={activeKeywords.includes(keyword) ? 'selected' : ''} onClick={() => handleKeywordClick(keyword)} > 
                    {keyword} 
                   </button>
                 ))}
                 </p>
+                {selectedKeywords.length > 1 && (
+                  <button className="clear-all-btn" onClick={() => setSelectedKeywords([])}>Clear All</button>
+                )}
 
                 <div className="word-sent">
                   <p>{leftSide.Lnum_word} words</p>
