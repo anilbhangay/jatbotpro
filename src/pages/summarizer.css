@@ -335,3 +335,39 @@
           color: var(--orange);
     }
     
+   .keywords-container {
+         width: 48%;
+         height: 128px;
+         padding-left: 1px;
+         background-color: #d8d5d5;
+   }
+
+   .keywords h4 {
+        padding-top: 12px;
+        font-size: 16px;
+   }
+
+   .keywords  button {
+        padding: 10px 19px;
+        margin-left: 8px;
+        border: 1px solid #333;
+        border-radius: 20px;
+        font-size: 13px;
+        cursor: pointer;
+   }
+
+   .keywords .btn {
+        margin-top: -8px;
+   }
+
+   .keywords button.selected {
+       background-color: var(--orange);
+       border: 1px solid var(--orange);
+       color: #fff;
+   }
+
+   .keywords .word-sent {
+       margin-top: -10px;
+   }
+
+   

@@ -25,6 +25,8 @@ function Tabs() {
   const [uploadButtonVisible, setUploadButtonVisible] = useState(true);
   const [showSentIconSection, setShowSentIconSection] = useState(false);
   const [showStatistics, setShowStatistics] = useState(false); 
+  const [selectedKeywords, setSelectedKeywords] = useState([]);
+  const [activeKeywords, setActiveKeywords] = useState([]);
   
   const stepOptions = ['Very_Short', 'Short', 'Medium', 'Long'];
 
@@ -66,8 +68,8 @@ function Tabs() {
     const formData = new FormData();
     formData.append('file', file);
     
-    const apiUrl = `http://localhost:5000/upload?type=${userType}`;
-    const requestData = userType === "paragraph" ? { sent_number: sentNumber } : { summary_length: summaryLength };
+    const apiUrl = `http://localhost:5000/upload?type=${userType}&summary_length=${summaryLength}`;
+    const requestData = userType === "paragraph" ? { sent_number: sentNumber } : {selected_Keyword: selectedKeywords.join(','),  sent_number: sentNumber };
   
     axios.post(apiUrl, formData, { params: requestData })
       .then(response => {
@@ -78,7 +80,28 @@ function Tabs() {
         console.error('Error generating summary: ', error);
       });
   };
+   
+   const handleKeywordClick = (keyword) => {
+    const updatedSelectedKeywords = selectedKeywords.includes(keyword)  
+          ? selectedKeywords.filter(k => k  !== keyword) 
+          : [...selectedKeywords, keyword];
+        setSelectedKeywords(updatedSelectedKeywords);
+        setActiveKeywords(updatedSelectedKeywords);
 
+      const selectedKeywordsString = updatedSelectedKeywords.join(',');
+      const apiUrl = `http://localhost:5000/upload?type=keywords&selected_keyword=${encodeURIComponent(selectedKeywordsString)}&sent_number=${sentNumber}`;
+      axios.post(apiUrl)
+      .then(response => {
+          setRightSide({
+              keyword_summary: response.data.keyword_summary,
+              num_word: response.data.num_word,
+              num_sent: response.data.num_sent
+          });
+      })
+      .catch(error => {
+          console.error('Error generating summary for selected keywords: ', error);
+      });
+  };
 
 
   useEffect(() => {
@@ -258,6 +281,7 @@ function Tabs() {
         ))} </p>
       </>
     )}
+        <p>{rightSide.keyword_summary}</p>
 
     {showSentIconSection && (
     <div className="icons-sent-container">
@@ -325,10 +349,14 @@ function Tabs() {
           {!uploadButtonVisible && (
              <div className="keywords-container">
               <div className="keywords">
-                Select keywords : 
-                <p>{leftSide.keywords && leftSide.keywords.split(',').map((keyword, index) => (
-                  <button key={index} >{keyword}</button>
-                ))}</p>
+               <h4>Select keywords : </h4> 
+                <p className='btn'>{leftSide.keywords && leftSide.keywords.split(',').map((keyword, index) => (
+                  <button key={index} className={activeKeywords.includes(keyword) ? 'selected' : ''} onClick={() => handleKeywordClick(keyword)} > 
+                   {keyword} 
+                  </button>
+                ))}
+                </p>
+
                 <div className="word-sent">
                   <p>{leftSide.Lnum_word} words</p>
                   <p>{leftSide.Lnum_sent} sentences</p>
@@ -381,140 +409,141 @@ function Tabs() {
 
 
 
-            // import React, { useState } from 'react';
-            // import axios from 'axios';
-            
-            // const App = () => {
-            //     const [leftSide, setLeftSide] = useState({});
-            //     const [rightSide, setRightSide] = useState({});
-            //     const [file, setFile] = useState(null);
-            //     const [sentNumber, setSentNumber] = useState(5);
-            //     const [userType, setUserType] = useState("paragraph");
-            //     const [selectedKeywords, setSelectedKeywords] = useState([]);
-            
-            //     const handleFileChange = (e) => {
-            //         setFile(e.target.files[0]);
-            //     };
-            
-            //     const handleSentNumberChange = (e) => {
-            //         setSentNumber(parseInt(e.target.value, 10));
-            //     };
-            
-            //     const handleUserTypeChange = (e) => {
-            //         setUserType(e.target.value);
-            //     };
-            
-            //     const handleUpload = () => {
-            //         const formData = new FormData();
-            //         formData.append('file', file);
-            
-            //         axios.post('http://localhost:5000/upload', formData)
-            //             .then(response => {
-            //                 setLeftSide(response.data);
-            //             })
-            //             .catch(error => {
-            //                 console.error('Error uploading file: ', error);
-            //             });
-            
-            //         const apiUrl = `http://localhost:5000/upload?type=${userType}`;
-            //         const requestData = userType === "paragraph" ? { sent_number: sentNumber } :  { selected_keyword: selectedKeywords.join(','), sent_number: sentNumber };
-            
-            //         axios.post(apiUrl, formData, { params: requestData })
-            //             .then(response => {
-            //                 setRightSide(response.data);
-            //             })
-            //             .catch(error => {
-            //                 console.error('Error generating summary: ', error);
-            //             });
-            //     };
-            
-            //     const handleKeywordClick = (keyword) => {
-            //         // Toggle selection of the keyword
-            //         const updatedSelectedKeywords = selectedKeywords.includes(keyword)
-            //             ? selectedKeywords.filter(k => k !== keyword)
-            //             : [...selectedKeywords, keyword];
-            //         setSelectedKeywords(updatedSelectedKeywords);
-            
-            //         // Construct the API URL with updated selected keywords
-            //         const selectedKeywordsString = updatedSelectedKeywords.join(',');
-            //         const apiUrl = `http://localhost:5000/upload?type=keywords&selected_keyword=${encodeURIComponent(selectedKeywordsString)}&sent_number=${sentNumber}`;
-            
-            //         axios.post(apiUrl)
-            //             .then(response => {
-            //                 setRightSide({
-            //                     keyword_summary: response.data.keyword_summary,
-            //                     num_word: response.data.num_word,
-            //                     num_sent: response.data.num_sent
-            //                 });
-            //             })
-            //             .catch(error => {
-            //                 console.error('Error generating summary for selected keywords: ', error);
-            //             });
-            //     };
-            
-            //     return (
-            //         <div>
-            //             <div style={{ marginBottom: '20px' }}>
-            //                 <input type="file" onChange={handleFileChange} />
-            //                 <label>
-            //                     User Type:
-            //                     <select onChange={handleUserTypeChange}>
-            //                         <option value="paragraph">Paragraph</option>
-            //                         <option value="bulletpoints">Bulletpoints</option>
-            //                         <option value="keywords">Selected Keyword</option>
-            //                     </select>
-            //                 </label>
-            
-            //                 {userType === "paragraph" && (
-            //                     <label>
-            //                         Number of Sentences in Summary:
-            //                         <input type="number" value={sentNumber} onChange={handleSentNumberChange} />
-            //                     </label>
-            //                 )}
-            
-            //                 {userType === "keywords" && (
-            //                     <div>
-            //                         <label>
-            //                             Number of Sentences in Summary:
-            //                             <input type="number" value={sentNumber} onChange={handleSentNumberChange} />
-            //                         </label>
-            //                     </div>
-            //                 )}
-            
-            //                 <button onClick={handleUpload}>Upload</button>
-            //             </div>
-            
-            //             <div style={{ float: 'right', width: '50%' }}>
-            //                 <h2>Right Side (Summary)</h2>
-            //                 <p>Text: {rightSide.text}</p>
-            //                 <p>Number of Words: {rightSide.num_word}</p>
-            //                 <p>Number of Sentences: {rightSide.num_sent}</p>
-            //             </div>
-            
-            //             <div style={{ float: 'right', width: '50%' }}>
-            //                 <h2>Right Side (keyword)</h2>
-            //                 <p>Text: {rightSide.keyword_summary}</p>
-            //             </div>
-            
-            //             <div style={{ float: 'left', width: '50%' }}>
-            //                 <h2>Left Side (Text)</h2>
-            //                 <p>Text: {leftSide.text}</p>
-            //                 <p>Keywords: {leftSide.keywords && leftSide.keywords.split(',').map((keyword, index) => (
-            //                     <button
-            //                         key={index}
-            //                         style={{ marginRight: '5px' }}
-            //                         className={selectedKeywords.includes(keyword) ? 'selected' : ''}
-            //                         onClick={() => handleKeywordClick(keyword)}
-            //                     >
-            //                         {keyword}
-            //                     </button>
-            //                 ))}
-            //                 </p>
-            //                 <p>Number of Words: {leftSide.num_word}</p>
-            //                 <p>Number of Sentences: {leftSide.num_sent}</p>
-            //             </div>
-            //         </div>
-            //     );
-            // };
-            
-            // export default App; 
+
+// import React, { useState } from 'react';
+// import axios from 'axios';
+
+// const App = () => {
+// const [leftSide, setLeftSide] = useState({});
+// const [rightSide, setRightSide] = useState({});
+// const [file, setFile] = useState(null);
+// const [sentNumber, setSentNumber] = useState(5);
+// const [userType, setUserType] = useState("paragraph");
+// const [selectedKeywords, setSelectedKeywords] = useState([]);
+
+// const handleFileChange = (e) => {
+// setFile(e.target.files[0]);
+// };
+
+// const handleSentNumberChange = (e) => {
+// setSentNumber(parseInt(e.target.value, 10));
+// };
+
+// const handleUserTypeChange = (e) => {
+// setUserType(e.target.value);
+// };
+
+// const handleUpload = () => {
+// const formData = new FormData();
+// formData.append('file', file);
+
+// axios.post('http://localhost:5000/upload', formData)
+//     .then(response => {
+//         setLeftSide(response.data);
+//     })
+//     .catch(error => {
+//         console.error('Error uploading file: ', error);
+//     });
+
+// const apiUrl = `http://localhost:5000/upload?type=${userType}`;
+// const requestData = userType === "paragraph" ? { sent_number: sentNumber } :  { selected_keyword: selectedKeywords.join(','), sent_number: sentNumber };
+
+// axios.post(apiUrl, formData, { params: requestData })
+//     .then(response => {
+//         setRightSide(response.data);
+//     })
+//     .catch(error => {
+//         console.error('Error generating summary: ', error);
+//     });
+// };
+
+// const handleKeywordClick = (keyword) => {
+// // Toggle selection of the keyword
+// const updatedSelectedKeywords = selectedKeywords.includes(keyword)
+//     ? selectedKeywords.filter(k => k !== keyword)
+//     : [...selectedKeywords, keyword];
+// setSelectedKeywords(updatedSelectedKeywords);
+
+// // Construct the API URL with updated selected keywords
+// const selectedKeywordsString = updatedSelectedKeywords.join(',');
+// const apiUrl = `http://localhost:5000/upload?type=keywords&selected_keyword=${encodeURIComponent(selectedKeywordsString)}&sent_number=${sentNumber}`;
+
+// axios.post(apiUrl)
+//     .then(response => {
+//         setRightSide({
+//             keyword_summary: response.data.keyword_summary,
+//             num_word: response.data.num_word,
+//             num_sent: response.data.num_sent
+//         });
+//     })
+//     .catch(error => {
+//         console.error('Error generating summary for selected keywords: ', error);
+//     });
+// };
+
+// return (
+// <div>
+//     <div style={{ marginBottom: '20px' }}>
+//         <input type="file" onChange={handleFileChange} />
+//         <label>
+//             User Type:
+//             <select onChange={handleUserTypeChange}>
+//                 <option value="paragraph">Paragraph</option>
+//                 <option value="bulletpoints">Bulletpoints</option>
+//                 <option value="keywords">Selected Keyword</option>
+//             </select>
+//         </label>
+
+//         {userType === "paragraph" && (
+//             <label>
+//                 Number of Sentences in Summary:
+//                 <input type="number" value={sentNumber} onChange={handleSentNumberChange} />
+//             </label>
+//         )}
+
+//         {userType === "keywords" && (
+//             <div>
+//                 <label>
+//                     Number of Sentences in Summary:
+//                     <input type="number" value={sentNumber} onChange={handleSentNumberChange} />
+//                 </label>
+//             </div>
+//         )}
+
+//         <button onClick={handleUpload}>Upload</button>
+//     </div>
+
+//     <div style={{ float: 'right', width: '50%' }}>
+//         <h2>Right Side (Summary)</h2>
+//         <p>Text: {rightSide.text}</p>
+//         <p>Number of Words: {rightSide.num_word}</p>
+//         <p>Number of Sentences: {rightSide.num_sent}</p>
+//     </div>
+
+//     <div style={{ float: 'right', width: '50%' }}>
+//         <h2>Right Side (keyword)</h2>
+//         <p>Text: {rightSide.keyword_summary}</p>
+//     </div>
+
+//     <div style={{ float: 'left', width: '50%' }}>
+//         <h2>Left Side (Text)</h2>
+//         <p>Text: {leftSide.text}</p>
+//         <p>Keywords: {leftSide.keywords && leftSide.keywords.split(',').map ((keyword, index) => (
+//             <button
+//                 key={index}
+//                 style={{ marginRight: '5px' }}
+//                 className={selectedKeywords.includes(keyword) ? 'selected' : ''}
+//                 onClick={() => handleKeywordClick(keyword)}
+//             >
+//                 {keyword}
+//             </button>
+//         ))}
+//         </p>
+//         <p>Number of Words: {leftSide.num_word}</p>
+//         <p>Number of Sentences: {leftSide.num_sent}</p>
+//     </div>
+// </div>
+// );
+// };
+
+// export default App; 
