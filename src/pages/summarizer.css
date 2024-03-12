@@ -34,7 +34,7 @@
 
     /* .mode-container {
         margin-top: -1px;
-    } */
+    }  */
 
     .mode-container .mode-part {
         margin: 0px 7px;
@@ -336,19 +336,34 @@
     }
     
    .keywords-container {
-         width: 48%;
-         height: 128px;
+        position: relative;
+        top: -121px;
+         /* margin-top: 5px; */
+         width: 49%;
+         height: 120px;
          padding-left: 1px;
-         background-color: #d8d5d5;
+         background-color: #fff;
    }
 
-   .keywords h4 {
-        padding-top: 12px;
+   .keywords .key-head  h4 {
         font-size: 16px;
    }
 
+   .keywords .key-head .clear-all-btn {
+        padding-bottom: 10px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+   }
+
+   .keywords .key-head {
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+   }
+
    .keywords  button {
-        padding: 10px 19px;
+        padding: 9px 18px;
         margin-left: 8px;
         border: 1px solid #333;
         border-radius: 20px;
@@ -357,7 +372,7 @@
    }
 
    .keywords .btn {
-        margin-top: -8px;
+        margin-top: -10px;
    }
 
    .keywords button.selected {
@@ -367,7 +382,7 @@
    }
 
    .keywords .word-sent {
-       margin-top: -10px;
+       margin-top: -17px;
    }
 
    

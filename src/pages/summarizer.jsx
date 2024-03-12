@@ -27,6 +27,7 @@ function Tabs() {
   const [showStatistics, setShowStatistics] = useState(false); 
   const [selectedKeywords, setSelectedKeywords] = useState([]);
   const [activeKeywords, setActiveKeywords] = useState([]);
+  const [clearAllButtonVisible, setClearAllButtonVisible] = useState(true);
   
   const stepOptions = ['Very_Short', 'Short', 'Medium', 'Long'];
 
@@ -202,16 +203,16 @@ function Tabs() {
   //   setIsStatVisible(false);
   // };
 
-  return (
-<>
-<div className="main">
-<div className="main-section">
-<div className='header'>
-  <h3>SUMMARIZER</h3>
-</div>
-<div className="mode-container">
-  <div className="mode-part">
-    <h4 className='text'>Modes:</h4>
+    return (
+    <>
+    <div className="main">
+    <div className= "main-section">
+    <div className='header'>
+    <h3>SUMMARIZER</h3>
+    </div>
+    <div className="mode-container">
+    <div className="mode-part">
+      <h4 className='text'>Modes:</h4>
 
     <select onChange={handleUserTypeChange}>
       <option value="paragraph">Paragraph</option>
@@ -349,16 +350,18 @@ function Tabs() {
           {!uploadButtonVisible && (
              <div className="keywords-container">
               <div className="keywords">
-               <h4>Select keywords : </h4>   
+                <div className="key-head">
+               <h4> Select keywords : </h4>
+               {selectedKeywords.length > 1 && clearAllButtonVisible && (
+                 <p className="clear-all-btn" onClick={() => {setActiveKeywords([]); setClearAllButtonVisible([]) }}> Clear All</p>
+                )}
+               </div>   
                 <p className='btn'>{leftSide.keywords && leftSide.keywords.split(',').map((keyword, index) => (
                   <button key={index} className={activeKeywords.includes(keyword) ? 'selected' : ''} onClick={() => handleKeywordClick(keyword)} > 
                    {keyword} 
                   </button>
                 ))}
                 </p>
-                {selectedKeywords.length > 1 && (
-                  <button className="clear-all-btn" onClick={() => setSelectedKeywords([])}>Clear All</button>
-                )}
 
                 <div className="word-sent">
                   <p>{leftSide.Lnum_word} words</p>

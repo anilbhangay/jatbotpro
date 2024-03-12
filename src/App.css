@@ -22,7 +22,7 @@
 
 
 .sidebar {
-    position: fixed;
+    /* position: fixed; */
     width: 200px;
     margin-left: -10px;
     background: #fff;
