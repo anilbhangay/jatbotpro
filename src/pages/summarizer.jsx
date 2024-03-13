@@ -18,7 +18,6 @@ function Tabs() {
   const [isHovered, setIsHovered] = useState(false);
   const [isDeleteTooltipVisible, setIsDeleteTooltipVisible] = useState(false);
   const [isStatTooltipVisible, setIsStatTooltipVisible] = useState(false);
-  // const [isStatVisible, setIsStatVisible] = useState(false);
   const [userType, setUserType] = useState("paragraph");
   const [file, setFile] = useState(null);
   const [summaryLength, setSummaryLength] = useState('medium');
@@ -60,10 +59,7 @@ function Tabs() {
     setUserType(e.target.value);
   };
 
-  // const handleStatIconClick = () => {
-  //   setIsStatVisible(!isStatVisible);
-  // };
-
+  
   
   const handleUpload = async () => {
     const formData = new FormData();
@@ -199,10 +195,7 @@ function Tabs() {
     setIsStatTooltipVisible(false);
   };
   
-  // const handleHideStatistics = () => {
-  //   setIsStatVisible(false);
-  // };
-
+  
     return (
     <>
     <div className="main">
@@ -244,7 +237,7 @@ function Tabs() {
     <button onClick={handleUpload}>SUMMARIZE</button>
 
     <div onClick={handleDeleteAllData}>
-      <span className='icon-1' onMouseEnter={handleDeleteIconHover} onMouseLeave={handleDeleteIconLeave}>
+      <span className='icon-delete' onMouseEnter={handleDeleteIconHover} onMouseLeave={handleDeleteIconLeave}>
         <FontAwesomeIcon icon={faTrashCan} />
       </span>
     </div>
@@ -282,45 +275,11 @@ function Tabs() {
         ))} </p>
       </>
     )}
-        <p>{rightSide.keyword_summary}</p>
-
-    {showSentIconSection && (
-    <div className="icons-sent-container">
-        <div className="sent-icon-container">
-        <div className="sent-word">
-          {userType === "paragraph" && ( 
-              <>
-            <p>{rightSide.Rnum_word} words</p>
-            <p>{rightSide.Rnum_sent} sentences</p> 
-            </>
-          )}
-        {userType === "bulletpoints" && (
-          <>
-            <p>{rightSide.Bnum_word} words</p>
-            <p>{rightSide.Bnum_sent} sentences</p>
-          </>  
-        )}
-        </div>
-              
-            <div className="all-icons">
-              <span className='stat-icon' onClick={handleStatIconClick} onMouseEnter={handleStatIconHover} onMouseLeave={handleStatIconLeave}>
-                <FontAwesomeIcon icon={faSquarePollVertical} />
-              </span>
-              <span className='down-icon' onClick={handleDownload} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
-              <FontAwesomeIcon icon={faCircleArrowDown} />
-              </span>
-              <span className='copy-icon' onClick={handleCopyText} onMouseEnter={handleCopyIconHover} onMouseLeave={handleCopyIconLeave}>
-              <FontAwesomeIcon icon={faCopy} />
-              </span>
-               </div>
-               </div>
-              </div>
-              )}
-              
-              </div>             
+        <p>{rightSide.keyword_summary}</p>              
+        </div>             
           </div>
 
-        {showStatistics && (
+      {showStatistics && (
         <div className={`statistics-slider ${showStatistics ? 'show' : ''}`}>
           <h2>Statistics <span className='cros-icon' onClick={() => setShowStatistics(false)}><FontAwesomeIcon icon={faXmark} /></span></h2>
           <hr />
@@ -351,7 +310,7 @@ function Tabs() {
              <div className="keywords-container">
               <div className="keywords">
                 <div className="key-head">
-               <h4> Select keywords : </h4>
+               <h4>Select keywords :</h4>
                {selectedKeywords.length > 1 && clearAllButtonVisible && (
                  <p className="clear-all-btn" onClick={() => {setActiveKeywords([]); setClearAllButtonVisible([]) }}> Clear All</p>
                 )}
@@ -371,6 +330,37 @@ function Tabs() {
             </div>
               )}
         </div>
+
+    {showSentIconSection && (
+     <div className="icons-sent-container">
+        <div className="sent-word">
+          {userType === "paragraph" && ( 
+              <>
+            <p>{rightSide.Rnum_word} words</p>
+            <p>{rightSide.Rnum_sent} sentences</p> 
+            </>
+          )}
+        {userType === "bulletpoints" && (
+          <>
+            <p>{rightSide.Bnum_word} words</p>
+            <p>{rightSide.Bnum_sent} sentences</p>
+          </>  
+        )}
+        </div>     
+            <div className="all-icons">
+              <span className='stat-icon' onClick={handleStatIconClick} onMouseEnter={handleStatIconHover} onMouseLeave={handleStatIconLeave}>
+                <FontAwesomeIcon icon={faSquarePollVertical} />
+              </span>
+              <span className='down-icon' onClick={handleDownload} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+              <FontAwesomeIcon icon={faCircleArrowDown} />
+              </span>
+              <span className='copy-icon' onClick={handleCopyText} onMouseEnter={handleCopyIconHover} onMouseLeave={handleCopyIconLeave}>
+              <FontAwesomeIcon icon={faCopy} />
+              </span>
+               </div>
+               </div>
+              )}
+
       </div>
     </div>
 
