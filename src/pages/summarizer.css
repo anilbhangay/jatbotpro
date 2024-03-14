@@ -6,8 +6,7 @@
     
 
     .main-section {
-        max-width: 970px;
-        width: auto; 
+        width:  970px; 
         height: 500px;
         margin: 90px 0px;
         border-radius: 12px;
@@ -33,9 +32,6 @@
         z-index: 999;
     }
 
-    /* .mode-container {
-        margin-top: -1px;
-    }  */
 
     .mode-container .mode-part {
         margin: 0px 7px;
@@ -395,4 +391,10 @@
        margin-top: -17px;
    }
 
-   
+  .text-container  p { 
+       margin-bottom: 125px;
+   }
+
+   .right-side  #right-side-text {
+      margin-bottom: 75px;
+  } 
