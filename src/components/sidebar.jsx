@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRectangleList, faMicrophone, faEarListen, faSpellCheck, faBrain, faNoteSticky, faCalendarDays, faLanguage } from "@fortawesome/free-solid-svg-icons";
- 
+ import '../pages/summarizer.jsx';
 import {
     FaBars,
     
@@ -14,7 +14,7 @@ import { NavLink } from 'react-router-dom';
 const Sidebar = ({children}) => {
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen (!isOpen);
-
+     
     const menuItem = [
          {
             path: "/",
@@ -62,6 +62,8 @@ const Sidebar = ({children}) => {
   return (
     <div className='container'>
      <div style={{width: isOpen ? "200px" : "50px"}} className="sidebar">
+        
+
         <div className="top_section">
               
             <div style={{marginLeft: isOpen ? "50px" : "0px"}} className="bars">

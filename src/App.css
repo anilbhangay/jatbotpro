@@ -17,7 +17,7 @@
  main {
     width: 100%;
     padding: 0px 18px;
-    padding-left: 37px;
+    padding-left: 30px;
 }
 
 
@@ -35,7 +35,7 @@
     display: flex;
     align-items: center;
     padding: 10px  15px;
-    margin-bottom: 78px;
+    margin-bottom: 80px;
 }
 
 .bars {
@@ -76,5 +76,5 @@
 
 .icon {
     font-size: 15px;
-    margin-left: -11px;
+    margin-left: -12px;
 }

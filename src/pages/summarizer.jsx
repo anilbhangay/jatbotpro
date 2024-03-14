@@ -59,8 +59,7 @@ function Tabs() {
     setUserType(e.target.value);
   };
 
-  
-  
+
   const handleUpload = async () => {
     const formData = new FormData();
     formData.append('file', file);
@@ -194,19 +193,20 @@ function Tabs() {
   const handleStatIconLeave = () => {
     setIsStatTooltipVisible(false);
   };
-  
+   
   
     return (
     <>
     <div className="main">
-    <div className= "main-section">
-    <div className='header'>
-    <h3>SUMMARIZER</h3>
-    </div>
-    <div className="mode-container">
-    <div className="mode-part">
-      <h4 className='text'>Modes:</h4>
-
+     <div className= "main-section">
+      <div className='header'>
+       <h3>SUMMARIZER</h3>
+      </div>
+     <div className="mode-container">
+    
+     <div className="mode-part">
+       <h4 className='text'>Modes:</h4>
+        
     <select onChange={handleUserTypeChange}>
       <option value="paragraph">Paragraph</option>
       <option value="bulletpoints">Bulletpoints</option>
@@ -393,9 +393,11 @@ function Tabs() {
             Upload Doc
         </div>
       )}
+    
     </>
   );
 };
+
  
  export default Tabs; 
 
