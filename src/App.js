@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 import './App.css';
 import Navbar from './components/Navbar/Navbar.jsx';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -36,7 +36,7 @@ const App = () => {
             <Route path='/translator' element={<Translator />} />
             <Route path="/" element={<Loginform />} />
             <Route path="/Loginform" element={<Loginform />} />
-            <Route path="/Signupform" element={<Signupform />} />
+            <Route path="/Signupform" element={<Signupform />} />    
        </Routes>
          </Sidebar>
        </BrowserRouter>

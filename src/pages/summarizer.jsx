@@ -7,6 +7,7 @@ import FileDownload from 'react-file-download';
 import axios from 'axios';
 
 
+
 function Tabs() {
   const fileInputRef = useRef(null);
   const [leftSide, setLeftSide] = useState({});
@@ -27,6 +28,8 @@ function Tabs() {
   const [selectedKeywords, setSelectedKeywords] = useState([]);
   const [activeKeywords, setActiveKeywords] = useState([]);
   const [clearAllButtonVisible, setClearAllButtonVisible] = useState(true);
+  
+
   
   const stepOptions = ['Very_Short', 'Short', 'Medium', 'Long'];
 
@@ -193,17 +196,16 @@ function Tabs() {
   const handleStatIconLeave = () => {
     setIsStatTooltipVisible(false);
   };
-   
   
+
     return (
     <>
     <div className="main">
      <div className= "main-section">
       <div className='header'>
-       <h3>SUMMARIZER</h3>
+         <h3>SUMMARIZER</h3>
       </div>
      <div className="mode-container">
-    
      <div className="mode-part">
        <h4 className='text'>Modes:</h4>
         

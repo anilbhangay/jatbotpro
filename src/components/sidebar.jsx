@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRectangleList, faMicrophone, faEarListen, faSpellCheck, faBrain, faNoteSticky, faCalendarDays, faLanguage } from "@fortawesome/free-solid-svg-icons";
- import '../pages/summarizer.jsx';
-import {
+ import {
     FaBars,
     
 
@@ -11,7 +10,7 @@ import {
 import { NavLink } from 'react-router-dom';
 
 
-const Sidebar = ({children}) => {
+const Sidebar = ({ children }) => { 
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen (!isOpen);
      
@@ -56,7 +55,7 @@ const Sidebar = ({children}) => {
             name: "TRANSLATOR",
             icon: <FontAwesomeIcon icon={faLanguage} />
         }
-    ]
+    ];
     
 
   return (
@@ -67,7 +66,7 @@ const Sidebar = ({children}) => {
         <div className="top_section">
               
             <div style={{marginLeft: isOpen ? "50px" : "0px"}} className="bars">
-                <FaBars onClick={toggle} />
+                 <FaBars onClick={toggle} /> 
             </div>
         </div>
         {
