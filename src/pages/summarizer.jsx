@@ -223,6 +223,8 @@ function Tabs() {
     <select onChange={handleUserTypeChange}>
       <option value="paragraph">Paragraph</option>
       <option value="bulletpoints">Bulletpoints</option>
+      <option value="keywords">keyword</option>
+
     </select>
         
     {userType === "paragraph" && (
@@ -373,7 +375,6 @@ function Tabs() {
               </div>
               </div>
               )}
-
       </div>
     </div>
 
@@ -413,6 +414,21 @@ function Tabs() {
 
 
 export default Tabs; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
