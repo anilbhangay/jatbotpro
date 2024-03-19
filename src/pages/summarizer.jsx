@@ -83,8 +83,8 @@ function Tabs() {
         console.error('Error generating summary: ', error);
       });
   };
-   
-   const handleKeywordClick = (keyword) => {
+  
+  const handleKeywordClick = (keyword) => {
     const updatedSelectedKeywords = selectedKeywords.includes(keyword)  
           ? selectedKeywords.filter(k => k  !== keyword) 
           : [...selectedKeywords, keyword];
@@ -211,14 +211,14 @@ function Tabs() {
     <>
     <div className="main">
     {/* {`main ${modeContainerWidth === 'max' ? 'max-width' : 'min-width'}`} */}
-     <div className="main-section"> 
+    <div className="main-section"> 
       <div className='header'>
-         <h3>SUMMARIZER</h3>
+        <h3>SUMMARIZER</h3>
       </div>
-     <div className="mode-container">
-     {/* {`mode-container ${modeContainerWidth}`} */}
-     <div className="mode-part">
-       <h4 className='text'>Modes:</h4>
+    <div className="mode-container">
+    {/* {`mode-container ${modeContainerWidth}`} */}
+    <div className="mode-part">
+      <h4 className='text'>Modes:</h4>
         
     <select onChange={handleUserTypeChange}>
       <option value="paragraph">Paragraph</option>
@@ -276,7 +276,7 @@ function Tabs() {
     </div>
 
     <div className="right-side">
-     {userType === "paragraph" && (
+    {userType === "paragraph" && (
           <p id='right-side-text'>{rightSide.text}</p>
     )}
 
@@ -297,7 +297,7 @@ function Tabs() {
           <h2>Statistics <span className='cros-icon' onClick={() => setShowStatistics(false)}><FontAwesomeIcon icon={faXmark} /></span></h2>
           <hr />
         <div className="stat-text">  
-         <div className="word-sec">
+        <div className="word-sec">
           <h4>Word Count</h4> 
           <p className='Lnum-word'>{leftSide.Lnum_word }</p> <p className='arrow'><FontAwesomeIcon icon={faArrowRight} /></p>       
           <p className='Rnum-word'>{rightSide.Rnum_word}</p>
@@ -305,32 +305,32 @@ function Tabs() {
         </div>
 
         <div className="sent-sec">
-           <h4>Sentence Count</h4>
-           <p className='Lnum-sent'>{leftSide.Lnum_sent}</p> <p className='arrow'><FontAwesomeIcon icon={faArrowRight} /></p>
-           <p className='Rnum-sent'>{rightSide.Rnum_sent}</p>
-           <p className='Rnum-sent'>{rightSide.Bnum_sent}</p>
+          <h4>Sentence Count</h4>
+          <p className='Lnum-sent'>{leftSide.Lnum_sent}</p> <p className='arrow'><FontAwesomeIcon icon={faArrowRight} /></p>
+          <p className='Rnum-sent'>{rightSide.Rnum_sent}</p>
+          <p className='Rnum-sent'>{rightSide.Bnum_sent}</p>
         </div>
 
-         <div className="percent">
+        <div className="percent">
             <h4>Reduction</h4>
-           <p className='per'>{rightSide.statistics}</p>
-         </div>
-       </div> 
-       </div>
-       )} 
+          <p className='per'>{rightSide.statistics}</p>
+        </div>
+      </div> 
+      </div>
+      )} 
           
           {!uploadButtonVisible && (
-             <div className="keywords-container">
+            <div className="keywords-container">
               <div className="keywords">
                 <div className="key-head">
-               <h4>Select keywords :</h4>
-               {selectedKeywords.length > 1 && clearAllButtonVisible && (
-                 <p className="clear-all-btn" onClick={() => {setActiveKeywords([]); setClearAllButtonVisible([]) }}> Clear All</p>
+              <h4>Select keywords :</h4>
+              {selectedKeywords.length > 1 && clearAllButtonVisible && (
+                <p className="clear-all-btn" onClick={() => {setActiveKeywords([]); setClearAllButtonVisible([]) }}> Clear All</p>
                 )}
-               </div>   
+              </div>   
                 <p className='btn'>{leftSide.keywords && leftSide.keywords.split(',').map((keyword, index) => (
                   <button key={index} className={activeKeywords.includes(keyword) ? 'selected' : ''} onClick={() => handleKeywordClick(keyword)} > 
-                   {keyword} 
+                  {keyword} 
                   </button>
                 ))}
                 </p>
@@ -344,8 +344,8 @@ function Tabs() {
               )}
         </div>
 
-    {showSentIconSection && (
-     <div className="icons-sent-container">
+  {showSentIconSection && (
+    <div className="icons-sent-container">
         <div className="sent-word">
           {userType === "paragraph" && ( 
               <>
@@ -370,8 +370,8 @@ function Tabs() {
               <span className='copy-icon' onClick={handleCopyText} onMouseEnter={handleCopyIconHover} onMouseLeave={handleCopyIconLeave}>
               <FontAwesomeIcon icon={faCopy} />
               </span>
-               </div>
-               </div>
+              </div>
+              </div>
               )}
 
       </div>
@@ -397,7 +397,7 @@ function Tabs() {
 
       {isStatTooltipVisible && (
         <div className="tooltip stat-tooltip">
-           Statistics
+          Statistics
         </div>
       )}
 
@@ -411,8 +411,8 @@ function Tabs() {
   );
 };
 
- 
- export default Tabs; 
+
+export default Tabs; 
 
 
 
@@ -421,140 +421,3 @@ function Tabs() {
 
 
 
-// import React, { useState } from 'react';
-// import axios from 'axios';
-
-// const App = () => {
-// const [leftSide, setLeftSide] = useState({});
-// const [rightSide, setRightSide] = useState({});
-// const [file, setFile] = useState(null);
-// const [sentNumber, setSentNumber] = useState(5);
-// const [userType, setUserType] = useState("paragraph");
-// const [selectedKeywords, setSelectedKeywords] = useState([]);
-
-// const handleFileChange = (e) => {
-// setFile(e.target.files[0]);
-// };
-
-// const handleSentNumberChange = (e) => {
-// setSentNumber(parseInt(e.target.value, 10));
-// };
-
-// const handleUserTypeChange = (e) => {
-// setUserType(e.target.value);
-// };
-
-// const handleUpload = () => {
-// const formData = new FormData();
-// formData.append('file', file);
-
-// axios.post('http://localhost:5000/upload', formData)
-//     .then(response => {
-//         setLeftSide(response.data);
-//     })
-//     .catch(error => {
-//         console.error('Error uploading file: ', error);
-//     });
-
-// const apiUrl = `http://localhost:5000/upload?type=${userType}`;
-// const requestData = userType === "paragraph" ? { sent_number: sentNumber } :  { selected_keyword: selectedKeywords.join(','), sent_number: sentNumber };
-
-// axios.post(apiUrl, formData, { params: requestData })
-//     .then(response => {
-//         setRightSide(response.data);
-//     })
-//     .catch(error => {
-//         console.error('Error generating summary: ', error);
-//     });
-// };
-
-// const handleKeywordClick = (keyword) => {
-// // Toggle selection of the keyword
-// const updatedSelectedKeywords = selectedKeywords.includes(keyword)
-//     ? selectedKeywords.filter(k => k !== keyword)
-//     : [...selectedKeywords, keyword];
-// setSelectedKeywords(updatedSelectedKeywords);
-
-// // Construct the API URL with updated selected keywords
-// const selectedKeywordsString = updatedSelectedKeywords.join(',');
-// const apiUrl = `http://localhost:5000/upload?type=keywords&selected_keyword=${encodeURIComponent(selectedKeywordsString)}&sent_number=${sentNumber}`;
-
-// axios.post(apiUrl)
-//     .then(response => {
-//         setRightSide({
-//             keyword_summary: response.data.keyword_summary,
-//             num_word: response.data.num_word,
-//             num_sent: response.data.num_sent
-//         });
-//     })
-//     .catch(error => {
-//         console.error('Error generating summary for selected keywords: ', error);
-//     });
-// };
-
-// return (
-// <div>
-//     <div style={{ marginBottom: '20px' }}>
-//         <input type="file" onChange={handleFileChange} />
-//         <label>
-//             User Type:
-//             <select onChange={handleUserTypeChange}>
-//                 <option value="paragraph">Paragraph</option>
-//                 <option value="bulletpoints">Bulletpoints</option>
-//                 <option value="keywords">Selected Keyword</option>
-//             </select>
-//         </label>
-
-//         {userType === "paragraph" && (
-//             <label>
-//                 Number of Sentences in Summary:
-//                 <input type="number" value={sentNumber} onChange={handleSentNumberChange} />
-//             </label>
-//         )}
-
-//         {userType === "keywords" && (
-//             <div>
-//                 <label>
-//                     Number of Sentences in Summary:
-//                     <input type="number" value={sentNumber} onChange={handleSentNumberChange} />
-//                 </label>
-//             </div>
-//         )}
-
-//         <button onClick={handleUpload}>Upload</button>
-//     </div>
-
-//     <div style={{ float: 'right', width: '50%' }}>
-//         <h2>Right Side (Summary)</h2>
-//         <p>Text: {rightSide.text}</p>
-//         <p>Number of Words: {rightSide.num_word}</p>
-//         <p>Number of Sentences: {rightSide.num_sent}</p>
-//     </div>
-
-//     <div style={{ float: 'right', width: '50%' }}>
-//         <h2>Right Side (keyword)</h2>
-//         <p>Text: {rightSide.keyword_summary}</p>
-//     </div>
-
-//     <div style={{ float: 'left', width: '50%' }}>
-//         <h2>Left Side (Text)</h2>
-//         <p>Text: {leftSide.text}</p>
-//         <p>Keywords: {leftSide.keywords && leftSide.keywords.split(',').map ((keyword, index) => (
-//             <button
-//                 key={index}
-//                 style={{ marginRight: '5px' }}
-//                 className={selectedKeywords.includes(keyword) ? 'selected' : ''}
-//                 onClick={() => handleKeywordClick(keyword)}
-//             >
-//                 {keyword}
-//             </button>
-//         ))}
-//         </p>
-//         <p>Number of Words: {leftSide.num_word}</p>
-//         <p>Number of Sentences: {leftSide.num_sent}</p>
-//     </div>
-// </div>
-// );
-// };
-
-// export default App; 
