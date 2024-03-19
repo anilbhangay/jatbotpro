@@ -28,7 +28,7 @@ function Tabs() {
   const [selectedKeywords, setSelectedKeywords] = useState([]);
   const [activeKeywords, setActiveKeywords] = useState([]);
   const [clearAllButtonVisible, setClearAllButtonVisible] = useState(true);
-  const [modeContainerWidth, setModeContainerWidth] = useState('max');
+  // const [modeContainerWidth, setModeContainerWidth] = useState('max');
   
 
   
@@ -45,7 +45,7 @@ function Tabs() {
   const handleFileChange = async (e) => {
     setFile(e.target.files[0]);
     setUploadButtonVisible(false);
-    handleModeContainerWidthChange('min');
+    // handleModeContainerWidthChange('min');
 
     const formData = new FormData();
     formData.append('file', e.target.files[0]);
@@ -62,7 +62,7 @@ function Tabs() {
 
   const handleUserTypeChange = (e) => {
     setUserType(e.target.value);
-    handleModeContainerWidthChange('min'); 
+    // handleModeContainerWidthChange('min'); 
   };
 
 
@@ -77,7 +77,7 @@ function Tabs() {
       .then(response => {
         setRightSide(response.data);
         setShowSentIconSection(true); 
-        handleModeContainerWidthChange('max');
+        // handleModeContainerWidthChange('max');
       })
       .catch(error => {
         console.error('Error generating summary: ', error);
@@ -203,18 +203,20 @@ function Tabs() {
     setIsStatTooltipVisible(false);
   };
 
-  const handleModeContainerWidthChange = (width) => {
-    setModeContainerWidth(width);
-  };
+  // const handleModeContainerWidthChange = (width) => {
+  //   setModeContainerWidth(width);
+  // };
   
     return (
     <>
     <div className="main">
-     <div className= {`main ${modeContainerWidth === 'max' ? 'max-width' : 'min-width'}`}>
+    {/* {`main ${modeContainerWidth === 'max' ? 'max-width' : 'min-width'}`} */}
+     <div className="main-section"> 
       <div className='header'>
          <h3>SUMMARIZER</h3>
       </div>
-     <div className={`mode-container ${modeContainerWidth}`}>
+     <div className="mode-container">
+     {/* {`mode-container ${modeContainerWidth}`} */}
      <div className="mode-part">
        <h4 className='text'>Modes:</h4>
         
