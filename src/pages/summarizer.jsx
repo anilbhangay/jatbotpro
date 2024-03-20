@@ -415,25 +415,3 @@ function Tabs() {
 
 export default Tabs; 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
