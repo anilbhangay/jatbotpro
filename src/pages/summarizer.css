@@ -160,7 +160,7 @@
         width: 440px;
         height: 62px;
         display: flex;
-        gap: 74px;
+        gap: 57px;
         background-color: #fff;
      }
 
@@ -176,6 +176,7 @@
     .all-icons {
         display: flex;
         align-items: center;  
+        padding-left: 5px;
     }
 
     .icon-delete {
@@ -412,5 +413,5 @@
    }
 
    .right-side  #right-side-text {
-       margin-bottom: 75px;
+       margin-bottom: 77px;
   } 
