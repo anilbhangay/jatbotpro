@@ -21,14 +21,6 @@
        transition: width 0.3s ease-in-out; 
     }
 
-    /* .min-width {
-        width: 90%;
-    }
-
-    .max-width {
-        width: 90%;
-    }
-    */
 
     .mode-part span {
         font-size: 15px;
@@ -127,8 +119,8 @@
     .upload-doc {
         position: relative;
         top: 60px;
-        text-align: center;
         padding: 30px;
+        text-align: center;
         font-size: 16px;
         font-weight: bold;
         border: 1px solid var(--orange);
@@ -200,9 +192,9 @@
     }
 
     .tooltip {
-        position: absolute;
-        right: 12%;
-        bottom: 72px;
+        position: relative;
+        /* right: 12%; 
+        bottom: 72px;  */
         padding: 5px 10px;
         font-size: 13px;
         background-color: #333;
@@ -218,24 +210,32 @@
 
     .export-tooltip {
         position: absolute;
-        right: 19%;
+        top: -15px;
+        right: 54px;
     }
 
     .stat-tooltip {
         position: absolute;
-        right: 22%;
+        top: -15px;
+        right: 91px;
     }
 
    .delete-tooltip {
-        position: absolute; 
-        bottom: 69%;
-        right: 11%;
-   }
+        position: absolute;
+        top: -384px;
+        right: -85px;   
+   } 
 
    .upload-tooltip {
         position: absolute;
-        bottom: 57%; 
-        right: 62%;
+        bottom: 118px; 
+        right: -30px;
+   }
+
+   .copy-tooltip {
+       position: absolute;
+       top: -15px;
+       right: -40px;
    }
 
    .statistics-slider {
@@ -357,7 +357,7 @@
           color: var(--orange);
     }
     
-   .keywords-container {
+    .keywords-container {
          position: relative;
          top: -119px;
          margin-left: 8px;
@@ -367,19 +367,19 @@
          background-color: #fff;
    }
 
-   .keywords .key-head  h4 {
+    .keywords .key-head  h4 {
         margin-top: 10px;
         font-size: 16px;
    }
 
-   .keywords .key-head .clear-all-btn {
+    .keywords .key-head .clear-all-btn {
         margin-top: 5px;
         font-size: 15px;
         font-weight: 600;
         cursor: pointer;
    }
 
-   .keywords .key-head {
+    .keywords .key-head {
        display: flex;
        align-items: center;
        justify-content: space-between;
