@@ -97,7 +97,7 @@ const apiUrl = `http://localhost:5000/upload?type=keywords&selected_keyword=${en
 axios.post(apiUrl)
 .then(response => {
 setRightSide({
-  keyword_summary: response.data.keyword_summary1,
+  keyword_summary: response.data.keyword_summary,
   num_word: response.data.num_word,
   num_sent: response.data.num_sent
 });
