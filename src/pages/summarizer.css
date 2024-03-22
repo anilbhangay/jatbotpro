@@ -1,415 +1,409 @@
-    body {
-        overflow: auto;
-    }
-
-    a {
-        text-decoration: none;
-        color: black;
-    }
-
-    .main-section { 
-        width: 970px;
-        height: 500px;  
-        margin: 90px 0px; 
-        border-radius: 12px;
-        box-shadow: 0px 5px 15px rgba(41, 41, 44, 0.2);
-        padding: 20px 40px 0px;
-        background-color: #fff;
-    } 
-
-    .mode-container {  
-        transition: 0.3s ease-in-out; 
-    }
-
-
-    .mode-part span {
-        font-size: 15px;
-        font-weight: 600;
-        cursor: pointer;
-    }
-
-    .header h3 {
-        position: fixed;
-        top: 8px;
-        left: 0px;
-        right: 0px;
-        font-size: 17px;
-        font-family: sans-serif;
-        text-align: center;
-        z-index: 999;
-    }
-
-
-    .mode-container .mode-part {
-        width: 926px;
-        height: 55px;
-        margin: 0px 7px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 8px;
-        border: 1px solid var(--orange);  
-    }
-
-    .mode-part .text {
-        font-size: 15px;
-        font-weight: 600;
-        text-decoration: none;
-        color: black;
-        cursor: pointer;
-    }
-
-    .mode-part button {
-        padding: 8px 15px;
-        background-color: var(--orange);
-        font-family: sans-serif;
-        font-size: 13px;
-        font-weight: bold;
-        border-radius: 22px;
-        border: 1px solid var(--orange);
-        cursor: pointer;
-    }
-
-    .mode-part button:hover {
-        background-color: #fff;
-        border: 1px solid var(--orange);
-    }
-
-    .mode-part .numberbox {
-        font-size: 4px;
-        padding: 3px 0px;
-    }
-
-    .mode-part  input {
-        cursor: pointer;
-    }
-
-    .mode-part label {
-        font-size: 15px;
-        font-weight: 600;
-    }
-
-    .upload-section {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .upload-section .left-side { 
-        width: 500px;
-        height: 443px;
-        display: grid; 
-        justify-content: center;   
-        align-items: center;
-        border: 1px solid var(--orange);
-        border-top: none;
-        overflow: auto;
-    }
-
-    .upload-section .right-side {
-        position: relative;
-        width: 500px;
-        height: 443px;
-        border: 1px solid var(--orange);
-        border-top: none;
-        border-left: none;
-        overflow: auto;
-    }
-
-    .upload-doc {
-        position: relative;
-        top: 60px;
-        padding: 30px;
-        text-align: center;
-        font-size: 16px;
-        font-weight: bold;
-        border: 1px solid var(--orange);
-        border-radius: 20px;
-        cursor: pointer;
-    }
-
-    .upload-doc .icon {
-        display: flex;
-        margin-top: 13px;
-        margin-left: 26%;
-        font-size: 17px;
-    }
-
-
-    .keywords .word-sent {
-        display: flex;
-        font-size: 14px;
-        font-weight: 700;
-        color: black;
-    }
-
-
-    .icons-sent-container {
-        position: relative;
-        bottom: 181px;
-        left: 50%;
-        margin-left: 1px;
-        width: 440px;
-        height: 62px;
-        display: flex;
-        gap: 58px;
-        background-color: #fff;
-    }
-
-
-    .icons-sent-container .sent-word {
-        display: flex;
-        align-items: center;
-        font-size: 14px;
-        font-weight: 700;
-        color: #000;
-    }
-
-    .all-icons {
-        display: flex;
-        align-items: center;  
-        padding-left: 5px;
-    }
-
-    .icon-delete {
-        font-size: 25px;
-        cursor: pointer;
-    }
-
-    .stat-icon {
-        font-size: 25px;
-        cursor: pointer;
-    }
-
-    .down-icon {
-        font-size: 25px;
-        cursor: pointer;
-    }
-
-    .copy-icon {
-        font-size: 25px;
-        cursor: pointer;
-    }
-
-    .tooltip {
-        position: relative;
-        padding: 5px 10px;
-        font-size: 13px;
-        background-color: #333;
-        transform: translateX(-50%);
-        border-radius: 5px;
-        z-index: 999;
-        color: #fff;
-    }
-
-    .down-icon:hover .tooltip {
-        display: block;
-    }
-
-    .export-tooltip {
-        position: absolute;
-        top: -15px;
-        right: 50px;
-    }
-
-    .stat-tooltip {
-        position: absolute;
-        top: -15px;
-        right: 88px;
-    }
-
-    .delete-tooltip {
-        position: absolute;
-        top: -384px;
-        right: -85px;   
-    } 
-
-    .upload-tooltip {
-        position: absolute;
-        bottom: 118px; 
-        right: -30px;
-    }
-
-    .copy-tooltip {
-        position: absolute;
-        top: -15px;
-        right: -43px;
-    }
-
-    .statistics-slider {
-        position: fixed;
-        top: 0;
-        right: -300px;
-        width: 310px;
-        height: 48%;
-        background-color: #fff;
-        border: 1px solid #ccc;
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
-        z-index: 999;
-        padding: 8px 0px;
-        transition: right 0.3s ease;
-    }
-
-    .statistics-slider.show {
-        right: 0px;
-    }
-
-    .statistics-slider  h2 {
-        padding-left: 14px;
-        font-size: 22px;
-        font-weight: 600;
-        color: #000000;
-    }
-
-    .statistics-slider .stat-text {
-        margin-top: 20px;
-        padding: 5px 12px;
-    }
-
-    .statistics-slider .stat-text h4 {
-        font-size: 15px;
-    }
-
-    .statistics-slider span {
-        font-size: 25px;
-        float: right;
-        cursor: pointer;
-    }
-
-    .statistics-slider span:hover {
-        background-color: #EEEEEE;
-        border-radius: 50%;
-    }
-
-    .statistics-slider .word-sec {
-        display: flex;
-        align-items: center;
-        background-color: #ccc;
-        border-radius: 12px;
-        margin-bottom: 10px;
-    }
-
-
-    .statistics-slider .sent-sec {
-        display: flex;
-        align-items: center;
-        background-color: #ccc;
-        border-radius: 12px;
-        margin-bottom: 10px;
-    }
-
-    .statistics-slider .percent {
-        display: flex;
-        align-items: center;
-        background-color: #ccc;
-        border-radius: 12px;
-    }
-
-    .stat-text .word-sec .arrow {
-        padding: 0px;
-        font-size: 15px;
-        color: gray;
-    }
-
-    .stat-text .sent-sec .arrow {
-        padding: 0px;
-        font-size: 15px;
-        color: gray;
-    }
-
-    .stat-text .word-sec .Lnum-word {
-        padding-left: 50px;
-        padding-right: 0px;
-        font-size: 18px;
-        font-weight: 600;
-        color: var(--orange);
-    }   
-
-    .stat-text .word-sec .Rnum-word {
-        padding-left: 0px;
-        font-size: 18px;
-        font-weight: 600;
-        color: var(--orange);
-    }
-
-    .stat-text .sent-sec .Lnum-sent {
-        padding-left: 24px;
-        padding-right: 4px;
-        font-size: 18px;
-        font-weight: 600;
-        color: var(--orange);
-    }
-
-    .stat-text .sent-sec .Rnum-sent {
-        padding-left: 0px;
-        font-size: 18px;
-        font-weight: 600;
-        color: var(--orange);
-    } 
-
-    .stat-text .percent .per {
-        padding-left: 65px;
-        font-size: 18px;
-        font-weight: 600;
-        color: var(--orange);
-    }
-
-    .keywords-container {
-        position: relative;
-        top: -119px;
-        margin-left: 8px;
-        width: 463px;
-        height: 118px;
-        padding-left: 0px;
-        background-color: #fff;
-    }
-
-    .keywords .key-head  h4 {
-        margin-top: 10px;
-        font-size: 16px;
-    }
-
-    .keywords .key-head .clear-all-btn {
-        margin-top: 5px;
-        font-size: 15px;
-        font-weight: 600;
-        cursor: pointer;
-    }
-
-    .keywords .key-head {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .keywords  button {
-        padding: 9px 14px;
-        margin-left: 3px;
-        border: 1px solid #333;
-        border-radius: 20px;
-        font-size: 13px;
-        cursor: pointer;
-    }
-
-    .keywords .btn {
-        margin-top: -4px;
-    }
-
-    .keywords button.selected {
-        background-color: var(--orange);
-        border: 1px solid var(--orange);
-        color: #fff;
-    }
-
-    .keywords .word-sent {
-        margin-top: -17px;
-    }
-
-    .text-container  p { 
-        margin-bottom: 125px;
-    }
-
-    .right-side  #right-side-text {
-        margin-bottom: 77px;
-    } 
+body {
+  overflow: auto;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.main-section {
+  width: 970px;
+  height: 500px;
+  margin: 90px 0px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(41, 41, 44, 0.2);
+  padding: 20px 40px 0px;
+  background-color: #fff;
+}
+
+.mode-container {
+  transition: 0.3s ease-in-out;
+}
+
+.mode-part span {
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.header h3 {
+  position: fixed;
+  top: 8px;
+  left: 0px;
+  right: 0px;
+  font-size: 17px;
+  font-family: sans-serif;
+  text-align: center;
+  z-index: 999;
+}
+
+.mode-container .mode-part {
+  width: 926px;
+  height: 55px;
+  margin: 0px 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--orange);
+}
+
+.mode-part .text {
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.mode-part button {
+  padding: 8px 15px;
+  background-color: var(--orange);
+  font-family: sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 22px;
+  border: 1px solid var(--orange);
+  cursor: pointer;
+}
+
+.mode-part button:hover {
+  background-color: #fff;
+  border: 1px solid var(--orange);
+}
+
+.mode-part .numberbox {
+  font-size: 4px;
+  padding: 3px 0px;
+}
+
+.mode-part input {
+  cursor: pointer;
+}
+
+.mode-part label {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.upload-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.upload-section .left-side {
+  width: 500px;
+  height: 443px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--orange);
+  border-top: none;
+  overflow: auto;
+}
+
+.upload-section .right-side {
+  position: relative;
+  width: 500px;
+  height: 443px;
+  border: 1px solid var(--orange);
+  border-top: none;
+  border-left: none;
+  overflow: auto;
+}
+
+.upload-doc {
+  position: relative;
+  top: 60px;
+  padding: 30px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px solid var(--orange);
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.upload-doc .icon {
+  display: flex;
+  margin-top: 13px;
+  margin-left: 26%;
+  font-size: 17px;
+}
+
+.keywords .word-sent {
+  display: flex;
+  font-size: 14px;
+  font-weight: 700;
+  color: black;
+}
+
+.icons-sent-container {
+  position: relative;
+  bottom: 181px;
+  left: 50%;
+  margin-left: 1px;
+  width: 440px;
+  height: 62px;
+  display: flex;
+  gap: 58px;
+  background-color: #fff;
+}
+
+.icons-sent-container .sent-word {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #000;
+}
+
+.all-icons {
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+}
+
+.icon-delete {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.stat-icon {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.down-icon {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.copy-icon {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.tooltip {
+  position: relative;
+  padding: 5px 10px;
+  font-size: 13px;
+  background-color: #333;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  z-index: 999;
+  color: #fff;
+}
+
+.down-icon:hover .tooltip {
+  display: block;
+}
+
+.export-tooltip {
+  position: absolute;
+  top: -15px;
+  right: 50px;
+}
+
+.stat-tooltip {
+  position: absolute;
+  top: -15px;
+  right: 88px;
+}
+
+.delete-tooltip {
+  position: absolute;
+  top: -384px;
+  right: -85px;
+}
+
+.upload-tooltip {
+  position: absolute;
+  bottom: 118px;
+  right: -30px;
+}
+
+.copy-tooltip {
+  position: absolute;
+  top: -15px;
+  right: -43px;
+}
+
+.statistics-slider {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 310px;
+  height: 48%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  z-index: 999;
+  padding: 8px 0px;
+  transition: right 0.3s ease;
+}
+
+.statistics-slider.show {
+  right: 0px;
+}
+
+.statistics-slider h2 {
+  padding-left: 14px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.statistics-slider .stat-text {
+  margin-top: 20px;
+  padding: 5px 12px;
+}
+
+.statistics-slider .stat-text h4 {
+  font-size: 15px;
+}
+
+.statistics-slider span {
+  font-size: 25px;
+  float: right;
+  cursor: pointer;
+}
+
+.statistics-slider span:hover {
+  background-color: #eeeeee;
+  border-radius: 50%;
+}
+
+.statistics-slider .word-sec {
+  display: flex;
+  align-items: center;
+  background-color: #ccc;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.statistics-slider .sent-sec {
+  display: flex;
+  align-items: center;
+  background-color: #ccc;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.statistics-slider .percent {
+  display: flex;
+  align-items: center;
+  background-color: #ccc;
+  border-radius: 12px;
+}
+
+.stat-text .word-sec .arrow {
+  padding: 0px;
+  font-size: 15px;
+  color: gray;
+}
+
+.stat-text .sent-sec .arrow {
+  padding: 0px;
+  font-size: 15px;
+  color: gray;
+}
+
+.stat-text .word-sec .Lnum-word {
+  padding-left: 50px;
+  padding-right: 0px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--orange);
+}
+
+.stat-text .word-sec .Rnum-word {
+  padding-left: 0px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--orange);
+}
+
+.stat-text .sent-sec .Lnum-sent {
+  padding-left: 24px;
+  padding-right: 4px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--orange);
+}
+
+.stat-text .sent-sec .Rnum-sent {
+  padding-left: 0px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--orange);
+}
+
+.stat-text .percent .per {
+  padding-left: 65px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--orange);
+}
+
+.keywords-container {
+  position: relative;
+  top: -119px;
+  margin-left: 8px;
+  width: 463px;
+  height: 118px;
+  padding-left: 0px;
+  background-color: #fff;
+}
+
+.keywords .key-head h4 {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.keywords .key-head .clear-all-btn {
+  margin-top: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.keywords .key-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.keywords button {
+  padding: 9px 14px;
+  margin-left: 3px;
+  border: 1px solid #333;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.keywords .btn {
+  margin-top: -4px;
+}
+
+.keywords button.selected {
+  background-color: var(--orange);
+  border: 1px solid var(--orange);
+  color: #fff;
+}
+
+.keywords .word-sent {
+  margin-top: -17px;
+}
+
+.text-container p {
+  margin-bottom: 125px;
+}
+
+.right-side #right-side-text {
+  margin-bottom: 77px;
+}
