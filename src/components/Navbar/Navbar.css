@@ -1,8 +1,6 @@
-
 .head-section { 
-    position: fixed;
-    top: 0px;
     width: 97%;
+    padding: 0px 18px;
     background-color: #ffffff;
     z-index: 999; 
  } 
@@ -12,12 +10,13 @@
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #000;
-    margin-top: -11px;
-    margin-bottom: 10px;
+    margin-top: -4px;
+    margin-bottom: 8px;
 }
 
 .navbar .logo a {
     font-size: 35px;
+    font-family: italic;
     text-decoration: none;
     color: #000;
 }
@@ -33,7 +32,8 @@
 }
 
  .navbar  .butn  {
-    padding: 10px 14px;
+    padding: 10px 15px;
+    margin-right: 18px;
     font-size: 15px;
     font-weight: bold;
     font-family: sans-serif;
@@ -45,8 +45,6 @@
 
 .navbar .butn:hover {
     background-color: #fff;
-    border: 2px solid var(--orange);
+    border: 1px solid var(--orange);
 }
 
-
-    

@@ -1,7 +1,7 @@
 import React from 'react';
-import './login.css';
-import GoogleLogin from './google';
-import FacebookLogin from './facebook';
+import '../pages/login.css';
+import GoogleLogin from '../socialicon/google';
+import FacebookLogin from '../socialicon/facebook';
 import { useState } from 'react';
 import {faEyeSlash,faEye}from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';

@@ -1,0 +1,12 @@
+.nav-bar{
+    position: sticky;
+}
+.sidbar-container{
+    display: flex;
+    justify-content: flex-start;
+    float: left;
+   
+}
+.side-container{
+    margin: 0px 20px ;
+}

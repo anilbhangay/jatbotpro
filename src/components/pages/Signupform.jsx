@@ -1,8 +1,8 @@
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faEyeSlash,faEye}from '@fortawesome/free-solid-svg-icons';
 import'./Signin.css';
-import GoogleLogin from './google';
-import FacebookLogin from './facebook';
+import GoogleLogin from '../socialicon/google';
+import FacebookLogin from '../socialicon/facebook';
 import { useState } from 'react';
 
 

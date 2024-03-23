@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faFacebookF}from '@fortawesome/free-brands-svg-icons';
 import Config from './config';
-import './login.css';
+import '../pages/login.css';
 
 
 
