@@ -31,7 +31,6 @@ const Mainside = () => {
             <Route path="/Loginform" element={<Loginform />} />
             <Route path="/Signupform" element={<Signupform />} />
             <Route path='/Forgotpass' element={<Forgotpass />} />
-        
        </Routes>
     </React.Fragment>
   )

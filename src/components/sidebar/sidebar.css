@@ -25,7 +25,8 @@
   
   .bars{
       position: relative;
-      left: 20px;
+      bottom: -8px;
+      left: 14px;
       display: flex;
       font-size: 35px;
       cursor: pointer;
