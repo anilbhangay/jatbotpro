@@ -459,7 +459,7 @@ function Tabs() {
                 <div className="tooltip copy-tooltip">Copy All Text</div>
               )}
               {isCopyTooltipVisible && (
-                <div className="tooltip copy-tooltip">Text Copied</div>
+                <div className="tooltip text-tooltip">Text Copied</div>
               )}
               {isStatTooltipVisible && (
                 <div className="tooltip stat-tooltip">Statistics</div>

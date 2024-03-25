@@ -9,7 +9,7 @@ a {
 
 .main-section {
   width: 1000px;
-  height: 515px;
+  height: 514px;
   margin-top: 19px;
   margin-left: 15px;
   border-radius: 13px;
@@ -30,7 +30,7 @@ a {
 
 .header h3 {
   position: relative;
-  bottom: 120px;
+  bottom: 107px;
   font-size: 17px;
   font-family: sans-serif;
   text-align: center;
@@ -132,7 +132,7 @@ a {
 }
 
 .keywords .word-sent {
-  margin-left: 6px;
+  margin-left: 7px;
   display: flex;
   gap: 12px;
   font-size: 14px;
@@ -141,21 +141,24 @@ a {
 }
 
 .icons-sent-container {
-  width: 483px;
-  height: 62px;
+  width: 484px;
+  height: 60px;
   position: relative;
-  bottom: 181px;
+  bottom: 179px;
   left: 50%;
   margin-left: 1px;
   display: flex;
   justify-content: space-between;
   gap: 58px;
-  background-color: #ccc;
+  background-color: #fff;
 }
 
 .icons-sent-container .sent-word {
   display: flex;
   align-items: center;
+  margin-top: 4px;
+  margin-left: 13px;
+  gap: 13px;
   font-size: 14px;
   font-weight: 700;
   color: #000;
@@ -164,7 +167,8 @@ a {
 .all-icons {
   display: flex;
   align-items: center;
-  padding-left: 5px;
+  gap: 23px;
+  padding-right: 26px;
 }
 
 .icon-delete {
@@ -189,7 +193,7 @@ a {
 
 .tooltip {
   position: relative;
-  padding: 5px 10px;
+  padding: 6px 9px;
   font-size: 13px;
   background-color: #333;
   transform: translateX(-50%);
@@ -204,20 +208,32 @@ a {
 
 .export-tooltip {
   position: absolute;
-  top: -15px;
-  right: 50px;
+  top: -17px;
+  right: 30px;
 }
 
 .stat-tooltip {
   position: absolute;
-  top: -15px;
-  right: 88px;
+  top: -17px;
+  right: 61px;
+}
+
+.copy-tooltip {
+  position: absolute;
+  top: -17px;
+  right: -43px;
+}
+
+.text-tooltip {
+   position: absolute;
+   top: -17px;
+   right: -34px;
 }
 
 .delete-tooltip {
   position: absolute;
   top: -384px;
-  right: -85px;
+  right: -75px;
 }
 
 .upload-tooltip {
@@ -226,18 +242,13 @@ a {
   right: -30px;
 }
 
-.copy-tooltip {
-  position: absolute;
-  top: -15px;
-  right: -43px;
-}
 
 .statistics-slider {
   position: fixed;
   top: 0;
   right: -300px;
-  width: 310px;
-  height: 48%;
+  width: 320px;
+  height: 49%;
   background-color: #fff;
   border: 1px solid #ccc;
   border-bottom-left-radius: 20px;
@@ -260,7 +271,7 @@ a {
 
 .statistics-slider .stat-text {
   margin-top: 20px;
-  padding: 5px 12px;
+  padding: 6px 13px;
 }
 
 .statistics-slider .stat-text h4 {
@@ -269,18 +280,21 @@ a {
 
 .statistics-slider span {
   font-size: 25px;
+  padding-right: 18px;
+  margin-top: -4px;
   float: right;
   cursor: pointer;
 }
 
-.statistics-slider span:hover {
+/* .statistics-slider span:hover {
   background-color: #eeeeee;
   border-radius: 50%;
-}
+} */
 
 .statistics-slider .word-sec {
   display: flex;
   align-items: center;
+  padding-left: 14px;
   background-color: #ccc;
   border-radius: 12px;
   margin-bottom: 10px;
@@ -289,6 +303,7 @@ a {
 .statistics-slider .sent-sec {
   display: flex;
   align-items: center;
+  padding-left: 14px;
   background-color: #ccc;
   border-radius: 12px;
   margin-bottom: 10px;
@@ -297,24 +312,25 @@ a {
 .statistics-slider .percent {
   display: flex;
   align-items: center;
+  padding-left: 14px;
   background-color: #ccc;
   border-radius: 12px;
 }
 
 .stat-text .word-sec .arrow {
-  padding: 0px;
+  padding: 0px 9px;
   font-size: 15px;
   color: gray;
 }
 
 .stat-text .sent-sec .arrow {
-  padding: 0px;
+  padding: 0px 9px;
   font-size: 15px;
   color: gray;
 }
 
 .stat-text .word-sec .Lnum-word {
-  padding-left: 50px;
+  padding-left: 46px;
   padding-right: 0px;
   font-size: 18px;
   font-weight: 600;
@@ -329,7 +345,7 @@ a {
 }
 
 .stat-text .sent-sec .Lnum-sent {
-  padding-left: 24px;
+  padding-left: 25px;
   padding-right: 4px;
   font-size: 18px;
   font-weight: 600;
@@ -337,7 +353,7 @@ a {
 }
 
 .stat-text .sent-sec .Rnum-sent {
-  padding-left: 0px;
+  padding-left: 2px;
   font-size: 18px;
   font-weight: 600;
   color: var(--orange);
