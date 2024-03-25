@@ -67,7 +67,7 @@ const Sidebar = ({ children }) => {
       <div style={{ width: isOpen ? "200px" : "50px" }} className="sidebar">
         <div className="top_section">
           <div style={{ marginLeft: isOpen ? "50px" : "0px" }} className="bars">
-            <FontAwesomeIcon icon={faBars} onPointerEnter={toggle} />
+            <FontAwesomeIcon icon={faBars} onClick={toggle} />
           </div>
         </div>
       </div>
