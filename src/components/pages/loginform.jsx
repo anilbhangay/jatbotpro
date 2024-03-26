@@ -1,93 +1,134 @@
-import React from 'react';
-import '../pages/login.css';
+import React, { useState } from 'react';
+import { faEyeSlash, faEye } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import './login.css';
 import GoogleLogin from '../socialicon/google';
 import FacebookLogin from '../socialicon/facebook';
-import { useState } from 'react';
-import {faEyeSlash,faEye}from '@fortawesome/free-solid-svg-icons';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { useNavigate } from 'react-router-dom';
+ 
+ 
+const Loginform= () => {
+  const [Email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [errors, setErrors] = useState({});
+  const history = useNavigate(); 
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setEmail(value);
+    setErrors({ ...errors, [name]: '' }); 
+  };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const validationError = {};
 
-
-export const Loginform = () => {
-  const [type,setType]=useState("Password")
-
-  const[ formData ,setFormData]=useState({
-    Email:"",
-    Password:""
-  })
-  const [errors,setErrors]=useState({})
-   const handleChange=(e)=>{
-    const {name,value}=e.target;
-    setFormData({
-      ...formData, [name]:value
-    })
-   }
-
-   const handleSubmit=(e)=>{
-    e.preventDefault()
-    const validationError={}
-    if(!formData.Email.trim()){
-      validationError.Email="Email is required"
-    }else if(!/\S+@\S+\.\S+/.test(formData.Email)){
-      validationError.Email="Email is not valid"
+    if (!Email.trim()) {
+      validationError.Email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(Email)) {
+      validationError.Email = "Invalid email format";
     }
-    if(!formData.Password.trim()){
-      validationError.Password="Password is required"
-    }else if(!/^(?=.*[A-Z])/.test(formData.Password)){
-      validationError.Password="At least enter one Capital letter "
-    }else if(!/^(?=.*[a-z])/.test(formData.Password)){
-      validationError.Password="At least enter one small letter "
-    }else if(!/^(?=.*[!@#/$%^&/*])/.test(formData.Password)){
-      validationError.Password="At least enter one spacial symbol"
+
+    if (!password.trim()) {
+      validationError.Password = "Password is required";
+    } else if (!/^(?=.*[A-Z])/.test(password)) {
+      validationError.Password = "At least enter one Capital letter";
+    } else if (!/^(?=.*[a-z])/.test(password)) {
+      validationError.Password = "At least enter one small letter";
+    } else if (!/^(?=.*[!@#/$%^&/*])/.test(password)) {
+      validationError.Password = "At least enter one special symbol";
+    } else if (!/^(?=.*[0-9])/.test(password)) {
+      validationError.Password = "At least enter one digit";
+    } else if (!/^(?=.{8,14})/.test(password)) {
+      validationError.Password = "Password must be between 8 and 14 characters";
     }
-    else if(!/^(?=.*[0-9])/.test(formData.Password)){
-      validationError.Password="At least enter one digit"
-    }
-    else if (!/^(?=.*[8,14])/.test(formData.Password)){
-      validationError.Password="please enter 8 to 14 character "
-    }
+
+
+    setErrors(validationError);
+
+
+    // If there are no errors, you can proceed with form submission
+    if (Object.keys(validationError).length === 0) {
+      try {
+        const response = await fetch('http://localhost:5000/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json', 
+          },
+          body: JSON.stringify({ email: Email, password: password }),
+        });
     
-      setErrors(validationError)
-      if(Object.keys(validationError).length===0){
-    
+        if (response.ok) {
+          history('/Password')
+          console.log("open dashboard")
+          // Login successful, you can proceed with further actions
+        } else {
+          // Login failed, handle error
+          const data = await response.json();
+          console.error('Login failed:', data.message);
+          // Assuming backend returns error message in format { message: 'Error message' }
+          setErrors({ ...errors, login: data.message });
+        }
+      } catch (error) {
+        console.error('Error:', error);
       }
-   }
+    }
+    
+  };
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+
+ 
+
   return (
-    <div className='login-form'>
-    <div>
-    <h2>Log in to your JatBot account</h2>
-    </div>
+    <div className='header-pass'>
+      <div className='header-text'>
+        <h2>Log in to your JatBot account</h2>
+      </div>
       <div className='form-coainter-login'>
-           <div className='form-button-login'>
-              <GoogleLogin />
-              <FacebookLogin />
-              
-            </div>
-            <div>
-            <form onSubmit={handleSubmit}>
-              <div className='form-input-login'>
-                <div>
-                    <input type="Email"  onChange={handleChange}  name='Email' placeholder='Email'/><br />
-                    {errors.Email&&<p className='error-name'>{errors.Email}</p>}
-                  </div>
-                  <div>
-                    <input type={type} onChange={handleChange} id="input-tag-login" name='Password' placeholder='Password'/>
-                    {type==="Password"?(<span id='icon-eye' onClick={()=>setType("text")}><FontAwesomeIcon  icon={faEyeSlash} size={18}/></span>):
-                      (<span id='icon-eye' onClick={()=>setType("Password")}><FontAwesomeIcon icon={faEye} size={18}/></span>)}
-                    {errors.Password&&<p className='error-name' id='error-name-text'>{errors.Password}</p>}
-                  </div>
-              </div>
-              <div className='form-links-login'>
-                <h3><a href="/">Forgot password?</a></h3>
-                <button  type="submit" id="button-login">Log in</button>
-                <h4><a href="Signupform">Don't have an account?</a></h4>
-              </div>
-            </form> 
+        <div className='form-button-login'>
+            <GoogleLogin />
+            <FacebookLogin />
+        </div>
+        <form onSubmit={handleSubmit}>
+          <div className='form-input-login'>
+            <input
+              type='email'
+              value={Email}
+              onChange={handleChange}
+              name='Email'
+              placeholder='Email'
+            /><br/>
+            {errors.Email && <span className='error-name-log' >{errors.Email}</span>}<br/>
           </div>
+          <div className='form-input-login'>
+            <input
+              type={showPassword ? 'text' : 'password'}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              name='password'
+              placeholder='Password'
+            /><br/>
+            {errors.Password && <span className='error-name-log'>{errors.Password}</span>}<br/>
+            <span
+              id='icon-eye-login'
+              onClick={togglePasswordVisibility}
+            >
+              <FontAwesomeIcon icon={showPassword ? faEye : faEyeSlash} size='sm' /><br/>
+            </span>
+          </div>
+          <div className='form-links-login'>
+              <h3><a id='forgot-pass-log' href="/Forgotpass">Forgot password?</a></h3>
+              <button  type="submit" id="button-login">Login</button>
+              <h4><a  href="/Signupform">Don't have an account?</a></h4>
+              </div>
+        </form>
       </div>
     </div>
   );
-}
+};
 
 export default Loginform;
