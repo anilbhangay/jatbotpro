@@ -54,7 +54,7 @@ const Forgotpass = () => {
   return (
     <div className="Forget-form">
       <div className="forget-form-text">
-        <h2>Reset your jackBot password</h2>
+        <h2>Reset your JatBot password</h2>
       </div>
       <div className="form-coainter-forget">
         <p>
@@ -81,7 +81,7 @@ const Forgotpass = () => {
               Send instructions
             </button>
             <h3>
-              <a href="/Loginform">Back to Loginpage</a>
+              <a href="/Loginform">Back to Login page</a>
             </h3>
           </div>
         </form>
