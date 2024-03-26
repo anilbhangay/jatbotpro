@@ -1,53 +1,93 @@
-import React from 'react'
-import { useState } from 'react';
-import './Forgot.css';
+import React, { useState } from "react";
+import "./Forgot.css";
+import { useNavigate } from "react-router-dom";
 
 const Forgotpass = () => {
-  const[ formData ,setFormData]=useState({
-    Email:"",
-    Password:""
-  })
-  const [errors,setErrors]=useState({})
-   const handleChange=(e)=>{
-    const {name,value}=e.target;
-    setFormData({
-      ...formData, [name]:value
-    })
-   }
+  const [email, setEmail] = useState("");
+  const [errors, setErrors] = useState({});
+  const history = useNavigate();
 
-   const handleSubmit=(e)=>{
-    e.preventDefault()
-    const validationError={}
-    if(!formData.Email.trim()){
-      validationError.Email="Email is required"
-    }else if(!/\S+@\S+\.\S+/.test(formData.Email)){
-      validationError.Email="Email is not valid"
-    }  setErrors(validationError)
-    if(Object.keys(validationError).length===0){
-  
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setEmail(value);
+    setErrors({ ...errors, [name]: "" }); // Clear error when typing
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const validationError = {};
+
+    if (!email.trim()) {
+      validationError.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      validationError.email = "Invalid email format";
     }
- }
+
+    setErrors(validationError);
+
+    // If there are no errors, you can proceed with form submission
+    if (Object.keys(validationError).length === 0) {
+      try {
+        const response = await fetch("http://localhost:5000/forgot_password", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email: email }),
+        });
+
+        if (response.ok) {
+          history("/Password");
+          // Email sent successfully, handle success
+          console.log("Reset password instructions sent successfully");
+        } else {
+          // Email sending failed, handle error
+          console.error("Failed to send reset password instructions");
+        }
+      } catch (error) {
+        console.error("Error sending reset password instructions:", error);
+        // Handle error
+      }
+    }
+  };
+
   return (
-    <div className='Forget-form'>
-      <div className='forget-form-text'>
+    <div className="Forget-form">
+      <div className="forget-form-text">
         <h2>Reset your jackBot password</h2>
       </div>
-      <div className='form-coainter-forget'>
-           <p>Enter your email, and we'll send you instructions on<br /> <span>how to reset your password.</span></p>
-        <form onSubmit={handleSubmit} >
-          <div className='form-input-forget'>
-              <input type="Email"  onChange={handleChange} id='input-for-Email' name='Email' placeholder='Email'/>
-              {errors.Email&&<p className='error-name-for'>{errors.Email}</p>}
+      <div className="form-coainter-forget">
+        <p>
+          Enter your email, and we'll send you instructions on
+          <br /> <span>how to reset your password.</span>
+        </p>
+        <form onSubmit={handleSubmit}>
+          <div className="form-input-forget">
+            <input
+              type="email"
+              value={email}
+              onChange={handleChange}
+              name="email"
+              placeholder="Email*"
+            />
+            <br />
+            {errors.email && (
+              <span className="error-name-for">{errors.email}</span>
+            )}
+            <br />
           </div>
-          <div className='form-links-forget'>
-              <button  type="submit" id="for-login">Send instructions</button>
-              <h3><a href="/Loginform">Back to Loginpage</a></h3>
+          <div className="form-links-forget">
+            <button type="submit" id="for-login">
+              Send instructions
+            </button>
+            <h3>
+              <a href="/Loginform">Back to Loginpage</a>
+            </h3>
           </div>
         </form>
-        </div>
+      </div>
     </div>
-    
-  )
-}
+  );
+};
 
-export default Forgotpass
+export default Forgotpass;

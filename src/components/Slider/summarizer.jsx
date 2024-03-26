@@ -456,7 +456,7 @@ function Tabs() {
                 <div className="tooltip export-tooltip">Export</div>
               )}
               {isCopyIconHovered && (
-                <div className="tooltip copy-tooltip">Copy All Text</div>
+                <div className="tooltip copy-tooltip">Copy All Text</div> 
               )}
               {isCopyTooltipVisible && (
                 <div className="tooltip text-tooltip">Text Copied</div>

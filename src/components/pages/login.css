@@ -1,157 +1,3 @@
-/* a {
-    text-decoration: none;
-}
-
-:root{
-    --background:#e95b0c;
-    --Font-Size:20px;
-}
-
-.login-form h2{
-    margin: 20px;
-    margin-right: -270px;
-    font-size: 32px;
-    font-weight: 400;
-    font-family: sans-serif;
-    line-height: 44px;
-    text-align: center;
-    margin-bottom: 20px; 
-    color: #252525;
-}
-
-.form-coainter-login{
-    width: 40%;
-    height: 30%;
-    padding: 30px 60px;
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
-    margin-left: 350px;
-    border-radius: 12px;
-    box-shadow: 0px 0px 0px 2px  rgba(0, 0, 0, 0.1); 
-}
-
-.form-button-login {
-    margin-bottom: 10px; 
-    margin-left: 40px;
-}
-
-.form-button-login button{
-    padding: 17px ;
-    width: 90%;
-    height: 20px;
-    border-radius: 28px;
-    background-color: transparent;
-    line-height: 2px;
-    border-color: var(--background); 
-    font-size: 18px;
-    margin-top: 3px;
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
-}
-
-.form-button-login button:hover {
-    background-color:  var(--background);
-    color: #ffffff;
-}
-
-.form-button-login button span{
-    margin-top: -9px;
-    margin-right: 5px;
-}
-
-.form-button-login  button span #google-icon-sign {
-    padding-right: 8px;
-    color: #34A853;
-}
-
-.form-button-login  button span #facebook-icon-sign{
-    padding-right: 8px;
-    color: rgb(0, 0, 255);
-}
-
-.form-button-login #button-login{
-    background-color: var(--background); 
-    cursor: pointer;
-}
-
-.form-input-login input{
-    margin-top: 20px;
-    margin-bottom: 8px;
-    width: 350px;
-    height: 35px;
-    border-radius: 5px;
-    padding: 5px;
-    margin-bottom: 5px;
-    margin-left: 20px; 
-    font-size: 18px;
-}
-
-.form-input-login #icon-eye{
-    content: ''; 
-    position: relative;
-    top: -30px;
-    float: right;
-    left: 14px; 
-    transform: translateY(-50%);
-    cursor: pointer;
-}
-
-.error-name {
-    margin: 10px;
-    font-size: 15px;
-    margin-left: 20px;
-    color: red;
-}
-
- #error-name-text{
-    margin-top: 7px;
-}
-
-#button-login {
-    padding: 18px 20px;
-    width: 86%;
-    height: 20px;
-    border: 2px solid var(--background);
-    border-radius: 28px;
-    line-height: 5px;
-    background-color: var(--background);
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-size: 18px;
-    margin-top: 10px;
-    margin-left: 27px;
-}
-
-#button-login:hover {
-    background-color:#ffffff;
-    cursor: pointer;
-}
-
-.form-links-login h3 {
-   margin-top: 3px;
-   margin-left: 226px;
-   font-size: 17px;
-}
-
-.form-links-login h4{
-    text-align: center;
-    margin-top: 18px;
-    font-size: 16px;
-}
-
-
-.form-links-login a {
-    color: #007fd6;
-}
-
-.form-links-login a:hover{
-    text-decoration: underline;
-} */
-
-
 
 a{
     text-decoration: none;
@@ -267,13 +113,13 @@ a{
 }
 
 .form-links-login  #button-login:hover {
-   background: #e95b0c;
+   background-color: #e95b0c;
    border-color: #e95b0c;
 }
 
 .form-links-login h4{
     text-align: center;
-    margin-top: 13px;
+    margin-top: 17px;
 }
 .form-links-login a:hover{
     text-decoration: underline;
