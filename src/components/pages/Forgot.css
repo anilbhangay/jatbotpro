@@ -1,87 +1,84 @@
 :root {
-    --background: #e95b0c;
-    --Font-Size: 20px;
-  }
-  
+  --background: #e95b0c;
+  --Font-Size: 20px;
+}
 
-.Forget-form{
-    align-items: center;
-    margin-left: 350px;
-    margin-top: 50px;
+.Forget-form {
+  align-items: center;
+  margin-left: 350px;
+  margin-top: 50px;
 }
-.forget-form-text h2{
-    font-size: 30px;
-    margin-left: 75px;
-    margin-bottom: 30px;
+.forget-form-text h2 {
+  font-size: 30px;
+  margin-left: 75px;
+  margin-bottom: 30px;
 }
-.form-coainter-forget{
-    align-items: center; 
-    border-radius: 12px;
-    width: 100%;
-    height: 310px;
-    padding: 30px;
-    box-shadow: 0px 0px 0px 2px  rgba(0, 0, 0, 0.1);
-    color: #000;
+.form-coainter-forget {
+  align-items: center;
+  border-radius: 12px;
+  width: 100%;
+  height: 310px;
+  padding: 30px;
+  box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.1);
+  color: #000;
 }
-.form-coainter-forget p{
-    margin-left: 80px;
-    font-size: 17px;
+.form-coainter-forget p {
+  margin-left: 80px;
+  font-size: 17px;
 }
-.form-coainter-forget p span{
-    margin-left: 80px;
+.form-coainter-forget p span {
+  margin-left: 80px;
 }
-.form-input-forget input{
-    margin-top: 15px;
-    width: 360px;
-    height: 35px;
-    border-radius: 5px;
-    border: 1px solid #000;
-    padding: 5px;
-    font-size: 18px;
-    margin-left: 80px;
-    margin-bottom: 4px;
-    
+.form-input-forget input {
+  margin-top: 15px;
+  width: 360px;
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  padding: 5px;
+  font-size: 18px;
+  margin-left: 80px;
+  margin-bottom: 4px;
 }
-.form-coainter-forget .error-name-for{
-    margin-left: 92px;
-    margin-top: -10px;
-    margin-bottom: 15px;
-    font-size: 17px;
-    color: red;
+.form-coainter-forget .error-name-for {
+  margin-left: 92px;
+  margin-top: -10px;
+  margin-bottom: 15px;
+  font-size: 17px;
+  color: red;
 }
-.form-links-forget #for-login{
-     width: 70%; 
-     padding: 10px;
-     margin-left: 84px;
-     border: 2px solid #e36826;
-     border-radius: 25px;
-     background-color: #e36826;
-     font-size: 18px;
-     margin-top: 20px;
-     color: #fff;
-     cursor: pointer;
+.form-links-forget #for-login {
+  width: 70%;
+  padding: 10px;
+  margin-left: 84px;
+  border: 2px solid #e36826;
+  border-radius: 25px;
+  background-color: #e36826;
+  font-size: 18px;
+  margin-top: 20px;
+  color: #fff;
+  cursor: pointer;
 }
 
 .form-links-forget #for-login:hover {
-    background-color: var(--background);
-    border: 2px solid var(--background);
+  background-color: var(--background);
+  border: 2px solid var(--background);
 }
 
-.form-links-forget a{
-    text-decoration: none;
+.form-links-forget a {
+  text-decoration: none;
 }
 
-.form-links-forget h3{
-    width: 65%;
-    margin-left: 86px;
-    padding: 9px;
-    text-align: center;
-    font-size: 18px;
-    margin-top: 18px;
-   
+.form-links-forget h3 {
+  width: 65%;
+  margin-left: 86px;
+  padding: 9px;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 18px;
 }
-.form-links-forget h3:hover{ 
-    border-radius: 25px;
-    background-color: rgb(148, 129, 123);
-    border: transparent;
+.form-links-forget h3:hover {
+  border-radius: 25px;
+  background-color: rgb(148, 129, 123);
+  border: transparent;
 }
