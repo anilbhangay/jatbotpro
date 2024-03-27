@@ -233,7 +233,7 @@ const Loginform = () => {
             </span>
           </div>
           <div className='form-links-login'>
-            <h3><a id='forgot-pass-log' href="/forgot_password">Forgot password?</a></h3>
+            <h3><a id='forgot-pass-log' href="/Forgotpass">Forgot password?</a></h3>
             <button type="submit" id="button-login">Login</button>
             <h4><a href="/signupform">Don't have an account?</a></h4>
           </div>

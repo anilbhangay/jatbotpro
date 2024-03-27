@@ -35,7 +35,7 @@ const Forgotpass = () => {
           },
           body: JSON.stringify({ email: email }),
         });
-
+ 
         if (response.ok) {
           history("/Password");
           // Email sent successfully, handle success
