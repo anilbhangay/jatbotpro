@@ -218,7 +218,7 @@ a {
   right: 61px;
 }
 
-.copy-tooltip {
+.copied-tooltip {
   position: absolute;
   top: -17px;
   right: -43px;
@@ -241,7 +241,6 @@ a {
   bottom: 118px;
   right: -28px;
 }
-
 
 .statistics-slider {
   position: fixed;
@@ -424,5 +423,10 @@ a {
 }
 
 .right-side #right-side-text {
-  margin-bottom: 78px;
+   margin-bottom: 70px;
 }
+
+.right-side #right-side-summary {
+   margin-bottom: 65px;
+   margin-top: -55px;
+} 

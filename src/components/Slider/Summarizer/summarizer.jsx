@@ -318,7 +318,7 @@ function Tabs() {
                   </>
                 )}
                 <div className="keyword-summary">
-                <p>{rightSide.keyword_summary}</p>
+                <p id="right-side-text">{rightSide.keyword_summary}</p>
                 </div>
 
               </div>
@@ -413,8 +413,8 @@ function Tabs() {
               <div className="sent-word">
                 {userType === "paragraph" && (
                   <>
-                    <p>{rightSide.Rnum_word} words</p>
-                    <p>{rightSide.Rnum_sent} sentences</p>
+                    <p>{rightSide.Rnum_word} {rightSide.num_word} words</p>
+                    <p>{rightSide.Rnum_sent} {rightSide.num_sent} sentences</p>
                   </>
                 )}
                 {userType === "bulletpoints" && (
@@ -455,7 +455,7 @@ function Tabs() {
                 <div className="tooltip export-tooltip">Export</div>
               )}
               {isCopyIconHovered && (
-                <div className="tooltip copy-tooltip">Copy All Text</div>
+                <div className="tooltip copied-tooltip">Copy All Text</div>
               )}
               {isCopyTooltipVisible && (
                 <div className="tooltip text-tooltip">Text Copied</div>
