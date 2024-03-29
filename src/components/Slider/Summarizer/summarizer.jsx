@@ -11,7 +11,6 @@ import {
   faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
 import FileDownload from "react-file-download";
-import axios from "axios";
 
 function Tabs() {
   const fileInputRef = useRef(null);
@@ -66,31 +65,7 @@ function Tabs() {
     setUserType(e.target.value);
     setActiveKeywords([]);
     setSelectedKeywords([]);
-    setRightSide(['']);
-  };
-
-  const handleUpload = async () => {
-    const formData = new FormData();
-    formData.append("file", file);
-
-    const apiUrl = `http://localhost:5000/upload?type=${userType}&summary_length=${summaryLength}`;
-    const requestData =
-      userType === "paragraph"
-        ? { sent_number: sentNumber }
-        : {
-            selected_Keyword: selectedKeywords.join(","),
-            sent_number: sentNumber,
-          };
-
-    axios
-      .post(apiUrl, formData, { params: requestData })
-      .then((response) => {
-        setRightSide(response.data);
-        setShowSentIconSection(true);
-      })
-      .catch((error) => {
-        console.error("Error generating summary:", error);
-      });
+    setRightSide([""]);
   };
 
   const handleKeywordClick = (keyword) => {
@@ -101,34 +76,47 @@ function Tabs() {
     setSelectedKeywords(updatedSelectedKeywords);
     setActiveKeywords(updatedSelectedKeywords);
 
-    if (updatedSelectedKeywords.length > 1) {
-      setClearAllButtonVisible(true);
-    } else {
-      setClearAllButtonVisible(false);
-    }
-
     const clearAllVisible = updatedSelectedKeywords.length > 1;
     setClearAllButtonVisible(clearAllVisible);
 
-    const selectedKeywordsString = updatedSelectedKeywords.join(",");
-    const apiUrl = `http://localhost:5000/upload?type=keywords&selected_keyword=${encodeURIComponent(
-      selectedKeywordsString
-    )}&sent_number=${sentNumber}`;
-    axios
-      .post(apiUrl)
-      .then((response) => {
-        setRightSide({
-          keyword_summary: response.data.keyword_summary,
-          num_word: response.data.num_word,
-          num_sent: response.data.num_sent,
-        });
-      })
-      .catch((error) => {
-        console.error(
-          "Error generating summary for selected keywords: ",
-          error
-        );
+    setKeywordClicked(true);
+  };
+
+  const handleUpload = async () => {
+    const formData = new FormData();
+    formData.append("file", file);
+
+    let apiUrl = `http://localhost:5000/upload`;
+
+    try {
+      if (selectedKeywords.length > 0) {
+        const selectedKeywordsString = selectedKeywords.join(",");
+        apiUrl += `?type=keywords&selected_keyword=${encodeURIComponent(
+          selectedKeywordsString
+        )}&sent_number=${sentNumber}`;
+      } else if (userType === "paragraph") {
+        apiUrl += `?type=paragraph&sent_number=${sentNumber}`;
+      } else {
+        apiUrl += `?type=${userType}&summary_length=${summaryLength}`;
+      }
+
+      const response = await fetch(apiUrl, {
+        method: "POST",
+        body: formData,
       });
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      const data = await response.json();
+
+      setRightSide(data);
+      setShowSentIconSection(true);
+
+    } catch (error) {
+      console.error("Error generating summary:", error);
+    }
   };
 
   useEffect(() => {
@@ -161,6 +149,8 @@ function Tabs() {
     setRightSide({});
     setUploadButtonVisible(true);
     setShowSentIconSection(false);
+    setKeywordClicked(false); 
+    setSentNumber(5);
   };
 
   const handleDownload = () => {
@@ -327,7 +317,10 @@ function Tabs() {
                     </p>
                   </>
                 )}
+                <div className="keyword-summary">
                 <p>{rightSide.keyword_summary}</p>
+                </div>
+
               </div>
             </div>
 
@@ -354,6 +347,7 @@ function Tabs() {
                     </p>
                     <p className="Rnum-word">{rightSide.Rnum_word}</p>
                     <p className="Rnum-word">{rightSide.Bnum_word}</p>
+                    <p className="Rnum-word">{rightSide.num_word}</p>
                   </div>
                   <div className="sent-sec">
                     <h4>Sentence Count</h4>
@@ -363,6 +357,7 @@ function Tabs() {
                     </p>
                     <p className="Rnum-sent">{rightSide.Rnum_sent}</p>
                     <p className="Rnum-sent">{rightSide.Bnum_sent}</p>
+                    <p className="Rnum-sent">{rightSide.num_sent}</p>
                   </div>
                   <div className="percent">
                     <h4>Reduction</h4>
@@ -460,7 +455,7 @@ function Tabs() {
                 <div className="tooltip export-tooltip">Export</div>
               )}
               {isCopyIconHovered && (
-                <div className="tooltip copy-tooltip">Copy All Text</div> 
+                <div className="tooltip copy-tooltip">Copy All Text</div>
               )}
               {isCopyTooltipVisible && (
                 <div className="tooltip text-tooltip">Text Copied</div>
