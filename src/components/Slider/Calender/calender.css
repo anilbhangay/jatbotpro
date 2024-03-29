@@ -1,0 +1,48 @@
+.container-cal{
+    padding: 20px 40px 0px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(41, 41, 44,0.2);
+    width: 1050px;
+    height: 600px;
+    border-radius: 18px;
+    padding: 5px 55px 10px;
+    margin: 40px;
+    
+}
+
+.head-top-cal{
+    border: 2px solid var(--orange);
+    width: 1047px;
+    height: 70px;
+    margin-top: 20px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-boxs-cal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+}
+.box-left-cal{
+    border: 2px solid var(--orange);
+    width: 49%;
+    height: 490px;
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+   
+}
+.box-right-cal{
+    border: 2px solid var(--orange);
+    width: 49%;
+    height: 490px;
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}

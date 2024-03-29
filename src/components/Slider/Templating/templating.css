@@ -1,0 +1,100 @@
+.container-main-tem{
+    padding: 20px 40px 0px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(41, 41, 44,0.2);
+    width: 1050px;
+    height: 600px;
+    border-radius: 18px;
+    padding: 5px 55px 10px;
+    margin: 40px;
+}
+.head-top-tem{
+    border: 2px solid var(--orange);
+    width: 100%;
+    height: 70px;
+    margin-top: 20px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container-boxs-tem{
+    border: 2px solid var(--orange);
+    width: 100%;
+    height: 490px;
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+   
+}
+.head-top-tem{
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    
+   
+}
+.icon-trash-tem{
+    cursor: pointer;  
+    border: 2px solid var(--orange);
+    width: 40px;
+    height: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 3ms;
+    margin-right: 15px;
+   
+}
+.icon-trash-tem:hover{
+    background-color: var(--orange);
+    cursor: pointer;
+}
+
+.container-boxs-tem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box-tem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.choose-tem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid var(--orange);
+    width: 200px;
+    height: 100px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+.choose-tem:hover{
+    background-color: var(--orange);
+    cursor: pointer;
+}
+.own-tem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid var(--orange);
+    width: 200px;
+    height: 100px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.own-tem:hover{
+    background-color: var(--orange);
+    cursor: pointer;
+}

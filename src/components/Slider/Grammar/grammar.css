@@ -1,0 +1,275 @@
+/*.container-main-gram{
+    padding: 20px 40px 0px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(41, 41, 44,0.2);
+    width: 1050px;
+    height: 600px;
+    border-radius: 18px;
+    padding: 5px 55px 10px;
+    margin: 40px;    
+}
+
+.head-top-gram{
+    border: 2px solid var(--orange);
+    width: 1047px;
+    height: 70px;
+    margin-top: 20px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container-boxs-gram{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+}
+.box-left-gram{
+    border: 2px solid var(--orange);
+    width: 48%;
+    height: 490px;
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+   
+}
+.box-left-data-gram{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    gap: 10px;
+    
+}
+.box-left-data-upload-gram{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 5px;
+    margin-top: -150px;
+    
+}
+#upload-gram{
+    height: 470px;
+    width: 240%;
+    border: none;
+    outline: none;
+    background: none;
+    resize: none;
+    font-size: 16px;
+}
+.languages-gram{
+    outline: none;
+}
+.box-right-gram{
+    border: 2px solid var(--orange);
+    width: 50%;
+    height: 490px;
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;  
+    
+}
+.gram-button{
+    background-color: var(--orange);
+    width: 170px;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}
+.trash-gram{
+    cursor: pointer;  
+    border: 2px solid var(--orange);
+    width: 40px;
+    height: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 3ms;
+}
+.trash-gram:hover{
+    background-color: var(--orange);
+    border-radius: 10px; 
+    cursor: pointer;
+}
+.text-area-trans #text-area-data-trans{
+    margin-left: 210px;
+    
+}*/
+
+.container-main-gram{
+    padding: 20px 40px 0px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(41, 41, 44,0.2);
+    width: 1050px;
+    height: 600px;
+    border-radius: 18px;
+    padding: 5px 55px 10px;
+    margin: 40px;    
+}
+
+.head-top-gram{
+    border: 2px solid var(--orange);
+    width: 1047px;
+    height: 70px;
+    margin-top: 20px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container-boxs-gram{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+}
+.box-left-gram{
+    border: 2px solid var(--orange);
+    width: 48%;
+    height: 490px;
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+   
+}
+.box-left-data-gram{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    gap: 10px;
+    
+}
+.box-left-text-gram{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+}
+.upload-text-gram{
+    margin-top: -140px;
+    margin-left: 5px;
+    
+}
+#text-margin-gram{
+    height: 470px;
+    width: 250%;
+    border: none;
+    outline: none;
+    background: none;
+    resize: none;
+    font-size: 16px;
+}
+.text-area-gram{
+    margin-top: -140px;
+    margin-left: 5px;
+}
+.text-area-gram #text-area-data-gram{
+    height: 470px;
+    width: 250%;
+    border: none;
+    outline: none;
+    background: none;
+    resize: none;
+    font-size: 16px;
+    
+}
+#textarea-right-gram{
+    height: 430px;
+    width: 97%;
+    border: none;
+    outline: none;
+    background: none;
+    resize: none;
+    font-size: 16px;
+    margin: 8px;
+    
+}
+.copy-tooltip-tecd-gram{
+    position: absolute;
+    background-color: var(--orange);
+    margin-left: 330px;
+    font-size: 15px;
+    font-weight: 50px;
+    width: 7%;
+    text-align: center;
+    border-radius: 5px;
+}
+.copy-tooltip-tecd-gram:hover{
+    display: block;
+}
+.copy-tooltip-gram{
+    position: absolute;
+    background-color: var(--orange);
+    margin-left: 330px;
+    margin-top: -60px;
+    font-size: 15px;
+    font-weight: 50px;
+    width: 7%;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.languages-gram{
+    outline: none;
+}
+.box-right-gram{
+    border: 2px solid var(--orange);
+    width: 50%;
+    height: 490px;
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;  
+    
+}
+.gram-button{
+    background-color: var(--orange);
+    width: 170px;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}
+.trash-gram{
+    cursor: pointer;  
+    border: 2px solid var(--orange);
+    width: 40px;
+    height: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 3ms;
+}
+.trash-gram:hover{
+    background-color: var(--orange);
+    border-radius: 10px; 
+    cursor: pointer;
+}
+.text-gram-copy-download{
+    margin-top: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 30px;
+    margin-right: 70px;
+    
+}
+#text-gram-download{
+    height: 22px;
+}
+#text-gram-copy{
+    height: 22px;
+}

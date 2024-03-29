@@ -1,16 +1,17 @@
 import React from 'react'
 import {Route, Routes } from 'react-router-dom';
-import Audiobly from '../Slider/audiobly.jsx';
-import Calender from '../Slider/calender.jsx';
-import Grammar from '../Slider/grammar.jsx';
-import Legal from '../Slider/legal.jsx';
-import Summarizer from '../Slider/summarizer.jsx';
-import Templating from '../Slider/templating.jsx';
-import Translator from '../Slider/translator.jsx';
-import Voice from '../Slider/voice.jsx';
+import Audiobly from '../Slider/Audiobly/audiobly.jsx'
+import Calender from '../Slider/Calender/calender.jsx';
+import Grammar from '../Slider/Grammar/grammar.jsx';
+import Legal from '../Slider/Legal/legal.jsx';
+import Summarizer from '../Slider/Summarizer/summarizer.jsx';
+import Templating from '../Slider/Templating/templating.jsx';
+import Translator from '../Slider/Translator/translator.jsx';
+import Voice from '../Slider/voice/voice.jsx';
 import Loginform from '../pages/loginform.jsx';
 import Signupform from '../pages/Signupform.jsx';
 import Forgotpass from '../pages/Forgotpass.jsx';
+import Password from '../pages/Password.jsx';
 
 
 
@@ -31,6 +32,7 @@ const Mainside = () => {
             <Route path="/Loginform" element={<Loginform />} />
             <Route path="/Signupform" element={<Signupform />} />
             <Route path='/Forgotpass' element={<Forgotpass />} />
+            <Route path="/password" element={<Password />} />
        </Routes>
     </React.Fragment>
   )

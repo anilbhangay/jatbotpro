@@ -1,0 +1,131 @@
+.container-audio{
+    padding: 20px 40px 0px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(41, 41, 44,0.2);
+    width: 1050px;
+    height: 600px;
+    border-radius: 18px;
+    padding: 5px 55px 10px;
+    margin: 40px;   
+}
+
+.head-top-audio{
+    border: 2px solid var(--orange);
+    width: 1047px;
+    height: 70px;
+    margin-top: 20px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.languages-audio{
+    outline: none;
+}
+.audio-button button{
+    background-color: var(--orange);
+    width: 130px;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 15px;
+    border: none;
+    margin-left: 250px;
+    cursor: pointer;
+}
+.mic-icons-audibly{
+    margin-top: -15px;
+}
+.mics-audibly{
+    cursor: pointer;  
+    border: 2px solid var(--orange);
+    width: 40px;
+    height: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 3ms;
+    
+}
+.icon-trash-audio{
+    cursor: pointer;  
+    border: 2px solid var(--orange);
+    width: 40px;
+    height: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   transition: 3ms;
+}
+.icon-trash-audio:hover{
+    background-color: var(--orange);
+    border-radius: 10px; 
+    cursor: pointer;
+}
+.container-boxs-audio{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+}
+.container-boxs-audio .box-left-audio{
+    border: 2px solid var(--orange);
+    width: 49%;
+    height: 490px;
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+   
+}
+.container-text-audio{
+    margin-top: -150px;
+    margin-left: 10px;
+    width: 504px;
+    height: 465px;
+    overflow: scroll;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+.box-right-audio{
+    border: 2px solid var(--orange);
+    width: 49%;
+    height: 490px;
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.mics-audibly{
+    margin-top: -7px;
+    position:absolute;
+}
+.upload-box-audio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 160px;
+}
+.upload-label-audio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid var(--orange);
+    width: 150px;
+    height: 100px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.text-audio-right{
+    margin-top: 5px;
+    margin-left: 10px;
+    width: 504px;
+    height: 465px;
+    overflow: scroll;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
