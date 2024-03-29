@@ -33,6 +33,7 @@ function Tabs() {
   const [selectedKeywords, setSelectedKeywords] = useState([]);
   const [activeKeywords, setActiveKeywords] = useState([]);
   const [clearAllButtonVisible, setClearAllButtonVisible] = useState(true);
+  const [keywordClicked, setKeywordClicked] = useState(false);
 
   const stepOptions = ["Very_Short", "Short", "Medium", "Long"];
 
@@ -63,6 +64,9 @@ function Tabs() {
 
   const handleUserTypeChange = (e) => {
     setUserType(e.target.value);
+    setActiveKeywords([]);
+    setSelectedKeywords([]);
+    setRightSide(['']);
   };
 
   const handleUpload = async () => {
