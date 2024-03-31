@@ -113,7 +113,6 @@ function Tabs() {
 
       setRightSide(data);
       setShowSentIconSection(true);
-
     } catch (error) {
       console.error("Error generating summary:", error);
     }
@@ -149,7 +148,7 @@ function Tabs() {
     setRightSide({});
     setUploadButtonVisible(true);
     setShowSentIconSection(false);
-    setKeywordClicked(false); 
+    setKeywordClicked(false);
     setSentNumber(5);
   };
 
@@ -318,9 +317,8 @@ function Tabs() {
                   </>
                 )}
                 <div className="keyword-summary">
-                <p id="right-side-text">{rightSide.keyword_summary}</p>
+                  <p id="right-side-text">{rightSide.keyword_summary}</p>
                 </div>
-
               </div>
             </div>
 
@@ -413,8 +411,12 @@ function Tabs() {
               <div className="sent-word">
                 {userType === "paragraph" && (
                   <>
-                    <p>{rightSide.Rnum_word} {rightSide.num_word} words</p>
-                    <p>{rightSide.Rnum_sent} {rightSide.num_sent} sentences</p>
+                    <p>
+                      {rightSide.Rnum_word} {rightSide.num_word} words
+                    </p>
+                    <p>
+                      {rightSide.Rnum_sent} {rightSide.num_sent} sentences
+                    </p>
                   </>
                 )}
                 {userType === "bulletpoints" && (
