@@ -140,7 +140,7 @@ function Tabs() {
     };
 
     fetchSummary();
-  }, [summaryLength, file, sentNumber]);
+  }, [summaryLength, file, sentNumber, keywordClicked]);
 
   const handleDeleteAllData = () => {
     setFile(null);
@@ -189,22 +189,36 @@ function Tabs() {
     setIsUploadIconHovered(false);
   };
 
+  
   const handleCopyText = () => {
-    const textToCopy = document.getElementById("right-side-text").innerText;
-    navigator.clipboard
-      .writeText(textToCopy)
-      .then(() => {
-        console.log("Text copied to clipboard");
-      })
-      .catch((err) => {
-        console.error("Error copying text: ", err);
-      });
-
-    setIsCopyTooltipVisible(true);
-    setTimeout(() => {
-      setIsCopyTooltipVisible(false);
-    }, 2000);
+    let textToCopy = '';
+  
+    if (rightSide.text) {
+      textToCopy += rightSide.text;
+    }
+  
+    if (rightSide.keyword_summary) {
+      if (textToCopy) {
+        textToCopy += '\n';
+      }
+      textToCopy += rightSide.keyword_summary;
+    }
+  
+    if (textToCopy) {
+      navigator.clipboard.writeText(textToCopy)
+        .then(() => {
+          setIsCopyTooltipVisible(true);
+          setTimeout(() => {
+            setIsCopyTooltipVisible(false);
+          }, 3000);
+        })
+        .catch((error) => {
+          // Handle error if needed
+          console.error('Error copying text:', error);
+        });
+    }
   };
+
 
   const handleDeleteIconHover = () => {
     setIsDeleteTooltipVisible(true);
@@ -322,7 +336,9 @@ function Tabs() {
                   </>
                 )}
                 <div className="keyword-summary">
-                  <p id="right-side-text">{rightSide.keyword_summary}</p>
+                  <p id="right-side-text">
+                    {rightSide.keyword_summary}
+                  </p>
                 </div>
               </div>
             </div>
@@ -371,44 +387,44 @@ function Tabs() {
             )}
 
             {!uploadButtonVisible && (
-              <div className="keywords-container">
-                <div className="keywords">
-                  <div className="key-head">
-                    <h4>Select keywords :</h4>
-                    {selectedKeywords.length > 1 && clearAllButtonVisible && (
-                      <p
-                        className="clear-all-btn"
-                        onClick={() => {
-                          setActiveKeywords([]);
-                          setSelectedKeywords([]);
-                        }}
-                      >
-                        {" "}
-                        Clear All
-                      </p>
-                    )}
-                  </div>
-                  <p className="btn">
-                    {leftSide.keywords &&
-                      leftSide.keywords.split(",").map((keyword, index) => (
-                        <button
-                          key={index}
-                          className={
-                            activeKeywords.includes(keyword) ? "selected" : ""
-                          }
-                          onClick={() => handleKeywordClick(keyword)}
+                <div className="keywords-container">
+                  <div className="keywords">
+                    <div className="key-head">
+                      <h4>Select keywords :</h4>
+                      {selectedKeywords.length > 1 && clearAllButtonVisible && (
+                        <p
+                          className="clear-all-btn"
+                          onClick={() => {
+                            setActiveKeywords([]);
+                            setSelectedKeywords([]);
+                          }}
                         >
-                          {keyword}
-                        </button>
-                      ))}
-                  </p>
-                  <div className="word-sent">
-                    <p>{leftSide.Lnum_word} words</p>
-                    <p>{leftSide.Lnum_sent} sentences</p>
+                          Clear All
+                        </p>
+                      )}
+                    </div>
+                    <p className="btn">
+                      {leftSide.keywords &&
+                        leftSide.keywords.split(",").map((keyword, index) => (
+                          <button
+                            key={index}
+                            className={
+                              activeKeywords.includes(keyword) ? "selected" : ""
+                            }
+                            onClick={() => handleKeywordClick(keyword)}
+                          >
+                            {keyword}
+                          </button>
+                        ))}
+                    </p>
+                    <div className="word-sent">
+                      <p>{leftSide.Lnum_word} words</p>
+                      <p>{leftSide.Lnum_sent} sentences</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            )}
+              )}
+            
           </div>
 
           {showSentIconSection && (
@@ -451,7 +467,7 @@ function Tabs() {
                 </span>
                 <span
                   className="copy-icon"
-                  onClick={handleCopyText}
+                  onClick={ handleCopyText}
                   onMouseEnter={handleCopyIconHover}
                   onMouseLeave={handleCopyIconLeave}
                 >
