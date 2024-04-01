@@ -317,7 +317,9 @@ function Tabs() {
                   </>
                 )}
                 <div className="keyword-summary">
-                  <p id="right-side-text">{rightSide.keyword_summary}</p>
+                  <p id="right-side-text">
+                    {rightSide.keyword_summary}
+                  </p>
                 </div>
               </div>
             </div>

@@ -426,7 +426,6 @@ a {
    margin-bottom: 70px;
 }
 
-.right-side #right-side-summary {
-   margin-bottom: 65px;
-   margin-top: -55px;
+.right-side .keyword-summary {
+    margin-top: -54px;
 } 
