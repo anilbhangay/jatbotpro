@@ -158,6 +158,11 @@ function Tabs() {
     } else {
       console.log("No data to download");
     }
+    if (rightSide.keyword_summary) {
+      FileDownload(rightSide.keyword_summary, "Summary.doc");
+    } else {
+      console.log("No data to download");
+    }
   };
 
   const handleMouseOver = () => {
@@ -317,9 +322,7 @@ function Tabs() {
                   </>
                 )}
                 <div className="keyword-summary">
-                  <p id="right-side-text">
-                    {rightSide.keyword_summary}
-                  </p>
+                  <p id="right-side-text">{rightSide.keyword_summary}</p>
                 </div>
               </div>
             </div>

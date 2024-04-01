@@ -141,12 +141,12 @@ a {
 }
 
 .icons-sent-container {
-  width: 484px;
+  width: 482px;
   height: 60px;
   position: relative;
   bottom: 179px;
   left: 50%;
-  margin-left: 1px;
+  margin-left: 2px;
   display: flex;
   justify-content: space-between;
   gap: 58px;
@@ -156,9 +156,9 @@ a {
 .icons-sent-container .sent-word {
   display: flex;
   align-items: center;
-  margin-top: 4px;
+  margin-top: 5px;
   margin-left: 13px;
-  gap: 13px;
+  gap: 14px;
   font-size: 14px;
   font-weight: 700;
   color: #000;
@@ -285,10 +285,6 @@ a {
   cursor: pointer;
 }
 
-/* .statistics-slider span:hover {
-  background-color: #eeeeee;
-  border-radius: 50%;
-} */
 
 .statistics-slider .word-sec {
   display: flex;
