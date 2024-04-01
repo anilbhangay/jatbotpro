@@ -386,7 +386,8 @@ function Tabs() {
               </div>
             )}
 
-            {!uploadButtonVisible && (
+            {!uploadButtonVisible && userType === "paragraph" && (
+              
                 <div className="keywords-container">
                   <div className="keywords">
                     <div className="key-head">
@@ -422,8 +423,16 @@ function Tabs() {
                       <p>{leftSide.Lnum_sent} sentences</p>
                     </div>
                   </div>
+                  <div className="bullpoints">
+                  {userType === "bulletpoints" && (
+                    <div className="word-sent">
+                      <p>{leftSide.Lnum_word} words</p>
+                      <p>{leftSide.Lnum_sent} sentences</p>
+                    </div>
+                  )}
                 </div>
-              )}
+                </div>
+            )}
             
           </div>
 
