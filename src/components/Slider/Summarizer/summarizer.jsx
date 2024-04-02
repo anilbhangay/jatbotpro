@@ -386,8 +386,7 @@ function Tabs() {
               </div>
             )}
 
-            {!uploadButtonVisible && userType === "paragraph" && (
-              
+            {!uploadButtonVisible && (
                 <div className="keywords-container">
                   <div className="keywords">
                     <div className="key-head">
