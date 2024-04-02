@@ -246,7 +246,7 @@ function Tabs() {
 
           <div className="mode-container">
             <div className="mode-part">
-              <h4 className="text">Modes:</h4>
+              <label className="text">Modes:</label>
 
               <select onChange={handleUserTypeChange}>
                 <option value="paragraph">Paragraph</option>
@@ -257,6 +257,7 @@ function Tabs() {
                 <span className="numberbox">
                   <input
                     type="number"
+                    min="0"
                     value={sentNumber}
                     onChange={handleSentNumberChange}
                   />
@@ -386,16 +387,16 @@ function Tabs() {
               </div>
             )}
 
-            {!uploadButtonVisible && (
+            {/* {!uploadButtonVisible && (
                 <div className="keywords-container">
                   <div className="keywords">
                     <div className="key-head">
                       <h4>Select keywords :</h4>
                       {selectedKeywords.length > 1 && clearAllButtonVisible && (
                         <p
-                          className="clear-all-btn"
+                          className="ordclear-all-btn"
                           onClick={() => {
-                            setActiveKeywords([]);
+                            setActiveKeyws([]);
                             setSelectedKeywords([]);
                           }}
                         >
@@ -431,8 +432,66 @@ function Tabs() {
                   )}
                 </div>
                 </div>
+            )} */}
+
+             {!uploadButtonVisible && (
+              <div className="container-sum">
+                {userType === "paragraph" && (
+                  <div className="keywords-container">
+                    <div className="keywords">
+                      <div>
+                        <div className="key-head">
+                          <h4>Select keywords :</h4>
+                          {selectedKeywords.length > 1 &&
+                            clearAllButtonVisible && (
+                              <p
+                                className="clear-all-btn"
+                                onClick={() => {
+                                  setActiveKeywords([]);
+                                  setSelectedKeywords([]);
+                                }}
+                              >
+                                {" "}
+                                Clear All
+                              </p>
+                            )}
+                        </div>
+                        <p className="btn">
+                          {leftSide.keywords &&
+                            leftSide.keywords
+                              .split(",")
+                              .map((keyword, index) => (
+                                <button
+                                  key={index}
+                                  className={
+                                    activeKeywords.includes(keyword)
+                                      ? "selected"
+                                      : ""
+                                  }
+                                  onClick={() => handleKeywordClick(keyword)}
+                                >
+                                  {keyword}
+                                </button>
+                              ))}
+                        </p>
+                      </div>
+                      <div className="word-sent">
+                        <p>{leftSide.Lnum_word} words</p>
+                        <p>{leftSide.Lnum_sent} sentences</p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+                <div className="bullpoints">
+                  {userType === "bulletpoints" && (
+                    <div className="word-sent">
+                      <p>{leftSide.Lnum_word} words</p>
+                      <p>{leftSide.Lnum_sent} sentences</p>
+                    </div>
+                  )}
+                </div>
+              </div>
             )}
-            
           </div>
 
           {showSentIconSection && (
