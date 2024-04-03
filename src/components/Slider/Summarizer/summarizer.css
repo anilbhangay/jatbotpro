@@ -438,9 +438,10 @@ a {
 
 .bullpoints .word-sent {
     display: flex;
-    flex-direction: row;
+    justify-content: flex-start;
     text-align: center;
-    gap: 19px;
+    gap: 18px;
+    padding-top: 7px;
     padding-left: 20px;
     font-size: 15px;
     font-weight: 700;
