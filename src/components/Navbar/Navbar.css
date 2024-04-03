@@ -1,5 +1,5 @@
 .head-section { 
-    width: 97%;
+    width: auto;
     padding: 0px 18px;
     background-color: #ffffff;
     z-index: 999; 
@@ -7,6 +7,7 @@
 
 .head-section .navbar {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #000;

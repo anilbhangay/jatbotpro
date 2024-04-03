@@ -5,8 +5,10 @@ a {
 }
 
 .main-section {
-  width: 1000px;
-  height: 514px;
+  /* width: 1000px; */
+  height: 514px; 
+  display: flex;
+  flex-direction: column;
   margin-top: 19px;
   margin-left: 15px;
   border-radius: 13px;
@@ -103,7 +105,7 @@ a {
 .upload-section .right-side {
   width: 500px;
   height: 443px;
-  margin-right: -2px;
+  margin-right: 0px;
   border: 1px solid var(--orange);
   border-top: none;
   border-left: none;
@@ -133,22 +135,22 @@ a {
   margin-left: 7px;
   display: flex;
   gap: 12px;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   color: black;
 }
 
 .icons-sent-container {
-  width: 482px;
+  width: 483px;
   height: 60px;
   position: relative;
-  bottom: 179px;
+  bottom: 114px;
   left: 50%;
-  margin-left: 2px;
+  margin-left: 1px;
   display: flex;
   justify-content: space-between;
   gap: 58px;
-  background-color: #fff;
+  background-color: #ccc;
 }
 
 .icons-sent-container .sent-word {
@@ -156,8 +158,8 @@ a {
   align-items: center;
   margin-top: 5px;
   margin-left: 13px;
-  gap: 14px;
-  font-size: 14px;
+  gap: 15px;
+  font-size: 15px;
   font-weight: 700;
   color: #000;
 }
@@ -423,3 +425,24 @@ a {
 .right-side .keyword-summary {
     margin-top: -54px;
 } 
+
+
+ .bullpoints {
+    position: relative;
+    top: -59px;
+    width: 483px;
+    height: 58px;
+    margin-left: 1px;
+    background-color: #ccc;
+}
+
+.bullpoints .word-sent {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    gap: 19px;
+    padding-left: 20px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #000;
+}
