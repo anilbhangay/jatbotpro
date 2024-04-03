@@ -189,23 +189,23 @@ function Tabs() {
     setIsUploadIconHovered(false);
   };
 
-  
   const handleCopyText = () => {
-    let textToCopy = '';
-  
+    let textToCopy = "";
+
     if (rightSide.text) {
       textToCopy += rightSide.text;
     }
-  
+
     if (rightSide.keyword_summary) {
       if (textToCopy) {
-        textToCopy += '\n';
+        textToCopy += "\n";
       }
       textToCopy += rightSide.keyword_summary;
     }
-  
+
     if (textToCopy) {
-      navigator.clipboard.writeText(textToCopy)
+      navigator.clipboard
+        .writeText(textToCopy)
         .then(() => {
           setIsCopyTooltipVisible(true);
           setTimeout(() => {
@@ -214,11 +214,10 @@ function Tabs() {
         })
         .catch((error) => {
           // Handle error if needed
-          console.error('Error copying text:', error);
+          console.error("Error copying text:", error);
         });
     }
   };
-
 
   const handleDeleteIconHover = () => {
     setIsDeleteTooltipVisible(true);
@@ -337,9 +336,7 @@ function Tabs() {
                   </>
                 )}
                 <div className="keyword-summary">
-                  <p id="right-side-text">
-                    {rightSide.keyword_summary}
-                  </p>
+                  <p id="right-side-text">{rightSide.keyword_summary}</p>
                 </div>
               </div>
             </div>
@@ -387,54 +384,7 @@ function Tabs() {
               </div>
             )}
 
-            {/* {!uploadButtonVisible && (
-                <div className="keywords-container">
-                  <div className="keywords">
-                    <div className="key-head">
-                      <h4>Select keywords :</h4>
-                      {selectedKeywords.length > 1 && clearAllButtonVisible && (
-                        <p
-                          className="ordclear-all-btn"
-                          onClick={() => {
-                            setActiveKeyws([]);
-                            setSelectedKeywords([]);
-                          }}
-                        >
-                          Clear All
-                        </p>
-                      )}
-                    </div>
-                    <p className="btn">
-                      {leftSide.keywords &&
-                        leftSide.keywords.split(",").map((keyword, index) => (
-                          <button
-                            key={index}
-                            className={
-                              activeKeywords.includes(keyword) ? "selected" : ""
-                            }
-                            onClick={() => handleKeywordClick(keyword)}
-                          >
-                            {keyword}
-                          </button>
-                        ))}
-                    </p>
-                    <div className="word-sent">
-                      <p>{leftSide.Lnum_word} words</p>
-                      <p>{leftSide.Lnum_sent} sentences</p>
-                    </div>
-                  </div>
-                  <div className="bullpoints">
-                  {userType === "bulletpoints" && (
-                    <div className="word-sent">
-                      <p>{leftSide.Lnum_word} words</p>
-                      <p>{leftSide.Lnum_sent} sentences</p>
-                    </div>
-                  )}
-                </div>
-                </div>
-            )} */}
-
-             {!uploadButtonVisible && (
+            {!uploadButtonVisible && (
               <div className="container-sum">
                 {userType === "paragraph" && (
                   <div className="keywords-container">
@@ -534,7 +484,7 @@ function Tabs() {
                 </span>
                 <span
                   className="copy-icon"
-                  onClick={ handleCopyText}
+                  onClick={handleCopyText}
                   onMouseEnter={handleCopyIconHover}
                   onMouseLeave={handleCopyIconLeave}
                 >
