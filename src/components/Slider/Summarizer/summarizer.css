@@ -5,8 +5,8 @@ a {
 }
 
 .main-section {
-  width: 1000px;
-  height: 514px; 
+  width: auto;
+  height: 512px; 
   display: flex;
   flex-direction: column;
   margin-top: 19px;
@@ -27,22 +27,15 @@ a {
   cursor: pointer;
 }
 
-/* .header h3 {
-  position: relative;
-  bottom: 107px;
-  font-size: 17px;
-  font-family: sans-serif;
-  text-align: center;
-} */
-
 .mode-container .mode-part {
   width: 1000px;
-  height: 55px;
+  height: 54px;
   margin-top: 13px;
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   border: 1px solid var(--orange);
 }
 
@@ -70,13 +63,12 @@ a {
   border: 1px solid var(--orange);
 }
 
-.mode-part .numberbox {
-  font-size: 4px;
-  padding: 3px 0px;
+.mode-part .box-1 {
+  width: 100px;
+  cursor: auto;
 }
 
 .mode-part input {
-  width: 100px;
   cursor: pointer;
 }
 
@@ -93,7 +85,7 @@ a {
 
 .upload-section .left-side {
   width: 500px;
-  height: 443px;
+  height: 442px;
   display: grid;
   justify-content: center;
   align-items: center;
@@ -104,8 +96,8 @@ a {
 
 .upload-section .right-side {
   width: 500px;
-  height: 443px;
-  margin-right: -2px;
+  height: 442px;
+  margin-left: -1px;
   border: 1px solid var(--orange);
   border-top: none;
   border-left: none;
@@ -144,7 +136,7 @@ a {
   width: 483px;
   height: 60px;
   position: relative;
-  bottom: 232px;
+  bottom: 174px;
   left: 50%;
   margin-left: 1px;
   display: flex;
@@ -232,8 +224,8 @@ a {
 
 .delete-tooltip {
   position: absolute;
-  top: -384px;
-  right: -75px;
+  top: -388px;
+  right: -66px;
 }
 
 .upload-tooltip {
@@ -411,37 +403,40 @@ a {
 }
 
 .keywords .word-sent {
-  margin-top: -19px;
+  margin-top: -20px;
 }
 
 .text-container p {
-  margin-bottom: 125px;
+  margin-bottom: 124px;
+  padding-left: 8px;
 }
 
 .right-side #right-side-text {
-   margin-bottom: 70px;
+   margin-bottom: 64px;
+   padding-left: 8px;
 }
 
 .right-side .keyword-summary {
     margin-top: -54px;
+    padding-left: 4px;
 } 
 
-
- .bullpoints {
+ .bullpoints-word-sent {
     position: relative;
-    top: -59px;
+    top: -55px;
+    display: inline-block;
     width: 483px;
-    height: 58px;
+    height: 54px;
     margin-left: 1px;
-    background-color: #ccc;
+    background-color: #fff;
 }
 
-.bullpoints .word-sent {
+ .bullpoints-word-sent .word-sent {
     display: flex;
     justify-content: flex-start;
     text-align: center;
-    gap: 18px;
-    padding-top: 7px;
+    gap: 17px;
+    padding-top: 4px;
     padding-left: 20px;
     font-size: 15px;
     font-weight: 700;

@@ -239,9 +239,7 @@ function Tabs() {
     <>
       <div className="main">
         <div className="main-section">
-          <div className="header">
-            {/* <h3>SUMMARIZER</h3> */}
-          </div>
+          <div className="header">{/* <h3>SUMMARIZER</h3> */}</div>
 
           <div className="mode-container">
             <div className="mode-part">
@@ -255,6 +253,7 @@ function Tabs() {
               {userType === "paragraph" && (
                 <span className="numberbox">
                   <input
+                    className="box-1"
                     type="number"
                     min="0"
                     value={sentNumber}
@@ -432,14 +431,15 @@ function Tabs() {
                     </div>
                   </div>
                 )}
-                <div className="bullpoints">
-                  {userType === "bulletpoints" && (
+
+                {userType === "bulletpoints" && (
+                  <div className="bullpoints-word-sent">
                     <div className="word-sent">
                       <p>{leftSide.Lnum_word} words</p>
                       <p>{leftSide.Lnum_sent} sentences</p>
                     </div>
-                  )}
-                </div>
+                  </div>
+                )}
               </div>
             )}
           </div>
@@ -457,6 +457,7 @@ function Tabs() {
                     </p>
                   </>
                 )}
+
                 {userType === "bulletpoints" && (
                   <>
                     <p>{rightSide.Bnum_word} words</p>
