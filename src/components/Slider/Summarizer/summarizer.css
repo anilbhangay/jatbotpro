@@ -5,7 +5,7 @@ a {
 }
 
 .main-section {
-  /* width: 1000px; */
+  width: 1000px;
   height: 514px; 
   display: flex;
   flex-direction: column;
@@ -27,18 +27,18 @@ a {
   cursor: pointer;
 }
 
-.header h3 {
+/* .header h3 {
   position: relative;
   bottom: 107px;
   font-size: 17px;
   font-family: sans-serif;
   text-align: center;
-}
+} */
 
 .mode-container .mode-part {
   width: 1000px;
   height: 55px;
-  margin-top: -55px;
+  margin-top: 13px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -105,7 +105,7 @@ a {
 .upload-section .right-side {
   width: 500px;
   height: 443px;
-  margin-right: 0px;
+  margin-right: -2px;
   border: 1px solid var(--orange);
   border-top: none;
   border-left: none;
@@ -144,7 +144,7 @@ a {
   width: 483px;
   height: 60px;
   position: relative;
-  bottom: 114px;
+  bottom: 232px;
   left: 50%;
   margin-left: 1px;
   display: flex;

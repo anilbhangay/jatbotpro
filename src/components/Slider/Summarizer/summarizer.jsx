@@ -240,7 +240,7 @@ function Tabs() {
       <div className="main">
         <div className="main-section">
           <div className="header">
-            <h3>SUMMARIZER</h3>
+            {/* <h3>SUMMARIZER</h3> */}
           </div>
 
           <div className="mode-container">

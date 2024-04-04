@@ -1,15 +1,30 @@
 import React from 'react';
 import './Navbar.css';
+import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBell } from "@fortawesome/free-regular-svg-icons";
-import { Link } from 'react-router-dom';
 
 
-const Navbar = () => {
+
+function Navbar() {
+  const location = useLocation();
+
+  const routeTitles = {
+    '/': 'Summarizer',
+    '/voice':'Voice Typing',
+    '/audiobly':'Audibly Reading',
+    '/grammar':'Grammar Checker',
+    '/legal':'Legal Ai',
+    '/templating':'Templating',
+    '/calender':'Calendar',
+    '/translator':'Translator'
+  };  
+ 
   return (
     <div className='head-section'>
         <div className="navbar">
-            <h1 className='logo'><a href="/">JATBOT</a></h1>
+            <h1 className='logo'><Link to="/">JATBOT</Link></h1>
+            <div><h4>{routeTitles[location.pathname]}</h4></div>
             <div className="btn">
             <Link to='/loginform' className='butn'>SIGNUP/LOGIN</Link>
             <a href="/"><FontAwesomeIcon icon={faBell} className='icon-bell' /></a>
