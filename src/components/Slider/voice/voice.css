@@ -1,110 +1,111 @@
-.container-main-voice {
-    padding: 20px 40px 0px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 5px 15px rgba(41, 41, 44,0.2);
-    width: 1050px;
-    height: 600px;
-    border-radius: 18px;
-    padding: 5px 55px 10px;
-    margin: 40px;
-    
-}
-.head-top-voice{
-    border: 2px solid var(--orange);
-    width: 1047px;
-    height: 70px;
-    margin-top: 20px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 30px;
-    
-}
-.languages-voice{
-    outline: none;
-}
-.mics-voice{
-    cursor: pointer;  
-    border: 2px solid var(--orange);
-    width: 40px;
-    height: 30px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 3ms;
-}
-.icon-trash-voice{
-    cursor: pointer;  
-    border: 2px solid var(--orange);
-    width: 40px;
-    height: 30px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   transition: 3ms;
-}
-.icon-trash-voice:hover{
-    background-color: var(--orange);
-    border-radius: 10px; 
-    cursor: pointer;
-}
-.container-boxs-voice{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0px;
-}
-.box-left-voice{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid var(--orange);
-    width: 49%;
-    height: 490px;
-    gap:35px;
-    border-top: none;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-.text-area-voice{
-    margin-left: -300px;
+body {
+  overflow: auto;
 }
 
-#text-area-data-voice{
-    height: 470px;
-    width: 252%;
-    border: none;
-    outline: none;
-    background: none;
-    resize: none;
-    font-size: 16px;
+.container-main-voice {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px 0px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(41, 41, 44, 0.2);
+  width: 1000px;
+  height: 512px;
+  border-radius: 18px;
+  padding: 5px 55px 10px;
+  margin-top: 20px;
+  margin-left: 15px;
 }
-.box-right-voice{
-    border: 2px solid var(--orange);
-    width: 49%;
-    height: 490px;
-    border-top: none;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px; 
-    
+.head-top-voice {
+  border: 1px solid var(--orange);
+  width: 1000px;
+  height: 54px;
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 30px;
 }
-.box-right-data-textheader{
-    margin: 10px 20px;
+.languages-voice {
+  outline: none;
 }
-.box-right-data-voice{
-    margin: 10px;
-    height: 445px;
-    overflow: scroll;
-    overflow-y: auto;
-    overflow-x: hidden;
-    text-overflow: ellipsis;
+.mics-voice {
+  cursor: pointer;
+  border: 2px solid var(--orange);
+  width: 40px;
+  height: 30px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 3ms;
 }
-#list-dots{
-    text-decoration: none;
+.icon-trash-voice {
+  cursor: pointer;
+  border: 2px solid var(--orange);
+  width: 40px;
+  height: 30px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 3ms;
 }
- 
+.icon-trash-voice:hover {
+  background-color: var(--orange);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.container-boxs-voice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px;
+}
+.box-left-voice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--orange);
+  width: 50%;
+  height: 447px;
+  gap: 35px;
+  border-top: none;
+}
+.text-area-voice {
+  margin-left: -285px;
+}
+
+#text-area-data-voice {
+  height: 460px;
+  width: 252%;
+  border: none;
+  outline: none;
+  background: none;
+  resize: none;
+  font-size: 16px;
+}
+.box-right-voice {
+  border: 1px solid var(--orange);
+  width: 50%;
+  height: 447px;
+  border-left: none;
+  border-top: none;
+}
+
+.box-right-data-textheader {
+  margin: 15px 20px;
+}
+
+.box-right-data-voice {
+  margin: 10px;
+  height: 445px;
+  overflow: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+
+#list-dots {
+  text-decoration: none;
+}

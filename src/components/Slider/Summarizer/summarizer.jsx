@@ -459,10 +459,10 @@ function Tabs() {
                 )}
 
                 {userType === "bulletpoints" && (
-                  <div className="bulletpoint-ws">
+                  <>
                     <p>{rightSide.Bnum_word} words</p>
                     <p>{rightSide.Bnum_sent} sentences</p>
-                  </div>
+                  </>
                 )}
               </div>
 

@@ -146,20 +146,14 @@ a {
 }
 
 .icons-sent-container .sent-word {
-  /* display: flex; */
-  /* align-items: center; */
+  display: flex; 
+  align-items: center; 
   margin-top: 5px;
   margin-left: 13px;
   gap: 15px;
   font-size: 15px;
   font-weight: 700;
   color: #000;
-}
-
-.sent-word .bulletpoint-ws {
-   display: flex;
-   text-align: center;
-   gap: 15px;
 }
 
 .all-icons {
