@@ -159,6 +159,7 @@ a {
 .sent-word .bulletpoint-ws {
    display: flex;
    text-align: center;
+   gap: 15px;
 }
 
 .all-icons {
