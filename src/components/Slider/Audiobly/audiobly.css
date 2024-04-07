@@ -1,19 +1,20 @@
 .container-audio{
-    padding: 20px 40px 0px;
+    display: flex;
+    flex-direction: column;
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 13px;
     box-shadow: 0px 5px 15px rgba(41, 41, 44,0.2);
-    width: 1050px;
-    height: 600px;
-    border-radius: 18px;
-    padding: 5px 55px 10px;
-    margin: 40px;   
+    width: auto;
+    height: 512px;
+    padding: 20px 40px 0px;
+    margin-left: 15px;   
+    margin-top: 20px;
 }
 
 .head-top-audio{
-    border: 2px solid var(--orange);
-    width: 1047px;
-    height: 70px;
+    border: 1px solid var(--orange);
+    width: 1000px;
+    height: 55px;
     margin-top: 20px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -58,7 +59,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-   transition: 3ms;
+    transition: 3ms;
 }
 .icon-trash-audio:hover{
     background-color: var(--orange);
@@ -72,30 +73,28 @@
     margin: 0px;
 }
 .container-boxs-audio .box-left-audio{
-    border: 2px solid var(--orange);
-    width: 49%;
-    height: 490px;
+    border: 1px solid var(--orange);
+    width: 500px;
+    height: 434px;
     border-top: none;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-   
+    overflow: auto;
 }
 .container-text-audio{
     margin-top: -150px;
     margin-left: 10px;
-    width: 504px;
-    height: 465px;
+    width: 500px;
+    height: 442px;
     overflow: scroll;
     overflow-x: hidden;
     text-overflow: ellipsis;
 }
 .box-right-audio{
-    border: 2px solid var(--orange);
-    width: 49%;
-    height: 490px;
+    border: 1px solid var(--orange);
+    width: 500px;
+    height: 434px;
     border-top: none;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-left: none;
+    margin-left: -2px;
 }
 
 .mics-audibly{
