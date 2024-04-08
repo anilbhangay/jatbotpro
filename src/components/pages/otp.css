@@ -1,0 +1,51 @@
+.cointer-otp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.container-otp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 25vw;
+    height:26vh;
+    padding: 30px 20px;
+    box-shadow: 0px 0px 0px 2px  rgba(0, 0, 0, 0.1);
+    margin-left: 250px;
+    margin-top: 55px;
+}
+.container-otp h2{
+    margin-top: 0px;
+}
+.form-input-otp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-input-otp form div label{
+    font-size: 35px;
+}
+#otp-number{
+    width: 50%;
+    height: 5vh;
+    font-size: 18px;
+    outline: none;
+}
+#button-otp{
+   margin-left: 85px;
+   margin-top: 10px;
+   border: 2px solid var(--orange);
+   width: 35%;
+   height: 5vh;
+   background: none;
+   border-radius: 5px;
+}
+#button-otp:hover{
+    background-color: var(--orange);
+}
+.error-otp{
+    color: red;
+}
