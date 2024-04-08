@@ -141,6 +141,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import GoogleLogin from '../socialicon/google';
 import FacebookLogin from '../socialicon/facebook';
 import { useNavigate } from 'react-router-dom';
+import './login.css';
 
 const Loginform = () => {
   const [email, setEmail] = useState('');
@@ -214,7 +215,7 @@ const Loginform = () => {
               name='email'
               placeholder='Email'
             /><br/>
-            {errors.email && <span className='error-name-log'>{errors.email}</span>}<br/>
+            {errors.email && <span className='error-name-email'>{errors.email}</span>}<br/>
           </div>
           <div className='form-input-login'>
             <input
@@ -224,7 +225,7 @@ const Loginform = () => {
               name='password'
               placeholder='Password'
             /><br/>
-            {errors.password && <span className='error-name-log'>{errors.password}</span>}<br/>
+            {errors.password && <span className='error-name-pass'>{errors.password}</span>}<br/>
             <span
               id='icon-eye-login'
               onClick={togglePasswordVisibility}

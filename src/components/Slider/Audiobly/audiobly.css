@@ -12,28 +12,33 @@
 }
 
 .head-top-audio{
-    border: 1px solid var(--orange);
     width: 1000px;
-    height: 55px;
-    margin-top: 20px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    height: 54px;
+    margin-top: 13px;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
+    gap: 30px;
     align-items: center;
+    border: 1px solid var(--orange);
 }
 .languages-audio{
     outline: none;
 }
 .audio-button button{
+    padding: 9px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 22px;
+    border: 1px solid var(--orange);
     background-color: var(--orange);
-    width: 130px;
-    height: 40px;
-    font-size: 15px;
-    border-radius: 15px;
-    border: none;
-    margin-left: 250px;
+    margin-left: 220px;
     cursor: pointer;
+}
+
+.audio-button button:hover {
+    background-color: #fff;
+    border: 1px solid var(--orange);
 }
 .mic-icons-audibly{
     margin-top: -15px;
@@ -68,6 +73,7 @@
 }
 .container-boxs-audio{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin: 0px;
@@ -75,7 +81,7 @@
 .container-boxs-audio .box-left-audio{
     border: 1px solid var(--orange);
     width: 500px;
-    height: 434px;
+    height: 442px;
     border-top: none;
     overflow: auto;
 }
@@ -91,7 +97,7 @@
 .box-right-audio{
     border: 1px solid var(--orange);
     width: 500px;
-    height: 434px;
+    height: 442px;
     border-top: none;
     border-left: none;
     margin-left: -2px;
@@ -109,15 +115,21 @@
 }
 .upload-label-audio{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 13px;
     font-size: 16px;
     font-weight: bold;
     border: 2px solid var(--orange);
-    width: 150px;
-    height: 100px;
-    border-radius: 5px;
+    padding: 31px;
+    margin-top: -30px;
+    border-radius: 20px;
     cursor: pointer;
+}
+
+.icon-audio {
+    font-size: 17px;
 }
 .text-audio-right{
     margin-top: 5px;

@@ -1,129 +1,128 @@
-
-a{
-    text-decoration: none;
-    color: blue;
+a {
+  text-decoration: none;
+  color: blue;
 }
-:root{
-    --background:#e95b0c;
-    --Font-Size:20px;
+:root {
+  --background: #e95b0c;
+  --Font-Size: 20px;
 }
 
-.login-form-text{
-    font-size: 22px;
-    font-weight: 100px;
-    font-family: 'Open Sans',sans-serif;
+.header-pass .header-text h2 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
 }
 
 .header-pass {
-    margin-left: 280px;
-} 
-
-.header-pass .header-text {
-     text-align: center;
-     padding-left: 70px;
+  margin-left: 220px;
 }
 
-.form-coainter-login{
-    align-items: center; 
-    border-radius: 12px;
-    width: 120%;
-    height:470px;
-    box-shadow: 0px 0px 0px 2px  rgba(0, 0, 0, 0.1); 
+.form-coainter-login {
+  width: 120%;
+  height: 464px;
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.1);
 }
-.form-button-login{
-    padding: 20px;
-    margin-bottom: 10px; 
-    margin-left: 50px;
+.form-button-login {
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-left: 50px;
 }
-.form-button-login button{
-    padding: 20px ;
-    width: 90%;
-    height: 20px;
-    border-radius: 25px;
-    background-color: transparent;
-    line-height: 2px;
-    border: 2px solid var(--background); 
-    font-size: 19px;
-    margin-top: 3px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+.form-button-login button {
+  width: 90%;
+  height: 20px;
+  padding: 20px;
+  border-radius: 25px;
+  background-color: transparent;
+  line-height: 2px;
+  border: 2px solid var(--background);
+  font-size: 19px;
+  margin-top: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
-.form-button-login button:hover{
-    background-color:  var(--background);
-    color: #fff;
+.form-button-login button:hover {
+  background-color: var(--background);
+  color: #fff;
 }
-.form-button-login button span{
-    margin-top: -4px;
-    margin-right: 11px;
+.form-button-login button span {
+  margin-top: -4px;
+  margin-right: 15px;
 }
-.form-button-login  button span #google-icon-sign{
-    color: green;
+.form-button-login button span #google-icon-sign {
+  color: green;
 }
-.form-button-login  button span #facebook-icon-sign{
-    color: blue;
-}
-
-
-.form-input-login input{
-    margin-top: 8px;
-    width: 300px;
-    height: 37px;
-    border-radius: 5px;
-    border: 1px solid black;
-    padding: 5px 10px;
-    font-size: 18px;
-    margin-left: 85px;
+.form-button-login button span #facebook-icon-sign {
+  color: blue;
 }
 
-#icon-eye-login{
-    position: relative;
-    top: -55px;
-    bottom: 0px;
-    left: 368px;
-    cursor: pointer;
+.form-input-login input {
+  margin-top: 5px;
+  width: 66%;
+  height: 37px;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 5px 10px;
+  font-size: 18px;
 }
 
-.error-name-log{
-    color: red;
-    margin: 0px;
-    margin-left: 90px;
+#icon-eye-login {
+  position: relative;
+  top: -56px;
+  bottom: 0px;
+  left: 165px;
+  font-size: 18px;
+  cursor: pointer;
 }
 
-#forgot-pass-log{
-    display: flex;
-    float: right;
-    margin-top: -40px;
-    margin-right: 84px;
-    font-size: 18px;
-}
-.form-links-login  #button-login{
-    padding: 19px;
-    width: 70%;
-    border-radius: 25px;
-    line-height: 2px;
-    border: 2px solid #e36826;
-    background-color: #e36826;
-    font-size: 18px;
-    margin-top: 12px;
-    margin-left: 78px;
-    cursor: pointer;
-    color: #fff;
+.error-name-email {
+  color: red;
+  margin-bottom: 10px;
+  padding-right: 245px;
 }
 
-.form-links-login  #button-login:hover {
-   background-color: #e95b0c;
-   border-color: #e95b0c;
+.error-name-pass {
+  color: red;
+  margin-bottom: 10px;
+  margin-left: -200px;
 }
 
-.form-links-login h4{
-    text-align: center;
-    margin-top: 17px;
+#forgot-pass-log {
+  display: flex;
+  float: right;
+  margin-top: -42px;
+  margin-right: 82px;
+  font-size: 17px;
 }
-.form-links-login a:hover{
-    text-decoration: underline;
+.form-links-login #button-login {
+  width: 70%;
+  padding: 19px;
+  border-radius: 25px;
+  line-height: 2px;
+  border: 2px solid #e36826;
+  background-color: #e36826;
+  font-size: 18px;
+  margin-top: 7px;
+  cursor: pointer;
+  color: #fff;
 }
-.form-links-login p{
-    color: blue;
-} 
+
+.form-links-login #button-login:hover {
+  background-color: #e95b0c;
+  border-color: #e95b0c;
+}
+
+.form-links-login h4 {
+  text-align: center;
+  margin-top: 14px;
+}
+.form-links-login a:hover {
+  text-decoration: underline;
+}
+.form-links-login p {
+  color: blue;
+}

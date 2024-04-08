@@ -106,12 +106,12 @@ a {
 
 .upload-doc {
   position: relative;
-  top: 60px;
-  padding: 30px;
+  top: 80px;
+  padding: 31px;
   text-align: center;
   font-size: 16px;
   font-weight: bold;
-  border: 1px solid var(--orange);
+  border: 2px solid var(--orange);
   border-radius: 20px;
   cursor: pointer;
 }
@@ -119,7 +119,7 @@ a {
 .upload-doc .icon {
   display: flex;
   margin-top: 13px;
-  margin-left: 30%;
+  margin-left: 33%;
   font-size: 17px;
 }
 
