@@ -80,16 +80,16 @@ a {
 }
 
 .error-name-email {
+  padding-right: 244px;
   color: red;
-  margin-bottom: 10px;
-  padding-right: 245px;
 }
 
 .error-name-pass {
+  position: relative;
+  right: 137px;
   color: red;
-  margin-bottom: 10px;
-  margin-left: -200px;
-}
+}   
+ 
 
 #forgot-pass-log {
   display: flex;

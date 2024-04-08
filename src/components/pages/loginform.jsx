@@ -230,7 +230,7 @@ const Loginform = () => {
               id='icon-eye-login'
               onClick={togglePasswordVisibility}
             >
-              <FontAwesomeIcon icon={showPassword ? faEye : faEyeSlash} size='sm' /><br/>
+              <FontAwesomeIcon icon={showPassword ? faEye : faEyeSlash}  /><br/>
             </span>
           </div>
           <div className='form-links-login'>
