@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import "./Forgot.css";
-import { useNavigate } from "react-router-dom";
 
 const Forgotpass = () => {
   const [email, setEmail] = useState("");
   const [errors, setErrors] = useState({});
-  const history = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -35,9 +33,9 @@ const Forgotpass = () => {
           },
           body: JSON.stringify({ email: email }),
         });
- 
+
         if (response.ok) {
-          history("/Password");
+          window.location.href = "/Password";
           // Email sent successfully, handle success
           console.log("Reset password instructions sent successfully");
         } else {
