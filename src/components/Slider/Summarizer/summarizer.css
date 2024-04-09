@@ -142,7 +142,7 @@ a {
   display: flex;
   justify-content: space-between;
   gap: 58px;
-  background-color: #ccc;
+  background-color: #fff;
 }
 
 .icons-sent-container .sent-word {

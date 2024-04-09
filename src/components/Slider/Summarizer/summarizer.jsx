@@ -213,7 +213,6 @@ function Tabs() {
           }, 3000);
         })
         .catch((error) => {
-          // Handle error if needed
           console.error("Error copying text:", error);
         });
     }
@@ -239,8 +238,6 @@ function Tabs() {
     <>
       <div className="main">
         <div className="main-section">
-          <div className="header">{/* <h3>SUMMARIZER</h3> */}</div>
-
           <div className="mode-container">
             <div className="mode-part">
               <label className="text">Modes:</label>
