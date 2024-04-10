@@ -105,25 +105,26 @@
 }*/
 
 .container-main-gram{
+    width: auto;
+    height: 512px;
+    display: flex;
+    flex-direction: column;
     padding: 20px 40px 0px;
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 13px;
     box-shadow: 0px 5px 15px rgba(41, 41, 44,0.2);
-    width: 1050px;
-    height: 600px;
     border-radius: 18px;
-    padding: 5px 55px 10px;
-    margin: 40px;    
+    margin-top: 20px;   
+    margin-left: 15px; 
 }
 
 .head-top-gram{
-    border: 2px solid var(--orange);
-    width: 1047px;
-    height: 70px;
-    margin-top: 20px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    width: 1000px;
+    height: 54px;
+    margin-top: 13px;
+    border: 1px solid var(--orange);
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
 }
@@ -134,60 +135,68 @@
     align-items: center;
     margin: 0px;
 }
-.box-left-gram{
-    border: 2px solid var(--orange);
-    width: 48%;
-    height: 490px;
+.box-left-gram {
+    width: 50%;
+    height: 442px;
+    border: 1px solid var(--orange);
     border-top: none;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-   
+    overflow: auto;
 }
+
+.box-right-gram{
+    width: 50%;
+    height: 442px;
+    border: 1px solid var(--orange);
+    border-top: none;
+    border-left: none; 
+}
+
 .box-left-data-gram{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 150px;
-    gap: 10px;
-    
+    margin-top: 115px;
+    gap: 15px;
 }
+
 .box-left-text-gram{
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    
 }
+
 .upload-text-gram{
-    margin-top: -140px;
-    margin-left: 5px;
-    
+    margin-top: -115px;
+    margin-left: 6px;
 }
+
 #text-margin-gram{
-    height: 470px;
-    width: 250%;
+    height: 430px;
+    width: 240%;
     border: none;
     outline: none;
     background: none;
     resize: none;
     font-size: 16px;
 }
+
 .text-area-gram{
-    margin-top: -140px;
-    margin-left: 5px;
+    margin-top: -115px;
+    margin-left: 6px;
 }
 .text-area-gram #text-area-data-gram{
-    height: 470px;
-    width: 250%;
+    height: 430px;
+    width: 242%;
     border: none;
     outline: none;
     background: none;
     resize: none;
     font-size: 16px;
-    
 }
+
 #textarea-right-gram{
     height: 430px;
-    width: 97%;
+    width: 90%;
     border: none;
     outline: none;
     background: none;
@@ -224,38 +233,34 @@
 .languages-gram{
     outline: none;
 }
-.box-right-gram{
-    border: 2px solid var(--orange);
-    width: 50%;
-    height: 490px;
-    border-top: none;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;  
-    
-}
+
 .gram-button{
+    padding: 9px 17px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 22px;
+    border: 2px solid var(--orange);
     background-color: var(--orange);
-    width: 170px;
-    height: 40px;
-    font-size: 15px;
-    border-radius: 15px;
-    border: none;
     cursor: pointer;
 }
+
+.gram-button:hover {
+    background-color: #fff;
+}
+
 .trash-gram{
-    cursor: pointer;  
-    border: 2px solid var(--orange);
     width: 40px;
     height: 30px;
-    border-radius: 10px;
+    border-radius: 8px;
+    border: 2px solid var(--orange);
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 3ms;
+    cursor: pointer;  
 }
 .trash-gram:hover{
     background-color: var(--orange);
-    border-radius: 10px; 
     cursor: pointer;
 }
 .text-gram-copy-download{
@@ -265,8 +270,8 @@
     align-items: flex-end;
     gap: 30px;
     margin-right: 70px;
-    
 }
+
 #text-gram-download{
     height: 22px;
 }
