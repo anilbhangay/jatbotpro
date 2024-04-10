@@ -108,15 +108,14 @@ const Grammar = () => {
     }
   };
 
-   const parseGrammarCheck = (text) => {
+  const parseGrammarCheck = (text) => {
     // Replace escape sequences and symbols with an empty string
-    const cleanedText = text.replace(/\\[.*?m/g, '').replace(/\[.*?[\s]/g, '');
+    const cleanedText = text.replace(/\\[.*?m/g, "").replace(/\[.*?[\s]/g, "");
 
     // Remove leading and trailing spaces
     const trimmedText = cleanedText.trim();
     return trimmedText; // Return the array of parsed sentences
   };
-
 
   const handleDelete = () => {
     setInputText("");
