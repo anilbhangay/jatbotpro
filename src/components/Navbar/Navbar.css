@@ -49,3 +49,7 @@
     border: 1px solid var(--orange);
 }
 
+.navbar .headers h4 {
+    font-size: 18px;
+    font-family: sans-serif;
+} 
