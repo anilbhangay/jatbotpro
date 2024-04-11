@@ -1,27 +1,26 @@
 .container-trans{
+    width: auto;
+    height: 512px;
+    display: flex;
+    flex-direction: column;
     padding: 20px 40px 0px;
     background-color: #fff;
-    border-radius: 10px;
     box-shadow: 0px 5px 15px rgba(41, 41, 44,0.2);
-    width: 1050px;
-    height: 600px;
-    border-radius: 18px;
-    padding: 5px 55px 10px;
-    margin: 40px;
+    border-radius: 13px;
+    margin-top: 20px;
+    margin-left: 15px;
 }
 
 .head-top-trans{
-    border: 2px solid var(--orange);
-    width: 1047px;
-    height: 70px;
-    margin-top: 20px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    width: 1000px;
+    height: 54px;
+    margin-top: 13px;
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     gap: 30px;
-   
+    border: 1px solid var(--orange);
 }
 
 .container-boxs-trans{
@@ -31,23 +30,21 @@
     margin: 0px;
 }
 .box-left-trans{
+    width: 50%;
+    height: 442px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid var(--orange);
-    width: 49%;
-    height: 490px;
-    gap:35px;
+    border: 1px solid var(--orange);
+    gap: 30px;
     border-top: none;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    overflow: auto;
 }
 .upload-box-trans{
     display: flex;
     justify-content: center;
     align-items: center;
     
-   
 }
 .upload-label-trans{
     display: flex;
@@ -58,7 +55,7 @@
     border: 2px solid var(--orange);
     width: 150px;
     height: 100px;
-    border-radius: 5px;
+    border-radius: 15px;
     cursor: pointer;
 }
 .text-box-trans{
@@ -75,17 +72,16 @@
     border: 2px solid var(--orange);
     width: 150px;
     height: 100px;
-    border-radius: 5px;
+    border-radius: 15px;
     cursor: pointer;
 }
 .box-right-trans{
-    border: 2px solid var(--orange);
-    width: 49%;
-    height: 490px;
+    width: 50%;
+    height: 442px;
+    border: 1px solid var(--orange);    
+    border-left: none;
     border-top: none;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px; 
-    
+    overflow: auto;
 }
 .box-left-data-trans{
     display: flex;
@@ -94,8 +90,8 @@
 }
 .container-text-trans{
     margin-left: -60px;
-    width: 490px;
-    height: 465px;
+    width: 480px;
+    height: 450px;
     overflow: scroll;
     overflow-x: hidden;
     text-overflow: ellipsis;

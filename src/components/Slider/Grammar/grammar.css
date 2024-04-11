@@ -65,6 +65,7 @@
     margin-left: 6px;
 }
 
+
 #text-margin-gram{
     height: 430px;
     width: 240%;
@@ -97,8 +98,7 @@
     background: none;
     resize: none;
     font-size: 16px;
-    margin: 8px;
-    
+    margin: 8px;  
 }
 .copy-tooltip-tecd-gram{
     position: absolute;

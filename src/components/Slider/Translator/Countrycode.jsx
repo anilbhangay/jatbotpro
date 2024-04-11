@@ -11,7 +11,6 @@ const country_code=[
     { value: 'ta', label: 'Tamil' },
     { value: 'mr', label: 'Marathi' },
     { value: 'bn', label: 'Bengali' },
-
 ]
 
 export default country_code;
