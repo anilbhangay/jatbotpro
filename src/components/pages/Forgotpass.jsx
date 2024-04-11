@@ -8,7 +8,7 @@ const Forgotpass = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setEmail(value);
-    setErrors({ ...errors, [name]: "" }); // Clear error when typing
+    setErrors({ ...errors, [name]: "" }); 
   };
 
   const handleSubmit = async (e) => {
