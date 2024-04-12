@@ -84,10 +84,11 @@
 }
 .container-text-audio{
     margin-top: -150px;
-    margin-left: 10px;
+    margin-left: 9px;
     width: 490px;
-    height: 425px;
+    height: 420px;
     overflow: auto;
+    overflow-x: hidden;
     text-overflow: ellipsis;
 }
 .box-right-audio{
@@ -101,7 +102,7 @@
 
 .mics-audibly{
     margin-top: -7px;
-    position:absolute;
+    position: absolute;
 }
 .upload-box-audio{
     display: flex;
@@ -131,7 +132,8 @@
     margin-top: 10px;
     margin-left: 10px;
     width: 490px;
-    height: 425px;
+    height: 420px;
     overflow: auto;
+    overflow-x: hidden;
     text-overflow: ellipsis;
 }
