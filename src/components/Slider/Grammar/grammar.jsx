@@ -36,7 +36,7 @@ const Grammar = () => {
         setIsCopyTooltipVisible(true);
         setTimeout(() => {
           setIsCopyTooltipVisible(false);
-        }, 3000);
+        }, 2000);
       })
       .catch((error) => {
         //console.error('Error copying text:', error);

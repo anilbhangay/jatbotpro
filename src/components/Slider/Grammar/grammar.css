@@ -60,14 +60,13 @@
 }
 
 .upload-text-gram{
-    margin-top: -115px;
-    margin-left: 6px;
+    margin-top: -112px;
+    margin-left: 7px;
 }
 
-
-#text-margin-gram{
+#text-margin-gram {
     height: 430px;
-    width: 240%;
+    width: 241%;
     border: none;
     outline: none;
     background: none;
@@ -75,13 +74,14 @@
     font-size: 16px;
 }
 
-.text-area-gram{
-    margin-top: -115px;
-    margin-left: 6px;
+.text-area-gram {
+    margin-top: -112px;
+    margin-left: 7px;
 }
-.text-area-gram #text-area-data-gram{
+
+.text-area-gram  #text-area-data-gram{
     height: 430px;
-    width: 242%;
+    width: 241%;
     border: none;
     outline: none;
     background: none;
@@ -89,39 +89,42 @@
     font-size: 16px;
 }
 
-#textarea-right-gram{
-    height: 430px;
-    width: 90%;
+#textarea-right-gram {
+    margin-top: 8px;
+    padding-left: 8px;
+    height: 392px;
+    width: 486px;
     border: none;
     outline: none;
     background: none;
     resize: none;
     font-size: 16px;
-    margin: 8px;  
 }
 .copy-tooltip-tecd-gram{
     position: absolute;
-    background-color: var(--orange);
     margin-left: 330px;
-    font-size: 15px;
-    font-weight: 50px;
-    width: 7%;
-    text-align: center;
+    padding: 6px 9px;
+    font-size: 13px;
+    font-weight: 500;
     border-radius: 5px;
+    background-color: #333;
+    z-index: 999;
+    color: #fff;
 }
 .copy-tooltip-tecd-gram:hover{
     display: block;
 }
-.copy-tooltip-gram{
+.copy-tooltip-gram {
     position: absolute;
-    background-color: var(--orange);
-    margin-left: 330px;
-    margin-top: -60px;
-    font-size: 15px;
-    font-weight: 50px;
-    width: 7%;
-    text-align: center;
+    margin-left: -40px;
+    margin-top: -63px;
+    padding: 6px 9px;
+    font-size: 13px;
+    font-weight: 500;
     border-radius: 5px;
+    background-color: #333;
+    z-index: 999;
+    color: #fff;
 }
 
 .languages-gram{
@@ -129,7 +132,7 @@
 }
 
 .gram-button{
-    padding: 9px 17px;
+    padding: 8px 17px;
     font-size: 14px;
     font-weight: bold;
     border-radius: 22px;
@@ -158,17 +161,22 @@
     cursor: pointer;
 }
 .text-gram-copy-download{
-    margin-top: 5px;
+    width: 440px;
+    position: relative;
+    top: -6px;
+    padding: 8px 20px;
+    background-color: #fff;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    gap: 30px;
-    margin-right: 70px;
+    justify-content: center;
+    align-items: center;
+    gap: 29px;
 }
 
 #text-gram-download{
     height: 22px;
+    cursor: pointer;
 }
 #text-gram-copy{
     height: 22px;
+    cursor: pointer;
 }
