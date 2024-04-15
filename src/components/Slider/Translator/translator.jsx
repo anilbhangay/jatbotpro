@@ -37,7 +37,7 @@ const Translator = () => {
         setIsCopyTooltipVisible(true);
         setTimeout(() => {
           setIsCopyTooltipVisible(false);
-        }, 3000);
+        }, 2000);
       })
       .catch((error) => {
         //console.error('Error copying text:', error);
@@ -179,7 +179,7 @@ const handleUpload = async () => {
               )}
               {showTextarea && (
                 <div className='text-area-trans' >
-                  <textarea value={inputText} onChange={handleLanguageChange}   placeholder='enter a text' id='text-area-data-trans'></textarea>
+                  <textarea value={inputText} onChange={handleLanguageChange}  placeholder='enter a text' id='text-area-data-trans'></textarea>
                 </div>
               )}
             </div>
@@ -189,7 +189,7 @@ const handleUpload = async () => {
               {translatedText  && <div><div className="text-trans-right">{translatedText}</div><div className='text-trans-copy-download'> <span onClick={handleCopy} onMouseEnter={handleCopyIconHover} onMouseLeave={handleCopyIconLeave}><FontAwesomeIcon id='text-trans-copy' icon={faCopy} /></span>
                 <FontAwesomeIcon id='text-trans-download'icon={faDownload}onClick={handleDownload}/></div> 
               {isCopyTooltipVisible&&(
-                <div className='copy-tooltip-tecd'>TextCopied</div>
+                <div className='copy-tooltip-tecd'>Text Copied</div>
               )}
               {isCopyIconHovered&&!isCopyTooltipVisible&&(
                 <div className='copy-tooltip'>Copy All Text</div>
