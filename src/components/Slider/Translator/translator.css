@@ -15,12 +15,12 @@
     width: 1000px;
     height: 54px;
     margin-top: 13px;
+    border: 1px solid var(--orange);
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    gap: 30px;
-    border: 1px solid var(--orange);
+    gap: 20px;
 }
 
 .container-boxs-trans{
@@ -36,9 +36,8 @@
     justify-content: center;
     align-items: center;
     border: 1px solid var(--orange);
-    gap: 30px;
+    gap: 20px;
     border-top: none;
-    overflow: auto;
 }
 .upload-box-trans{
     display: flex;
@@ -53,9 +52,9 @@
     font-size: 16px;
     font-weight: bold;
     border: 2px solid var(--orange);
+    border-radius: 15px;
     width: 150px;
     height: 100px;
-    border-radius: 15px;
     cursor: pointer;
 }
 .text-box-trans{
@@ -107,15 +106,20 @@
     
 }
 .trans-button{
+    padding: 9px 17px;
+    margin-left: 150px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 2px solid var(--orange);
+    border-radius: 22px;
     background-color: var(--orange);
-    width: 130px;
-    height: 40px;
-    font-size: 15px;
-    border-radius: 15px;
-    border: none;
-    margin-left: 380px;
     cursor: pointer;
 }
+
+.trans-button:hover {
+    background-color: #fff;
+}
+
 .text-area-trans{
     margin-left: -270px;
     
@@ -151,15 +155,14 @@
     border: 2px solid var(--orange);
     width: 40px;
     height: 30px;
-    border-radius: 10px;
+    border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 3ms;
 }
-.icon-trash:hover{
+.icon-trash-trans:hover{
     background-color: var(--orange);
-    border-radius: 10px; 
     cursor: pointer;
 }
 .text-trans-copy-download{
@@ -171,12 +174,11 @@
     margin-right: 70px;
     
 }
-#text-trans-copy{
-    
+#text-trans-copy{   
     height: 25px;
 }
+
 #text-trans-download{
-   
     height: 25px;
 }
 .copy-tooltip-tecd{
