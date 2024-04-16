@@ -52,3 +52,43 @@
     font-size: 18px;
     font-family: sans-serif;
 } 
+
+
+
+
+@media screen and (min-width: 360px) and (max-width: 481px) {
+
+    .head-section { 
+        width: 100%;
+        padding: 0px 5px;
+     } 
+
+     .head-section .navbar {
+        display: flex;
+        justify-content: space-around;
+        gap: 22px;
+        margin-top: -4px;
+        margin-bottom: 4px;
+    }
+
+    .navbar .logo a {
+        font-size: 18px;
+    }
+
+    .navbar a .icon-bell {
+        font-size: 15px;
+        margin-top: 5px;
+    }
+
+    .navbar  .butn  {
+        padding: 4px 8px;
+        margin-right: 16px;
+        font-size: 9px;
+        border-radius: 20px;
+    }
+
+    .navbar .headers h4 {
+        font-size: 13px;
+        margin-top: 24px;
+    } 
+};
