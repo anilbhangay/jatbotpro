@@ -39,14 +39,13 @@
     font-weight: bold;
     font-family: sans-serif;
     background-color: var(--orange);
-    border: none;
-    border-radius: 20px;
+    border: 2px solid var(--orange);
+    border-radius: 22px;
     color: rgb(0, 0, 0);
 }
 
 .navbar .butn:hover {
     background-color: #fff;
-    border: 1px solid var(--orange);
 }
 
 .navbar .headers h4 {
