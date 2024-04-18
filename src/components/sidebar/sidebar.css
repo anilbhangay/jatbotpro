@@ -1,105 +1,105 @@
 :root {
-    --orange: #e95b0c; 
-    --family: sans-serif;
-  }
-  .sidebar{
-      width: 300px;
-      margin-left: -15px;
-      background: #fff;
-      color: var(--orange);
-      transition: all 0.5s;
-  }
+  --orange: #e95b0c;
+  --family: sans-serif;
+}
+.sidebar {
+  width: 300px;
+  margin-left: -15px;
+  background: #fff;
+  color: var(--orange);
+  transition: all 0.5s;
+}
 
-  main{
-      width: auto;
-      padding: 0px 18px;
-      padding-left: 37px;
-  }
-  
-  .top_section{
-      display: flex;
-      align-items: center;
-      padding: 10px  15px;
-      margin-bottom: 20px;
-  }
-  
-  .bars{
-      position: relative;
-      bottom: -8px;
-      left: 14px;
-      display: flex;
-      font-size: 35px;
-      cursor: pointer;
-  }
-  
-  .link{
-      display: flex;
-      align-items: center;
-      padding: 10px 13px;
-      margin-bottom: 18px;
-      border: 1px solid var(--orange);
-      border-radius: 21px;
-      transition: all 0.5s;
-      color: #000;
-  }
-  
-  .link:hover{
-      background: var(--orange); 
-      color: #000; 
-      transition: all 0.10s;  
-  }  
-  
-  .active{
-      background: var(--orange);
-      color: #fff;
-  } 
-  .icon-slider{
-      font-size: 15px;
-      margin: 0px 5px;
-  }
-  
-  .link_text{
-      font-size: 15px; 
-      margin-left: 10px;  
-  }
-  
+main {
+  width: auto;
+  padding: 0px 18px;
+  padding-left: 37px;
+}
 
+.top_section {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+}
+
+.bars {
+  position: relative;
+  bottom: -8px;
+  left: 14px;
+  display: flex;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  padding: 10px 13px;
+  margin-bottom: 18px;
+  border: 1px solid var(--orange);
+  border-radius: 21px;
+  transition: all 0.5s;
+  color: #000;
+}
+
+.link:hover {
+  background: var(--orange);
+  color: #000;
+  transition: all 0.1s;
+}
+
+.active {
+  background: var(--orange);
+  color: #fff;
+}
+.icon-slider {
+  font-size: 15px;
+  margin: 0px 5px;
+}
+
+.link_text {
+  font-size: 15px;
+  margin-left: 10px;
+}
 
 @media only screen and (min-width: 360px) and (max-width: 481px) {
-.sidebar{
-      width: 100px;
-      margin-left: -15px;
+  .sidebar {
+    width: 100px;
+    margin-left: -15px;
+    display: none;
   }
 
-main{
+  main {
     width: 100%;
     padding: 0px 12px;
     padding-left: 10px;
-}
+  }
 
-.top_section{
+  .top_section {
     padding: 10px 8px;
     margin-bottom: 15px;
-}
-.bars{
+  }
+  .bars {
     bottom: -10px;
     left: 12px;
     font-size: 22px;
-}
-.link{
-    display: flex;
+  }
+  .link {
+    display: none;
     padding: 4px 6px;
     margin-bottom: 12px;
     border-radius: 22px;
-}
-.icon-slider{
+  }
+  .icon-slider {
     font-size: 11px;
     margin: 0px 4px;
-}
-
-.link_text{
-    font-size: 11px; 
-    margin-left: 7px;  
-}
-      
   }
+
+  .link_text {
+    font-size: 11px;
+    margin-left: 7px;
+  }
+
+
+}

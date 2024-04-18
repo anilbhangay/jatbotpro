@@ -1,94 +1,94 @@
-.head-section { 
-    width: auto;
-    padding: 0px 18px;
-    background-color: #ffffff;
-    z-index: 999; 
- } 
+.head-section {
+  width: auto;
+  padding: 0px 18px;
+  background-color: #ffffff;
+  z-index: 999;
+}
 
 .head-section .navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #000;
-    margin-top: -4px;
-    margin-bottom: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #000;
+  margin-top: -4px;
+  margin-bottom: 8px;
 }
 
 .navbar .logo a {
-    font-size: 35px;
-    font-family: italic;
-    text-decoration: none;
-    color: #000;
+  font-size: 35px;
+  font-family: italic;
+  text-decoration: none;
+  color: #000;
 }
 
 .navbar a .icon-bell {
-    font-size: 24px;
-    color: #000;
-    cursor: pointer;
+  font-size: 24px;
+  color: #000;
+  cursor: pointer;
 }
 
 .navbar a .icon-bell:hover {
-    color: var(--orange);
+  color: var(--orange);
 }
 
- .navbar  .butn  {
-    padding: 10px 15px;
-    margin-right: 18px;
-    font-size: 15px;
-    font-weight: bold;
-    font-family: sans-serif;
-    background-color: var(--orange);
-    border: 2px solid var(--orange);
-    border-radius: 22px;
-    color: rgb(0, 0, 0);
+.navbar .butn {
+  padding: 10px 15px;
+  margin-right: 18px;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: sans-serif;
+  background-color: var(--orange);
+  border: 2px solid var(--orange);
+  border-radius: 22px;
+  color: rgb(0, 0, 0);
 }
 
 .navbar .butn:hover {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .navbar .headers h4 {
-    font-size: 18px;
-    font-family: sans-serif;
-} 
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
 
 
 
 
 @media screen and (min-width: 360px) and (max-width: 481px) {
+  .head-section {
+    width: 100%;
+    padding: 0px;
+  }
 
-    .head-section { 
-        width: 100%;
-        padding: 0px 5px;
-     } 
+  .head-section .navbar {
+    display: flex;
+    justify-content: space-around;
+    gap: 22px;
+    margin-top: -4px;
+    margin-bottom: 4px;
+  }
 
-     .head-section .navbar {
-        display: flex;
-        justify-content: space-around;
-        gap: 22px;
-        margin-top: -4px;
-        margin-bottom: 4px;
-    }
+  .navbar .logo a {
+    font-size: 18px;
+  }
 
-    .navbar .logo a {
-        font-size: 18px;
-    }
+  .navbar a .icon-bell {
+    font-size: 15px;
+    margin-top: 5px;
+  }
 
-    .navbar a .icon-bell {
-        font-size: 15px;
-        margin-top: 5px;
-    }
+  .navbar .butn {
+    padding: 4px 8px;
+    margin-right: 16px;
+    font-size: 9px;
+    border-radius: 20px;
+  }
 
-    .navbar  .butn  {
-        padding: 4px 8px;
-        margin-right: 16px;
-        font-size: 9px;
-        border-radius: 20px;
-    }
-
-    .navbar .headers h4 {
-        font-size: 13px;
-        margin-top: 24px;
-    } 
-};
+  .navbar .headers h4 {
+    font-size: 13px;
+    margin-top: 24px;
+  }
+}

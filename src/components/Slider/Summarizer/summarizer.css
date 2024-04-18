@@ -6,7 +6,7 @@ a {
 
 .main-section {
   width: auto;
-  height: 512px; 
+  height: 80vh; 
   display: flex;
   flex-direction: column;
   margin-top: 20px;
@@ -441,4 +441,110 @@ a {
     font-size: 15px;
     font-weight: 700;
     color: #000;
+}
+
+
+
+
+
+@media only screen and (min-width: 360px) and (max-width: 481px){
+  .main-section {
+    width: 339px;
+    height: 800px;
+    margin-top: 15px;
+    margin-left: -56px;
+    padding: 4px 6px 0px;
+  }
+  
+  .mode-part span {
+    font-size: 13px;
+  }
+
+  .mode-container .mode-part {
+    width: 337px;
+    height: 33px;
+    margin-top: 13px;
+    gap: 5px;
+  }
+
+  .mode-part .text {
+    font-size: 12px;
+  }
+
+  .mode-part button {
+    padding: 4px 8px;
+    font-size: 8px;
+  }
+
+  .mode-part .box-1 {
+    width: 30px;
+  }
+
+  .mode-part label {
+    font-size: 8px;
+  }
+  
+  .upload-section .left-side {
+    width: 337px;
+    height: 369px;
+  }
+
+  .upload-section .right-side {
+    width: 337px;
+    height: 369px;
+    padding-left: 2px;
+    border-left: 1px solid var(--orange);
+    border-top: 1px solid var(--orange);
+  }
+
+  .upload-section {
+    display: grid;
+    gap: 10px;
+  }
+
+  .upload-doc {
+    top: 90px;
+    padding: 28px;
+    font-size: 12px;
+  }
+
+  .upload-doc .icon {
+    margin-top: 12px;
+    font-size: 15px;
+  }
+
+  .icons-sent-container {
+    width: 338px;
+    height: 54px;
+    bottom: 154px;
+    left: 0px;
+    margin-left: 0px;
+    gap: 48px;
+  }
+
+  .icons-sent-container .sent-word {  
+    gap: 12px;
+    font-size: 13px;
+    font-weight: 800;
+  }
+  
+  .all-icons {
+    gap: 17px;
+    padding-right: 14px;
+  }
+
+  .keywords-container {
+    width: 336px;
+    height: 105px;
+    top: -487px;
+    padding-left: 1px;
+    background-color: #ccc;
+  }
+
+  .keywords .key-head h4 {
+    margin-top: 5px;
+    margin-left: 7px;
+    font-size: 12px;
+  }
+
 }
