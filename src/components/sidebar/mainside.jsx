@@ -13,7 +13,7 @@ import Signupform from '../pages/Signupform.jsx';
 import Forgotpass from '../pages/Forgotpass.jsx';
 import Password from '../pages/Password.jsx';
 import Otpfile from '../pages/Otpfile.jsx';
-// import Contactus from '../Userprofiles/Contactus.jsx';
+import Contactus from '../Navbar/Contactus.jsx';
 // import Account from '../Userprofiles/Account.jsx';
 // import Helpcenter from '../Userprofiles/Helpcenter.jsx';
 
@@ -38,8 +38,8 @@ const Mainside = () => {
             <Route path='/Forgotpass' element={<Forgotpass />} />
             <Route path="/password" element={<Password />} />
             <Route path='/Otpfile' element={<Otpfile />}/>
-            {/* <Route path='/Contactus' element={<Contactus />}/>
-            <Route path='/Account' element={<Account />}/>
+            <Route path='/Contactus' element={<Contactus />}/>
+            {/* <Route path='/Account' element={<Account />}/>
             <Route path='/Helpcenter' element={<Helpcenter />}/> */}
        </Routes>
     </React.Fragment>

@@ -26,7 +26,7 @@ function Navbar() {
             <h1 className='logo'><Link to="/">JATBOT</Link></h1>
             <div className='headers'><h4>{routeTitles[location.pathname]}</h4></div>
             <div className="btn">
-            <Link to='/loginform' className='butn'>LOGIN</Link>
+            <Link to='/Contactus' className='butn'>Contact Us</Link>
             <a href="/"><FontAwesomeIcon icon={faBell} className='icon-bell' /></a>
             </div>
         </div> 
