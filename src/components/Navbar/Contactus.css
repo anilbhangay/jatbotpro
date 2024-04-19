@@ -38,14 +38,15 @@
     width: 72%;
     height: 11vh;
     border: 1px solid #ccc;
-    padding-top: 9px;
+    padding-top: 10px;
     border-radius: 9px;
     font-size: 17px;
+    font-family: sans-serif;
     resize: none;
 }
 
 .left-form-input-contact input,textarea::placeholder {
-    font-size: 18px;
+    font-size: 17px;
     padding-left: 12px;
 }
 
@@ -69,7 +70,7 @@
     justify-content: center;
     gap: 30px;
     width: 50vw;
-    height: 100vh;
+    height: 88vh;
     padding-left: 50px; 
     margin-left: 58px;
     margin-top: -8px;
