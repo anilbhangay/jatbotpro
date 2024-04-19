@@ -6,11 +6,11 @@
 }
 .left-data-contact{
     width: 50%;
-    margin-left: 120px;
-    margin-top: 40px;
+    margin-left: 100px;
+    margin-top: 30px;
 }
 .left-data-heading-contact h4{
-    font-size: 35px;
+    font-size: 36px;
     font-family: sans-serif;
     font-weight: 300;
 }
@@ -19,21 +19,73 @@
     margin-top: -20px;
     margin-bottom: 40px;
     line-height: 25px;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 400;
 }
 
-.left-form-input-contact input,textarea{
-    width: 50%;
-    height: 8vh;
-    border-radius: 8px;
+.left-form-input-contact {
+    margin-bottom: 25px;
 }
+
+.left-form-input-contact input{
+    width: 70%;
+    height: 8vh;
+    border: 1px solid #ccc;
+    border-radius: 9px;
+}
+
+.left-form-input-contact textarea {
+    width: 72%;
+    height: 11vh;
+    border: 1px solid #ccc;
+    padding-top: 9px;
+    border-radius: 9px;
+    font-size: 17px;
+    resize: none;
+}
+
+.left-form-input-contact input,textarea::placeholder {
+    font-size: 18px;
+    padding-left: 12px;
+}
+
+.left-data-form-contact .snd-btn button {
+    padding: 10px 18px;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    border-radius: 22px;
+    background-color: var(--orange);
+    cursor: pointer;
+}
+
+.left-data-form-contact .snd-btn button:hover {
+    background-color: #ff5a01;
+}
+
 .right-data-contact{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    width: 50%;
-    max-width: 100vw; 
-    background-color: aqua; 
-    margin-left: 200px; 
-    margin: 5px;
+    gap: 30px;
+    width: 50vw;
+    height: 100vh;
+    padding-left: 50px; 
+    margin-left: 58px;
+    margin-top: -8px;
+    background-color: #ccc; 
+}
+
+.right-data-contact .address-1 {
+    margin-left: 35px;
+}
+
+.right-data-contact .inquiries {
+    margin-left: 35px;
+    margin-top: -19px;
+}
+
+.right-data-contact .address-2 {
+    margin-left: 35px;
+    margin-top: -6px;
 }
