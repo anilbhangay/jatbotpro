@@ -1,6 +1,4 @@
-body {
-  overflow: hidden;
-}
+
 .main-contactus {
   display: flex;
   flex-direction: row;
@@ -94,3 +92,6 @@ textarea::placeholder {
   margin-left: 35px;
   margin-top: -6px;
 }
+
+
+

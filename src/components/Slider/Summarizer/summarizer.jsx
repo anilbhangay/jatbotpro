@@ -268,7 +268,7 @@ function Tabs() {
                     id="summaryLength"
                     name="summaryLength"
                     min="0"
-                    max={stepOptions.length - 1}
+                    max={stepOptions.length - 1} 
                     step="1"
                     value={stepOptions.indexOf(summaryLength)}
                     onChange={handleSummaryLengthChange}
