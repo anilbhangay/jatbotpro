@@ -1,5 +1,4 @@
 
-
 a {
   text-decoration: none;
   color: black;
@@ -448,7 +447,7 @@ a {
 
 
 
-@media only screen and (min-width: 360px) and (max-width: 481px){
+@media  screen and (min-width: 360px) and (max-width: 481px){
   .main-section {
     width: 339px;
     height: 800px;
@@ -478,7 +477,7 @@ a {
   }
 
   .mode-part .box-1 {
-    width: 30px;
+    width: 32px;
   }
 
   .mode-part label {
@@ -555,9 +554,9 @@ a {
   }
 
   .keywords button {
-    padding: 7px 14px;
+    padding: 6px 12px;
     margin-left: 3px;
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .keywords .btn {
@@ -567,6 +566,16 @@ a {
   .keywords .word-sent {
     margin-top: -12px;
     font-size: 12px;
+  }
+
+  .mode-part option {
+    font-size: 11px;
+  }
+  
+  .mode-part select {
+     font-size: 9px;
+     outline: none;
+     cursor: pointer;
   }
 
 }

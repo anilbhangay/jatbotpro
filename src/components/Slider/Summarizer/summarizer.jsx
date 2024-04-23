@@ -243,8 +243,8 @@ function Tabs() {
               <label className="text">Modes:</label>
 
               <select onChange={handleUserTypeChange}>
-                <option className="para-down" value="paragraph">Paragraph</option>
-                <option className="bullet-down" value="bulletpoints">Bulletpoints</option>
+                <option  value="paragraph">Paragraph</option>
+                <option  value="bulletpoints">Bulletpoints</option>
               </select>
 
               {userType === "paragraph" && (
