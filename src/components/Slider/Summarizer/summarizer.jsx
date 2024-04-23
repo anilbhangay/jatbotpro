@@ -243,8 +243,8 @@ function Tabs() {
               <label className="text">Modes:</label>
 
               <select onChange={handleUserTypeChange}>
-                <option value="paragraph">Paragraph</option>
-                <option value="bulletpoints">Bulletpoints</option>
+                <option className="para-down" value="paragraph">Paragraph</option>
+                <option className="bullet-down" value="bulletpoints">Bulletpoints</option>
               </select>
 
               {userType === "paragraph" && (
@@ -268,7 +268,7 @@ function Tabs() {
                     id="summaryLength"
                     name="summaryLength"
                     min="0"
-                    max={stepOptions.length - 1} 
+                    max={stepOptions.length - 1}
                     step="1"
                     value={stepOptions.indexOf(summaryLength)}
                     onChange={handleSummaryLengthChange}
