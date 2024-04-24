@@ -316,7 +316,7 @@ a {
   color: gray;
 }
 
-.stat-text .word-sec .Lnum-word {
+.stat-text .word-sec .Lnum-word { 
   padding-left: 46px;
   padding-right: 0px;
   font-size: 18px;
@@ -412,7 +412,7 @@ a {
 }
 
 .right-side #right-side-text {
-   margin-bottom: 64px;
+   margin-bottom: 62px;
    padding-left: 8px;
 }
 
@@ -472,7 +472,7 @@ a {
   }
 
   .mode-part button {
-    padding: 4px 8px;
+    padding: 4px 7px;
     font-size: 8px;
   }
 
@@ -523,7 +523,7 @@ a {
   }
 
   .icons-sent-container .sent-word {  
-    gap: 12px;
+    gap: 13px;
     font-size: 13px;
     font-weight: 800;
   }
@@ -534,7 +534,7 @@ a {
   }
 
   .keywords-container {
-    width: 336px;
+    width: 335px;
     height: 105px;
     top: -487px;
     padding-left: 1px;
@@ -554,13 +554,13 @@ a {
   }
 
   .keywords button {
-    padding: 6px 12px;
+    padding: 6px 11px;
     margin-left: 3px;
     font-size: 11px;
   }
 
   .keywords .btn {
-    margin-top: -5px;
+    margin-top: -3px;
   }
 
   .keywords .word-sent {
@@ -569,13 +569,67 @@ a {
   }
 
   .mode-part option {
-    font-size: 11px;
+    font-size: 10px;
   }
   
   .mode-part select {
-     font-size: 9px;
+     font-size: 8px;
      outline: none;
      cursor: pointer;
   }
 
+  .mode-part label {
+     font-size: 8px;
+     padding-left: 8px;
+  }
+
+  .mode-part  #summaryLength {
+     width: 21%;
+  }
+
+  .statistics-slider {
+    width: 280px;
+    height: 43%;
+    padding: 4px 0px 6px 0px;
+  }
+
+  .statistics-slider h2 {
+    font-size: 21px;
+  }
+
+  .bullpoints-word-sent {
+    top: -432px;
+    width: 337px;
+    height: 50px;
+}
+
+.bullpoints-word-sent .word-sent {
+  font-size: 13px;
+}
+
+.stat-text .word-sec .Lnum-word {
+  padding-left: 42px;
+  font-size: 16px;
+}
+
+.stat-text .word-sec .Rnum-word {
+  padding-left: 0px;
+  font-size: 16px;
+}
+
+.stat-text .sent-sec .Lnum-sent {
+  padding-right: 4px;
+  font-size: 16px;
+}
+
+.stat-text .sent-sec .Rnum-sent {
+  padding-left: 2px;
+  font-size: 16px;
+}
+
+.stat-text .percent .per {
+  font-size: 17px;
+}
+
+  
 }

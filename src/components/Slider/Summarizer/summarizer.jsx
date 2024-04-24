@@ -444,7 +444,7 @@ function Tabs() {
           {showSentIconSection && (
             <div className="icons-sent-container">
               <div className="sent-word">
-                {userType === "paragraph" && (
+                {userType === "paragraph" && ( 
                   <>
                     <p>
                       {rightSide.Rnum_word} {rightSide.num_word} words
