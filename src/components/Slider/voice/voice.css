@@ -51,9 +51,9 @@
   transition: 3ms;
   cursor: pointer;
 }
+
 .icon-trash-voice:hover {
   background-color: var(--orange);
-  border-radius: 10px;
   cursor: pointer;
 }
 
@@ -119,15 +119,64 @@
     width: 339px;
     height: 800px;
     margin-top: 15px;
+    margin-bottom: 10px;
     margin-left: -56px;
     padding: 4px 6px 0px;
   }
 
   .head-top-voice {
     width: 337px;
-    height: 33px;
+    height: 34px;
     margin-top: 13px;
-    gap: 20px;
+    gap: 22px;
+  }
+
+  .mics-voice {
+    width: 32px;
+    height: 24px;
+    border-radius: 7px;
+  }
+
+  .icon-trash-voice {
+    width: 33px;
+    height: 24px;
+    border-radius: 7px;
+  }
+
+  .container-boxs-voice {
+    display: grid;
+    gap: 12px;
   }
   
+  .box-left-voice {
+    width: 337px;
+    height: 370px;
+  }
+  
+  .box-right-voice {
+    width: 337px;
+    height: 370px;
+    border-left: 1px solid var(--orange);
+    border-top: 1px solid var(--orange);
+  }
+
+  .text-area-voice { 
+    margin-left: -150px;
+    margin-top: 12px;
+  }
+
+  #text-area-data-voice {
+    height: 356px;
+    width: 190%;
+    font-size: 14px;
+  }
+
+  .box-right-data-textheader {
+    margin: 9px 18px;
+  }
+  
+  .box-right-data-voice {
+    margin: 8px;
+    height: 330px;
+  }
 }
