@@ -456,15 +456,15 @@ a {
     padding: 4px 6px 0px;
   }
   
-  .mode-part span {
-    font-size: 13px;
-  }
-
   .mode-container .mode-part {
     width: 337px;
     height: 33px;
     margin-top: 13px;
     gap: 5px;
+  }
+
+  .mode-part span {
+    font-size: 13px;
   }
 
   .mode-part .text {
@@ -505,7 +505,7 @@ a {
   .upload-doc {
     top: 90px;
     padding: 28px;
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .upload-doc .icon {
