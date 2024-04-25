@@ -112,3 +112,22 @@
 #list-dots {
   text-decoration: none;
 }
+
+
+@media screen and (min-width: 360px) and (max-width: 481px) {
+  .container-main-voice {
+    width: 339px;
+    height: 800px;
+    margin-top: 15px;
+    margin-left: -56px;
+    padding: 4px 6px 0px;
+  }
+
+  .head-top-voice {
+    width: 337px;
+    height: 33px;
+    margin-top: 13px;
+    gap: 20px;
+  }
+  
+}

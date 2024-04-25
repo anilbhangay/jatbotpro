@@ -560,7 +560,7 @@ a {
   }
 
   .keywords .btn {
-    margin-top: -3px;
+    margin-top: -2px;
   }
 
   .keywords .word-sent {
@@ -589,7 +589,7 @@ a {
 
   .statistics-slider {
     width: 280px;
-    height: 43%;
+    height: 46%;
     padding: 4px 0px 6px 0px;
   }
 
@@ -630,6 +630,5 @@ a {
 .stat-text .percent .per {
   font-size: 17px;
 }
-
   
 }
