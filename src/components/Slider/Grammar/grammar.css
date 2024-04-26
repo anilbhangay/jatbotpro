@@ -179,3 +179,131 @@
     height: 22px;
     cursor: pointer;
 }
+
+
+@media screen and (min-width: 360px) and (max-width: 481px) {
+    .container-main-gram{
+        width: 339px;
+        height: 800px;
+        margin-top: 15px;   
+        margin-left: -56px;
+        margin-bottom: 10px;
+        padding: 4px 6px 0px; 
+    }
+
+    .head-top-gram{
+        width: 337px;
+        height: 33px;
+        margin-top: 13px;
+        gap: 4px;
+    }
+
+    .container-boxs-gram{
+        display: grid;
+        gap: 10px;
+    }
+
+    .box-left-gram {
+        width: 337px;
+        height: 369px;
+    }
+    
+    .box-right-gram{
+        width: 337px;
+        height: 369px;
+        border-top: 1px solid var(--orange);
+        border-left: 1px solid var(--orange); 
+    }
+
+    .box-left-data-gram {
+        display: grid;
+        margin-top: 70px;
+        gap: 16px;
+    }
+
+    .languages-gram {
+        font-size: 11px;
+        outline: none;
+        border: 1px solid #000;
+    }
+    
+    .gram-button{
+        padding: 6px 8px;
+        font-size: 9px;
+        border-radius: 20px;
+    }
+
+    .trash-gram{
+        width: 30px;
+        height: 23px;
+        font-size: 14px;
+        border-radius: 6px;
+    }
+
+    .upload-box-gram  label {
+        font-size: 14px;
+        gap: 7px;
+    }
+
+    .text-label p {
+        font-size: 14px;
+        gap: 8px;
+    }
+
+    .upload-text-gram {
+        margin-top: -80px;
+        margin-left: 6px;
+    }
+
+    #text-margin-gram {
+        height: 355px;
+        width: 325px;
+        font-size: 14px;
+    }
+
+    .text-area-gram {
+        margin-top: -79px;
+        margin-left: 6px;
+    }
+    
+    .text-area-gram  #text-area-data-gram{
+        height: 355px;
+        width: 325px;
+        font-size: 14px;
+    }
+
+    #textarea-right-gram {
+        height: 315px;
+        width: 325px;
+        margin-top: 8px;
+        padding-left: 6px;
+        font-size: 14px;
+    }
+
+    .text-gram-copy-download{
+        width: 325px;
+        top: 1px;
+        padding: 6px 6px;
+        background-color: #ccc;
+        gap: 26px;
+    }
+
+    #text-gram-download{
+        height: 23px;
+    }
+    #text-gram-copy{
+        height: 23px;
+    }
+
+    .copy-tooltip-tecd-gram{
+        position: absolute;
+        margin-left: 330px;
+        padding: 6px 9px;
+        font-size: 13px;
+        font-weight: 500;
+        border-radius: 5px;
+        background-color: #333;
+        z-index: 999;
+        color: #fff;
+    }    
+}

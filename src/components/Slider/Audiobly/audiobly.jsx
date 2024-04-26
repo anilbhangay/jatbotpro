@@ -116,7 +116,7 @@ const Audiobly = () => {
             >
               <option value="">Auto Language</option>
               {country_code.map((option) => (
-                <option hidden key={option.value} value={option.value}>
+                <option className="sel-lan" hidden key={option.value} value={option.value}>
                   {option.label}
                 </option>
               ))}

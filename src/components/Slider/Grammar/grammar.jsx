@@ -167,7 +167,7 @@ const Grammar = () => {
                   </label>
                 )}
               </div>
-              <div onClick={() => setShowTextarea(true)}>
+              <div className="text-label" onClick={() => setShowTextarea(true)}>
                 {showTextarea ? null : !file ? (
                   <p className="text-label-trans">
                     PASTE TEXT
