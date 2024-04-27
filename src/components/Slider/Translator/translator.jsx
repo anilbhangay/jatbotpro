@@ -145,7 +145,7 @@ const handleUpload = async () => {
     <div className='container-trans'>
       <div className='container-main-trans'>
         <div className="head-top-trans">
-          <div>
+          <div className='auto-lan'>
             <select  className='languages-trans' onChange={handleLanguageChange1} value={targetLanguage1}> 
             <option value="">Auto Language</option>
               {country_code.map(option => (

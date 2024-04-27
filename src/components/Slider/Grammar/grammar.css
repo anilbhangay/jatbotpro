@@ -1,309 +1,300 @@
-
-.container-main-gram{
-    width: auto;
-    height: 512px;
-    display: flex;
-    flex-direction: column;
-    padding: 20px 40px 0px;
-    background-color: #fff;
-    border-radius: 13px;
-    box-shadow: 0px 5px 15px rgba(41, 41, 44,0.2);
-    margin-top: 20px;   
-    margin-left: 15px; 
+.container-main-gram {
+  width: auto;
+  height: 512px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px 0px;
+  background-color: #fff;
+  border-radius: 13px;
+  box-shadow: 0px 5px 15px rgba(41, 41, 44, 0.2);
+  margin-top: 20px;
+  margin-left: 15px;
 }
 
-.head-top-gram{
-    width: 1000px;
-    height: 54px;
-    margin-top: 13px;
-    border: 1px solid var(--orange);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+.head-top-gram {
+  width: 1000px;
+  height: 54px;
+  margin-top: 13px;
+  border: 1px solid var(--orange);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.container-boxs-gram{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0px;
+.container-boxs-gram {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px;
 }
 .box-left-gram {
-    width: 50%;
-    height: 442px;
-    border: 1px solid var(--orange);
-    border-top: none;
+  width: 50%;
+  height: 442px;
+  border: 1px solid var(--orange);
+  border-top: none;
 }
 
-.box-right-gram{
-    width: 50%;
-    height: 442px;
-    border: 1px solid var(--orange);
-    border-top: none;
-    border-left: none; 
+.box-right-gram {
+  width: 50%;
+  height: 442px;
+  border: 1px solid var(--orange);
+  border-top: none;
+  border-left: none;
 }
 
-.box-left-data-gram{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 120px;
-    gap: 15px;
+.box-left-data-gram {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+  gap: 15px;
 }
 
-.box-left-text-gram{
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+.box-left-text-gram {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-.upload-text-gram{
-    margin-top: -112px;
-    margin-left: 7px;
+.upload-text-gram {
+  margin-top: -112px;
+  margin-left: 7px;
 }
 
 #text-margin-gram {
-    height: 430px;
-    width: 241%;
-    border: none;
-    outline: none;
-    background: none;
-    resize: none;
-    font-size: 16px;
+  height: 430px;
+  width: 241%;
+  border: none;
+  outline: none;
+  background: none;
+  resize: none;
+  font-size: 16px;
 }
 
 .text-area-gram {
-    margin-top: -112px;
-    margin-left: 7px;
+  margin-top: -112px;
+  margin-left: 7px;
 }
 
-.text-area-gram  #text-area-data-gram{
-    height: 430px;
-    width: 241%;
-    border: none;
-    outline: none;
-    background: none;
-    resize: none;
-    font-size: 16px;
+.text-area-gram #text-area-data-gram {
+  height: 430px;
+  width: 241%;
+  border: none;
+  outline: none;
+  background: none;
+  resize: none;
+  font-size: 16px;
 }
 
 #textarea-right-gram {
-    margin-top: 8px;
-    padding-left: 8px;
-    height: 392px;
-    width: 486px;
-    border: none;
-    outline: none;
-    background: none;
-    resize: none;
-    font-size: 16px;
+  margin-top: 8px;
+  padding-left: 8px;
+  height: 392px;
+  width: 486px;
+  border: none;
+  outline: none;
+  background: none;
+  resize: none;
+  font-size: 16px;
 }
-.copy-tooltip-tecd-gram{
-    position: absolute;
-    margin-left: 330px;
-    padding: 6px 9px;
-    font-size: 13px;
-    font-weight: 500;
-    border-radius: 5px;
-    background-color: #333;
-    z-index: 999;
-    color: #fff;
+.copy-tooltip-tecd-gram {
+  position: absolute;
+  margin-left: 330px;
+  padding: 6px 9px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 5px;
+  background-color: #333;
+  z-index: 999;
+  color: #fff;
 }
-.copy-tooltip-tecd-gram:hover{
-    display: block;
+.copy-tooltip-tecd-gram:hover {
+  display: block;
 }
 .copy-tooltip-gram {
-    position: absolute;
-    margin-left: -40px;
-    margin-top: -63px;
-    padding: 6px 9px;
-    font-size: 13px;
-    font-weight: 500;
-    border-radius: 5px;
-    background-color: #333;
-    z-index: 999;
-    color: #fff;
+  position: absolute;
+  margin-left: -40px;
+  margin-top: -63px;
+  padding: 6px 9px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 5px;
+  background-color: #333;
+  z-index: 999;
+  color: #fff;
 }
 
-.languages-gram{
-    outline: none;
+.languages-gram {
+  outline: none;
 }
 
-.gram-button{
-    padding: 9px 17px;
-    font-size: 14px;
-    font-weight: bold;
-    border-radius: 22px;
-    border: 2px solid var(--orange);
-    background-color: var(--orange);
-    cursor: pointer;
+.gram-button {
+  padding: 9px 17px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 22px;
+  border: 2px solid var(--orange);
+  background-color: var(--orange);
+  cursor: pointer;
 }
 
 .gram-button:hover {
-    background-color: #fff;
+  background-color: #fff;
 }
 
-.trash-gram{
-    width: 40px;
-    height: 30px;
-    border-radius: 8px;
-    border: 2px solid var(--orange);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 3ms;
-    cursor: pointer;  
+.trash-gram {
+  width: 40px;
+  height: 30px;
+  border-radius: 8px;
+  border: 2px solid var(--orange);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 3ms;
+  cursor: pointer;
 }
-.trash-gram:hover{
-    background-color: var(--orange);
-    cursor: pointer;
+.trash-gram:hover {
+  background-color: var(--orange);
+  cursor: pointer;
 }
-.text-gram-copy-download{
-    width: 440px;
-    position: relative;
-    top: -6px;
-    padding: 8px 20px;
-    background-color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 29px;
-}
-
-#text-gram-download{
-    height: 22px;
-    cursor: pointer;
-}
-#text-gram-copy{
-    height: 22px;
-    cursor: pointer;
+.text-gram-copy-download {
+  width: 440px;
+  position: relative;
+  top: -6px;
+  padding: 8px 20px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 29px;
 }
 
+#text-gram-download {
+  height: 22px;
+  cursor: pointer;
+}
+#text-gram-copy {
+  height: 22px;
+  cursor: pointer;
+}
 
 @media screen and (min-width: 360px) and (max-width: 481px) {
-    .container-main-gram{
-        width: 339px;
-        height: 800px;
-        margin-top: 15px;   
-        margin-left: -56px;
-        margin-bottom: 10px;
-        padding: 4px 6px 0px; 
-    }
+  .container-main-gram {
+    width: 339px;
+    height: 800px;
+    margin-top: 15px;
+    margin-left: -56px;
+    margin-bottom: 10px;
+    padding: 4px 6px 0px;
+  }
 
-    .head-top-gram{
-        width: 337px;
-        height: 33px;
-        margin-top: 13px;
-        gap: 4px;
-    }
+  .head-top-gram {
+    width: 337px;
+    height: 33px;
+    margin-top: 13px;
+    gap: 4px;
+  }
 
-    .container-boxs-gram{
-        display: grid;
-        gap: 10px;
-    }
+  .container-boxs-gram {
+    display: grid;
+    gap: 10px;
+  }
 
-    .box-left-gram {
-        width: 337px;
-        height: 369px;
-    }
-    
-    .box-right-gram{
-        width: 337px;
-        height: 369px;
-        border-top: 1px solid var(--orange);
-        border-left: 1px solid var(--orange); 
-    }
+  .box-left-gram {
+    width: 337px;
+    height: 369px;
+  }
 
-    .box-left-data-gram {
-        display: grid;
-        margin-top: 70px;
-        gap: 16px;
-    }
+  .box-right-gram {
+    width: 337px;
+    height: 369px;
+    border-top: 1px solid var(--orange);
+    border-left: 1px solid var(--orange);
+  }
 
-    .languages-gram {
-        font-size: 11px;
-        outline: none;
-        border: 1px solid #000;
-    }
-    
-    .gram-button{
-        padding: 6px 8px;
-        font-size: 9px;
-        border-radius: 20px;
-    }
+  .box-left-data-gram {
+    display: grid;
+    margin-top: 70px;
+    gap: 16px;
+  }
 
-    .trash-gram{
-        width: 30px;
-        height: 23px;
-        font-size: 14px;
-        border-radius: 6px;
-    }
+  .languages-gram {
+    font-size: 11px;
+    outline: none;
+    border: 1px solid #000;
+  }
 
-    .upload-box-gram  label {
-        font-size: 14px;
-        gap: 7px;
-    }
+  .gram-button {
+    padding: 6px 8px;
+    font-size: 9px;
+    border-radius: 20px;
+  }
 
-    .text-label p {
-        font-size: 14px;
-        gap: 8px;
-    }
+  .trash-gram {
+    width: 30px;
+    height: 23px;
+    font-size: 14px;
+    border-radius: 6px;
+  }
 
-    .upload-text-gram {
-        margin-top: -80px;
-        margin-left: 6px;
-    }
+  .upload-box-gram label {
+    font-size: 14px;
+    gap: 7px;
+  }
 
-    #text-margin-gram {
-        height: 355px;
-        width: 325px;
-        font-size: 14px;
-    }
+  .text-label p {
+    font-size: 14px;
+    gap: 8px;
+  }
 
-    .text-area-gram {
-        margin-top: -79px;
-        margin-left: 6px;
-    }
-    
-    .text-area-gram  #text-area-data-gram{
-        height: 355px;
-        width: 325px;
-        font-size: 14px;
-    }
+  .upload-text-gram {
+    margin-top: -80px;
+    margin-left: 6px;
+  }
 
-    #textarea-right-gram {
-        height: 315px;
-        width: 325px;
-        margin-top: 8px;
-        padding-left: 6px;
-        font-size: 14px;
-    }
+  #text-margin-gram {
+    height: 355px;
+    width: 325px;
+    font-size: 14px;
+  }
 
-    .text-gram-copy-download{
-        width: 325px;
-        top: 1px;
-        padding: 6px 6px;
-        background-color: #ccc;
-        gap: 26px;
-    }
+  .text-area-gram {
+    margin-top: -79px;
+    margin-left: 6px;
+  }
 
-    #text-gram-download{
-        height: 23px;
-    }
-    #text-gram-copy{
-        height: 23px;
-    }
+  .text-area-gram #text-area-data-gram {
+    height: 355px;
+    width: 325px;
+    font-size: 14px;
+  }
 
-    .copy-tooltip-tecd-gram{
-        position: absolute;
-        margin-left: 330px;
-        padding: 6px 9px;
-        font-size: 13px;
-        font-weight: 500;
-        border-radius: 5px;
-        background-color: #333;
-        z-index: 999;
-        color: #fff;
-    }    
+  #textarea-right-gram {
+    height: 316px;
+    width: 325px;
+    margin-top: 8px;
+    padding-left: 6px;
+    font-size: 14px;
+  }
+
+  .text-gram-copy-download {
+    width: 325px;
+    top: 2px;
+    padding: 5px 6px;
+    background-color: none;
+    gap: 25px;
+  }
+
+  #text-gram-download {
+    height: 23px;
+  }
+  #text-gram-copy {
+    height: 23px;
+  }
+
+  .copy-tooltip-tecd-gram {
+    margin-left: 233px;
+    padding: 6px 8px;
+  }
 }

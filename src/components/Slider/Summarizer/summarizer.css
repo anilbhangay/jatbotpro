@@ -453,6 +453,7 @@ a {
     height: 800px;
     margin-top: 15px;
     margin-left: -56px;
+    margin-bottom: 10px;
     padding: 4px 6px 0px;
   }
   
@@ -477,7 +478,9 @@ a {
   }
 
   .mode-part .box-1 {
-    width: 32px;
+    width: 35px;
+    font-size: 12px;
+    border: 1px solid #000;
   }
 
   .mode-part label {
@@ -573,7 +576,8 @@ a {
   }
   
   .mode-part select {
-     font-size: 8px;
+     font-size: 9px;
+     border: 1px solid #000;
      outline: none;
      cursor: pointer;
   }
