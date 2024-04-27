@@ -313,8 +313,8 @@
   }
 
   .text-trans-copy-download {
-    margin-top: 9px;
-    margin-right: 20px;
+    margin-top: 8px;
+    margin-right: 17px;
     gap: 26px;
   }
 
@@ -324,6 +324,16 @@
   
   #text-trans-download {
     height: 23px;
+  }
+
+  .copy-tooltip-tecd {
+    margin-left: 233px;
+    margin-top: -28px;
+    padding: 6px 8px;
+  }
+
+  .copy-tooltip {
+    margin-left: 90px;
   }
   
 }
