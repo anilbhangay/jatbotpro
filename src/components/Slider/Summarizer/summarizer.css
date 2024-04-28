@@ -35,8 +35,8 @@ a {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  gap: 10px;
   border: 1px solid var(--orange);
+  gap: 10px;
 }
 
 .mode-part .text {
@@ -81,7 +81,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0;
+  margin: 0px;
 }
 
 .upload-section .left-side {
