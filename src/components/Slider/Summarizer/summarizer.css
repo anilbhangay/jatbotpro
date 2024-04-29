@@ -86,7 +86,7 @@ a {
 
 .upload-section .left-side {
   width: 500px;
-  height: 442px;
+  height: 443px;
   display: grid;
   justify-content: center;
   align-items: center;
@@ -97,7 +97,7 @@ a {
 
 .upload-section .right-side {
   width: 500px;
-  height: 442px;
+  height: 443px;
   margin-left: -1px;
   border: 1px solid var(--orange);
   border-top: none;

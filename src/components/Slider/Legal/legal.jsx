@@ -5,7 +5,7 @@ const Legal = () => {
     <div className="container-legal">
       <div className="container-main-legal">
         <div className="head-top-legal">
-          <h5>Coming Soon</h5>
+          <h5>Update Soon...</h5>
         </div>
         <div className="box-legal">
           <div className="left-box"></div>

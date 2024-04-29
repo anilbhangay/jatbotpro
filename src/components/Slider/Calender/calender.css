@@ -1,48 +1,46 @@
-.container-cal{
-    padding: 20px 40px 0px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 5px 15px rgba(41, 41, 44,0.2);
-    width: 1050px;
-    height: 600px;
-    border-radius: 18px;
-    padding: 5px 55px 10px;
-    margin: 40px;
-    
+.container-cal {
+  width: auto;
+  height: 80vh; 
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-left: 15px;
+  padding: 20px 40px 0px;
+  border-radius: 13px;
+  background-color: #fff;
+  box-shadow: 0px 5px 15px rgba(41, 41, 44, 0.2);
 }
 
-.head-top-cal{
-    border: 2px solid var(--orange);
-    width: 1047px;
-    height: 70px;
-    margin-top: 20px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+.head-top-cal {
+    width: 1000px;
+    height: 54px;
+    margin-top: 13px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
+    border: 1px solid var(--orange);
 }
 
 .container-boxs-cal{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0px;
 }
 .box-left-cal{
-    border: 2px solid var(--orange);
-    width: 49%;
-    height: 490px;
+    width: 500px;
+    height: 443px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--orange);
     border-top: none;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-   
 }
 .box-right-cal{
-    border: 2px solid var(--orange);
-    width: 49%;
-    height: 490px;
-    border-top: none;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+  width: 500px;
+  height: 443px;
+  margin-left: -1px;
+  border: 1px solid var(--orange);
+  border-top: none;
+  border-left: none;
 }

@@ -70,7 +70,7 @@
   align-items: center;
   border: 1px solid var(--orange);
   width: 50%;
-  height: 447px;
+  height: 448px;
   gap: 35px;
   border-top: none;
 }
@@ -91,7 +91,7 @@
 
 .box-right-voice {
   width: 50%;
-  height: 447px;
+  height: 448px;
   border: 1px solid var(--orange);
   border-left: none;
   border-top: none;

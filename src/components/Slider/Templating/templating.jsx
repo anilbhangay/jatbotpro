@@ -11,6 +11,7 @@ const Templating = () => {
     <div className='container-tem'>
     <div className='container-main-tem'>
       <div className="head-top-tem">
+        <h5>Update Soon...</h5>
       <div onClick={handleDeleteData} className='icon-trash-tem'><FontAwesomeIcon icon={faTrash} /></div>
       </div>
       <div className='container-boxs-tem'>

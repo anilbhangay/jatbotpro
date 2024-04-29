@@ -31,7 +31,7 @@
 }
 .box-left-trans {
   width: 50%;
-  height: 442px;
+  height: 443px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,7 +78,7 @@
 }
 .box-right-trans {
   width: 50%;
-  height: 442px;
+  height: 443px;
   border: 1px solid var(--orange);
   border-left: none;
   border-top: none;

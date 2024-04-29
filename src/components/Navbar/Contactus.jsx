@@ -37,7 +37,7 @@ const Contactus = () => {
       </div>
       <div className="right-data-contact">
         <div className="address-1">
-          <h1>Chicago</h1>
+          <h1>Hyderabad</h1>
           <address>
             303 East Wacker, Suite 2101 <br /> Chicago, IL 60601 <br />
             United States of America 
@@ -53,7 +53,7 @@ const Contactus = () => {
           </p>
         </div>
         <div className="address-2">
-          <h1>Jaipur</h1>
+          <h1>Vizag</h1>
           <address>
             5th floor, Gt Square Mall, Kalyan <br /> Colony, D-Block, Malviya
             Nagar,

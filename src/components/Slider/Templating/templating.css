@@ -16,25 +16,23 @@
   margin-top: 13px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   border: 1px solid var(--orange);
 }
+
+
 .container-boxs-tem{
     width: 1000px;
-    height: 442px;
+    height: 100%;
     border: 1px solid var(--orange);
     border-top: none;
 }
-.head-top-tem{
-    display: flex;
-    justify-content:flex-end;
-    align-items: center;  
-}
+
 .icon-trash-tem{
     width: 40px;
     height: 30px;
-    margin-right: 10px;
+    margin-left: 60px;
     display: flex;
     justify-content: center;
     align-items: center;

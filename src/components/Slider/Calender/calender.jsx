@@ -5,7 +5,7 @@ const Calender = () => {
     <div className='container-cal'>
     <div className='container-main-cal'>
       <div className="head-top-cal">
-        <h1>Aravind hello</h1>
+        <h5>Update Soon...</h5>
       </div>
       <div className='container-boxs-cal'>
         <div className='box-left-cal'></div>
