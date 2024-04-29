@@ -1,6 +1,6 @@
 .container-cal {
   width: auto;
-  height: 80vh; 
+  height: 80vh;
   display: flex;
   flex-direction: column;
   margin-top: 20px;
@@ -12,35 +12,71 @@
 }
 
 .head-top-cal {
-    width: 1000px;
-    height: 54px;
-    margin-top: 13px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    border: 1px solid var(--orange);
+  width: 1000px;
+  height: 54px;
+  margin-top: 13px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid var(--orange);
 }
 
-.container-boxs-cal{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.container-boxs-cal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.box-left-cal{
-    width: 500px;
-    height: 443px;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid var(--orange);
-    border-top: none;
+.box-left-cal {
+  width: 500px;
+  height: 443px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--orange);
+  border-top: none;
 }
-.box-right-cal{
+.box-right-cal {
   width: 500px;
   height: 443px;
   margin-left: -1px;
   border: 1px solid var(--orange);
   border-top: none;
   border-left: none;
+}
+
+@media screen and (min-width: 360px) and (max-width: 481px) {
+  .container-cal {
+    width: 339px;
+    height: 800px;
+    margin-top: 15px;
+    margin-left: -56px;
+    margin-bottom: 10px;
+    padding: 4px 6px 0px;
+  }
+
+  .head-top-cal {
+    width: 337px;
+    height: 33px;
+    margin-top: 13px;
+    gap: 5px;
+  }
+
+  .container-boxs-cal {
+    display: grid;
+    gap: 10px;
+  }
+
+  .box-left-cal {
+    width: 337px;
+    height: 369px;
+  }
+
+  .box-right-cal {
+    width: 337px;
+    height: 369px;
+    margin-left: 0px;
+    border-left: 1px solid var(--orange);
+    border-top: 1px solid var(--orange);
+  }
 }

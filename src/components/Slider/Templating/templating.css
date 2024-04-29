@@ -1,14 +1,14 @@
 .container-main-tem {
-    width: auto;
-    height: 80vh; 
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    margin-left: 15px;
-    border-radius: 13px;
-    background-color: #fff;
-    padding: 20px 40px 0px;
-    box-shadow: 0px 5px 15px rgba(41, 41, 44, 0.2);
+  width: auto;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-left: 15px;
+  border-radius: 13px;
+  background-color: #fff;
+  padding: 20px 40px 0px;
+  box-shadow: 0px 5px 15px rgba(41, 41, 44, 0.2);
 }
 .head-top-tem {
   width: 1000px;
@@ -21,69 +21,121 @@
   border: 1px solid var(--orange);
 }
 
-
-.container-boxs-tem{
-    width: 1000px;
-    height: 100%;
-    border: 1px solid var(--orange);
-    border-top: none;
+.container-boxs-tem {
+  width: 1000px;
+  height: 100%;
+  border: 1px solid var(--orange);
+  border-top: none;
 }
 
-.icon-trash-tem{
-    width: 40px;
-    height: 30px;
-    margin-left: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 3ms;
-    border-radius: 9px;
-    border: 2px solid var(--orange);
+.icon-trash-tem {
+  width: 40px;
+  height: 30px;
+  margin-left: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 3ms;
+  border-radius: 9px;
+  border: 2px solid var(--orange);
 }
-.icon-trash-tem:hover{
-    background-color: var(--orange);
-    cursor: pointer;
+.icon-trash-tem:hover {
+  background-color: var(--orange);
+  cursor: pointer;
 }
 
-.container-boxs-tem{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container-boxs-tem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.box-tem{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 45px;
+.box-tem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
 }
-.choose-tem{
-    width: 200px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 15px;
-    font-weight: bold;
-    border: 2px solid var(--orange);
+.choose-tem {
+  width: 200px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  border: 2px solid var(--orange);
+  border-radius: 6px;
+}
+.choose-tem:hover {
+  background-color: var(--orange);
+  cursor: pointer;
+}
+.own-tem {
+  width: 200px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: bold;
+  border: 2px solid var(--orange);
+  border-radius: 6px;
+}
+.own-tem:hover {
+  background-color: var(--orange);
+  cursor: pointer;
+}
+
+
+
+
+@media screen and (min-width: 360px) and (max-width: 481px) {
+  .container-main-tem {
+    width: 339px;
+    height: 542px;
+    margin-top: 15px;
+    margin-left: -56px;
+    padding: 4px 6px 0px;
+  }
+
+  .head-top-tem {
+    width: 337px;
+    height: 33px;
+    margin-top: 13px;
+    gap: 5px;
+  }
+
+  .container-boxs-tem {
+    width: auto;
+    height: 542px;
+  }
+
+  .icon-trash-tem {
+    width: 28px;
+    height: 23px;
+    font-size: 14px;
     border-radius: 6px;
-}
-.choose-tem:hover{
-    background-color: var(--orange);
-    cursor: pointer;
-}
-.own-tem{
-    width: 200px;
+  }
+
+  .box-tem {
+    display: grid;
+    gap: 38px;
+  }
+
+  .choose-tem {
+    width: 175px;
     height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 15px;
-    font-weight: bold;
-    border: 2px solid var(--orange);
-    border-radius: 6px;
-}
-.own-tem:hover{
-    background-color: var(--orange);
-    cursor: pointer;
+    font-size: 13px;
+    line-height: 21px;
+    border-radius: 7px;
+  }
+
+  .own-tem {
+    width: 175px;
+    height: 100px;
+    font-size: 13px;
+    border-radius: 7px;
+  }
+
 }
