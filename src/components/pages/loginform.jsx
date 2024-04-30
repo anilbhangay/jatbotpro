@@ -138,8 +138,8 @@
 import React, { useState } from 'react';
 import { faEyeSlash, faEye } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import GoogleLogin from '../socialicon/google';
-import FacebookLogin from '../socialicon/facebook';
+// import GoogleLogin from '../socialicon/google';
+// import FacebookLogin from '../socialicon/facebook';
 import { useNavigate } from 'react-router-dom';
 import './login.css';
 
@@ -202,10 +202,10 @@ const Loginform = () => {
         <h2>Log in to your JatBot account</h2>
       </div>
       <div className='form-coainter-login'>
-        <div className='form-button-login'>
+        {/* <div className='form-button-login'>
           <GoogleLogin />
           <FacebookLogin />
-        </div>
+        </div> */}
         <form onSubmit={handleSubmit}>
           <div className='form-input-login'>
             <input
