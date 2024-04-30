@@ -63,7 +63,9 @@ main {
   margin-left: 10px;
 }
 
-@media only screen and (min-width: 360px) and (max-width: 481px) {
+
+
+@media (max-width:800px) {
   .sidebar {
     width: 100px;
     margin-left: -15px;

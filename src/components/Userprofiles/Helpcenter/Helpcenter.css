@@ -1,0 +1,18 @@
+.help-cointner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     margin: 20px;  
+     gap: 20px;
+}
+.cointner-help{
+    border: 2px solid var(--orange);
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    transition: 0.5s;
+}
+.cointner-help:hover{
+ background-color: var(--orange);
+ color: black;
+}

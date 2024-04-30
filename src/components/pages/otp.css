@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-   
+    
 }
 .container-otp{
     display: flex;
@@ -35,7 +35,7 @@
     outline: none;
 }
 #button-otp{
-   margin-left: 85px;
+   margin-left: 85px; 
    margin-top: 10px;
    border: 2px solid var(--orange);
    width: 35%;
@@ -48,4 +48,5 @@
 }
 .error-otp{
     color: red;
+
 }

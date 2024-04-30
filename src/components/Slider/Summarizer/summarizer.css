@@ -447,9 +447,9 @@ a {
 
 
 
-@media  screen and (min-width: 360px) and (max-width: 481px){
+@media  screen and (min-width: 360px) and (max-width: 650px){
   .main-section {
-    width: 339px;
+    width: auto;
     height: 800px;
     margin-top: 15px;
     margin-left: -56px;
@@ -633,6 +633,38 @@ a {
 
 .stat-text .percent .per {
   font-size: 17px;
+}
+
+.export-tooltip {
+  position: absolute;
+  top: -20px;
+  right: 10px;
+}
+
+.stat-tooltip {
+  position: absolute;
+  top: -20px;
+  right: 39px;
+}
+
+.copied-tooltip {
+  position: absolute;
+  top: -20px;
+  right: -46px;
+}
+
+.text-tooltip {
+   position: absolute;
+   top: -20px;
+   right: -38px;
+}
+
+.text-container p {
+  font-size: 14px;
+}
+
+.right-side #right-side-text {
+   font-size: 14px;
 }
   
 }

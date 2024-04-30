@@ -1,32 +1,39 @@
 import React, { useState } from 'react';
-import './otp.css';
+import './otp.css'; 
 import { faRotateRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
- 
- 
+
+
 const Otpfile = () => {
   const [otp, setOtp] = useState('');
   const [error, setError] = useState('');
   const[loading, setLoading]=useState(false);
   const [backendError, setBackendError] = useState('');
- 
+
   const handleOtpChange = (e) => {
     setOtp(e.target.value);
   };
- 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    const validationError = {};
-   
- 
-  // Validate OTP
-  if (!otp.trim()) {
-    validationError ({ otp: "OTP is required" });
-  } else if (!/^\d{4}$/.test(otp.trim())) {
-    validationError ({ otp: "Invalid OTP format" });
-  }
-  setError(validationError);
+    const validationError = {}; // Initialize validationError as an object
+
+    // Validate OTP
+    if (!otp.trim()) {
+      validationError.otp = "OTP is required"; // Use object notation to set the error message
+    } else if (!/^\d{6}$/.test(otp.trim())) {
+      validationError.otp = "Invalid OTP format"; // Use object notation to set the error message
+    }
+  
+    // Check if any validation errors occurred
+    if (Object.keys(validationError).length > 0) {
+      // If there are validation errors, update the state and return without further processing
+      setError(validationError.otp); // Update the error state with the OTP validation error
+      setLoading(false); // Stop loading
+      return;
+    }
+
     try {
       const response = await fetch('http://localhost:5000/verify_otp', {
         method: 'POST',
@@ -35,7 +42,7 @@ const Otpfile = () => {
         },
         body: JSON.stringify({otp: otp }), // Use otp instead of email
       });
- 
+  
       if (response.status === 200) {
         setTimeout(() => {
           setLoading(false); // Turn off loading after 5 seconds
@@ -57,7 +64,7 @@ const Otpfile = () => {
     }
  
   };
- 
+  
   return (
     <div className='cointer-otp'>
       <div className='container-otp'>
@@ -83,5 +90,5 @@ const Otpfile = () => {
     </div>
   );
 };
- 
+
 export default Otpfile;

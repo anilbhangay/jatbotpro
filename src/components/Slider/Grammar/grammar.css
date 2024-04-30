@@ -215,8 +215,8 @@
 
   .box-left-data-gram {
     display: grid;
-    margin-top: 70px;
-    gap: 16px;
+    margin-top: 28px;
+    gap: 42px;
   }
 
   .languages-gram {

@@ -23,7 +23,6 @@
 }
 
 .navbar a .icon-bell {
-  padding-left: 50px;
   font-size: 24px;
   color: #000;
   cursor: pointer;
@@ -59,12 +58,12 @@
   font-size: 15px;
   font-weight: bold;
   background-color: var(--orange);
-  border: 2px solid var(--orange);
   border-radius: 20px;
   border: none;
   cursor: pointer;
   color: #000;
   margin-right: 30px;
+  border: 2px solid var(--orange);
 }
 
 .navbar #signin-login:hover {
@@ -102,6 +101,7 @@
 }
 .dropdown-content ul li:hover{
   background-color: #b8d4d8; 
+  
 }
 
 .dropdown-content ul li a {

@@ -1,0 +1,181 @@
+/* .container-acc{
+    margin: 5px;
+}
+.container-data-acc {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 20px;
+    margin-left: 100px;
+  }
+.container-data-acc h1  {   
+    background-color: var(--orange);  
+   border: 2px solid var(--orange);
+   border-radius: 50%;
+   text-align: center;
+   width: 7vw;
+   height: 14vh;
+  }
+  .container-data-acc h1 span{
+   margin:35px ;
+   color: white;
+   font-size: 50px;
+  }
+  .profile-name-email-acc{
+      margin-left: 30px;  
+  }
+  .profile-name-email-acc h2 { 
+      font-size: 30px;
+      
+  }
+  .profile-name-email-acc  p{ 
+      margin-top: -20px;
+  }
+  .profile-btn-acc{
+      display: flex;
+      flex-direction: row; 
+      gap: 80px;
+      margin-left: 150px;
+  }
+  .btns-acc{
+      display: flex;
+      flex-direction: column;   
+  }
+  .btns-acc button{
+      width: 140px;
+      height: 40px;
+      background: none;
+      border-top: none;
+      border-right: none;
+      border-bottom: none;
+      text-align: start;
+  }
+  .btns-acc button span{
+   margin: 10px;
+   font-size: 15px;
+  }
+  .cointainer-name-prof-acc{
+     background-color: #fff;
+      width: 50vw;
+      height: 50vh;
+      border-radius: 10px;
+      box-shadow: 0px 0px 0px 2px  rgba(0, 0, 0, 0.1); 
+  }
+  .cointainer-data-acc{
+    padding: 20px;
+    margin-left: 20px;
+    display: none;
+  }
+  .cointainer-data-acc h4{
+    margin-top: -7px;
+  }
+  .cointainer-data-acc .cointainer-email-acc{
+     margin-top: 40px;
+  }
+  .cointainer-name-acc{
+    margin-top: 45px;
+  }
+  .active-tabs{
+    background-color: blue;
+  }
+  .active-tabs::before{
+    display: block;
+  }
+  .active-contact{
+    display: block;
+  } */
+  .container-acc{
+    margin: 5px;
+}
+.container-data-acc {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-bottom: 25px;
+  }
+.container-data-acc h1  {   
+    background-color: var(--orange);  
+   border: 2px solid var(--orange);
+   border-radius: 50%;
+   text-align: center;
+   width: 80px;
+   height: 74px;
+  }
+  .container-data-acc h1 span{
+   
+   color: white;
+   font-size: 50px;
+  }
+  .profile-name-email-acc{
+      margin-left: 30px;  
+  }
+  .profile-name-email-acc h2 { 
+      font-size: 30px;
+      
+  }
+  .profile-name-email-acc  p{ 
+     margin-top: -10px;
+     
+  }
+  .profile-btn-acc{
+      display: flex;
+      flex-direction: row; 
+      gap: 80px;
+      margin-left: 150px;
+  }
+  .btns-acc{
+      display: flex;
+      flex-direction: column;   
+  }
+  .btns-acc .tabs{
+      width: 140px;
+      height: 50px;
+      background: none;
+      border-top: none;
+      border-right: none;
+      border-bottom: none;
+      text-align: start;
+  }
+  .tabs:hover{
+    background-color: aliceblue;
+    opacity: 1;
+  }
+  .btns-acc .tabs span{
+    margin: 10px;
+    font-size: 15px;
+   }
+  .cointainer-name-prof-acc{
+     background-color: #fff;
+      width: 770px;
+      height: 360px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 0px 2px  rgba(0, 0, 0, 0.1); 
+  }
+  .cointainer-data-acc{
+    padding: 20px;
+    margin-left: 20px;
+    display: none;
+  }
+  .cointainer-data-acc h4{
+    margin-top: -7px;
+  }
+  .cointainer-data-acc .cointainer-email-acc{
+     margin-top: 40px;
+  }
+  .cointainer-name-acc{
+    margin-top: 45px;
+  }
+  .active-tabs{
+    background:none;
+    background-color: var(--orange);
+    border: none;
+    height: 40px;
+  }
+  .active-tabs::before{
+    display: block;
+  }
+  .active-contact{
+    display: block;
+  }
