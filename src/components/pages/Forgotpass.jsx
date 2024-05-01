@@ -26,7 +26,7 @@ const Forgotpass = () => {
     // If there are no errors, you can proceed with form submission
     if (Object.keys(validationError).length === 0) {
       try {
-        const response = await fetch("http://localhost:5000/forgot_password", {
+        const response = await fetch("http://localhost:5000/forget_password", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -35,7 +35,7 @@ const Forgotpass = () => {
         });
 
         if (response.ok) {
-          window.location.href = "/Password";
+          window.location.href = "/Otpfile";
           // Email sent successfully, handle success
           console.log("Reset password instructions sent successfully");
         } else {

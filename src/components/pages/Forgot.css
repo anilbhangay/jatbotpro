@@ -82,3 +82,42 @@
   background-color: #c6c2c2;
   border: transparent;
 }
+
+
+
+@media screen and (min-width: 360px) and (max-width: 481px) {
+  .Forget-form {
+    margin-left: -35px;
+    margin-top: 34px;
+  }
+
+  .forget-form-text h2 {
+    font-size: 28px;
+    margin-left: 40px;
+  }
+
+  .form-coainter-forget {
+    width: 80%;
+    height: 320px;
+    padding: 22px;
+  }
+
+  .form-coainter-forget p {
+    margin-left: 25px;
+    font-size: 16px;
+  }
+
+  .form-coainter-forget p span {
+    margin-left: 20px;
+  }
+
+  .form-input-forget input {
+    width: 230px;
+    height: 34px;
+    margin-top: 15px;
+    font-size: 17px;
+    margin-left: 13px;
+    margin-bottom: 5px;
+  }
+  
+}

@@ -175,13 +175,15 @@ a {
     font-size: 16px;
   }
 
-  .form-links-login #button-login {
-    font-size: 17px;
-    margin-top: 19px;
-  }
 
   .form-links-login h4 {
     margin-top: 17px;
+  }
+
+  .form-links-login #button-login {
+    width: 80%;
+    font-size: 17px;
+    margin-top: 18px;
   }
 
 }
