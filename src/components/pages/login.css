@@ -19,18 +19,19 @@ a {
 }
 
 .form-coainter-login {
-  width: 120%;
-  height: 464px;
+  width: 110%;
+  height: 390px;
+  padding-top: 55px;
   align-items: center;
   border-radius: 12px;
   box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.1);
 }
-.form-button-login {
+/* .form-button-login {
   padding: 20px;
   margin-bottom: 20px;
   margin-left: 50px;
-}
-.form-button-login button {
+} */
+/* .form-button-login button {
   width: 90%;
   height: 20px;
   padding: 20px;
@@ -48,45 +49,45 @@ a {
 .form-button-login button:hover {
   background-color: var(--background);
   color: #fff;
-}
-.form-button-login button span {
+} */
+/* .form-button-login button span {
   margin-top: -4px;
   margin-right: 15px;
-}
-.form-button-login button span #google-icon-sign {
+} */
+/* .form-button-login button span #google-icon-sign {
   color: green;
 }
 .form-button-login button span #facebook-icon-sign {
   color: blue;
-}
+} */
 
 .form-input-login input {
-  margin-top: 5px;
   width: 66%;
   height: 37px;
-  border-radius: 5px;
+  margin-top: 15px;
   border: 1px solid black;
+  border-radius: 5px;
   padding: 5px 10px;
-  font-size: 18px;
+  font-size: 17px;
 }
 
 #icon-eye-login {
   position: relative;
   top: -56px;
   bottom: 0px;
-  left: 165px;
-  font-size: 18px;
+  left: 148px;
+  font-size: 17px;
   cursor: pointer;
 }
 
 .error-name-email {
-  padding-right: 244px;
+  padding-right: 228px;
   color: red;
 }
 
 .error-name-pass {
   position: relative;
-  right: 137px;
+  right: 130px;
   color: red;
 }   
  
@@ -94,9 +95,9 @@ a {
 #forgot-pass-log {
   display: flex;
   float: right;
-  margin-top: -42px;
+  margin-top: -30px;
   margin-right: 82px;
-  font-size: 17px;
+  font-size: 16px;
 }
 .form-links-login #button-login {
   width: 70%;
@@ -106,19 +107,19 @@ a {
   border: 2px solid #e36826;
   background-color: #e36826;
   font-size: 18px;
-  margin-top: 7px;
+  margin-top: 20px;
   cursor: pointer;
   color: #fff;
 }
 
 .form-links-login #button-login:hover {
   background-color: #e95b0c;
-  border-color: #e95b0c;
+  border-color: #020201;
 }
 
 .form-links-login h4 {
   text-align: center;
-  margin-top: 14px;
+  margin-top: 24px;
 }
 .form-links-login a:hover {
   text-decoration: underline;
@@ -129,6 +130,10 @@ a {
 
 
 @media screen and (min-width: 360px) and (max-width:481px) {
+
+  .header-pass {
+    width: auto;
+  }
   .header-pass .header-text h2 {
     width: 300px;
     margin-top: 30px;
@@ -141,6 +146,42 @@ a {
     height: 330px;
     margin-top: 30px;
     margin-left: -330px;
+  }
+
+  .form-input-login input {
+    width: auto;
+    height: 36px;
+    margin-top: 13px;
+    font-size: 17px;
+  }
+
+  #icon-eye-login {
+    left: 98px;
+    font-size: 17px;
+  }
+
+  .error-name-email {
+    padding-right: 120px;
+    padding-top: 20px;
+  }
+  
+  .error-name-pass {
+    right: 70px;
+  } 
+  
+  #forgot-pass-log {
+    margin-top: -25px;
+    margin-right: 46px;
+    font-size: 16px;
+  }
+
+  .form-links-login #button-login {
+    font-size: 17px;
+    margin-top: 19px;
+  }
+
+  .form-links-login h4 {
+    margin-top: 17px;
   }
 
 }

@@ -5,8 +5,8 @@ import { faEyeSlash, faEye } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom'; 
 import './Signin.css';
-import GoogleLogin from '../socialicon/google';
-import FacebookLogin from '../socialicon/facebook';
+// import GoogleLogin from '../socialicon/google';
+// import FacebookLogin from '../socialicon/facebook';
 
 
 const Signupform = () => {
@@ -98,10 +98,10 @@ const Signupform = () => {
         <h2>Sign up to your JatBot account</h2>
       </div>
       <div className='form-coainter-signup'>
-        <div className='form-button-signup'>
+        {/* <div className='form-button-signup'>
           <GoogleLogin />
           <FacebookLogin />
-        </div>
+        </div> */}
         <form onSubmit={handleSubmit}>
           <div className='form-input-signup'>
             <input
