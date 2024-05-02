@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faRectangleList,
@@ -17,7 +17,12 @@ import { NavLink } from "react-router-dom";
 
 const Sidebar = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const toggle = () => setIsOpen(!isOpen);
+    const toggle = (e) => {
+        setIsOpen (!isOpen);
+    menuref.current.classList.toggle('nav-contant');
+    e.target.classList.toggle('open');
+   }
+    const menuref=useRef()
 
   const menuItem = [
     {
@@ -60,17 +65,17 @@ const Sidebar = ({ children }) => {
       name: "TRANSLATOR",
       icon: <FontAwesomeIcon icon={faLanguage} />,
     },
-  ];
+  ]
 
   return (
     <div className="side-bar-container">
-      <div style={{ width: isOpen ? "200px" : "50px" }} className="sidebar">
+      <div style={{ width: isOpen ? "15vw" : "5vw" }} className="sidebar">
         <div className="top_section">
-          <div style={{ marginLeft: isOpen ? "50px" : "0px" }} className="bars">
-            <FontAwesomeIcon icon={faBars} onClick={toggle} />
+          <div style={{ marginLeft: isOpen ? "5vw" : "0vw" }}  onClick={toggle} className="bars">
+            <FontAwesomeIcon icon={faBars}  ref={menuref} />
           </div>
-        </div>
       </div>
+      <div className="display-flex">
       {menuItem.map((item, index) => (
         <NavLink
           to={item.path}
@@ -79,15 +84,17 @@ const Sidebar = ({ children }) => {
           activeclassname="active"
         >
           <div className="icon-slider">{item.icon}</div>
-          <div
+          <div className={isOpen?'link_text':'link_text-none'}>{item.name}</div>
+          {/* <div
             style={{ display: isOpen ? "block" : "none" }}
             className="link_text"
           >
             {item.name}
-          </div>
+          </div> */}
         </NavLink>
       ))}
-
+    </div>
+    </div>
       <main>{children}</main>
     </div>
   );

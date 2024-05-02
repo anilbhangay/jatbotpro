@@ -45,7 +45,7 @@ const Loginform = () => {
         });
 
         if (response.ok) {
-          history('/dashboard');
+          history('/');
         } else {
           const data = await response.json();
           setErrors({ ...errors, login: data.message });

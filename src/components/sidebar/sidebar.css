@@ -2,9 +2,16 @@
   --orange: #e95b0c;
   --family: sans-serif;
 }
+
+.side-bar-container{
+  margin-left: -5px;
+  background: #fff;
+  color: var(--orange);
+}
+
 .sidebar {
-  width: 300px;
-  margin-left: -15px;
+  width: 250px;
+  margin-left: 0px;
   background: #fff;
   color: var(--orange);
   transition: all 0.5s;
@@ -16,56 +23,60 @@ main {
   padding-left: 37px;
 }
 
-.top_section {
-  display: flex;
-  align-items: center;
-  padding: 10px 15px;
-  margin-bottom: 20px;
+.top_section{
+  padding: 5px  8px;
+  margin-bottom: 10px;
 }
 
-.bars {
+.bars{
   position: relative;
-  bottom: -8px;
-  left: 14px;
+  left: 10px;
   display: flex;
   font-size: 35px;
   cursor: pointer;
-}
-
-.link {
-  display: flex;
-  align-items: center;
-  padding: 10px 13px;
-  margin-bottom: 18px;
-  border: 1px solid var(--orange);
-  border-radius: 21px;
   transition: all 0.5s;
+}
+
+.link{
+  display: flex;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border: 1px solid var(--orange);
+  border-radius: 22px;
+  transition: all 0.5ms;
+  align-items: center;
+  margin-top: 18px;
   color: #000;
 }
 
-.link:hover {
-  background: var(--orange);
-  color: #000;
-  transition: all 0.1s;
-}
+.link:hover{
+  background: var(--orange); 
+  color: #000; 
+  transition: all 0.10s;  
+} 
 
-.active {
+.active{
   background: var(--orange);
   color: #fff;
 }
-.icon-slider {
+
+.icon-slider{
   font-size: 15px;
-  margin: 0px 5px;
+  margin-left: 8px ;   
 }
 
-.link_text {
-  font-size: 15px;
-  margin-left: 10px;
+.link_text{
+  display: block;
+  font-size: 1vw; 
+  margin-left: 11px;  
+}
+
+.link_text-none{
+  display: none;
 }
 
 
-
-@media (max-width:800px) {
+/* @media (max-width:800px) {
   .sidebar {
     width: 100px;
     margin-left: -15px;
@@ -102,4 +113,48 @@ main {
     font-size: 11px;
     margin-left: 7px;
   }
+} */
+
+
+
+@media (max-width:1024px) {
+  .icon-slider{
+      font-size: 15px;
+      margin-left: -5px ;
+  }
 }
+
+
+@media (max-width:800px) {
+  .side-bar-container{
+   margin-left: 2px;
+      
+  }
+  .link{
+      display:flex;
+      flex-direction: column;
+      width: 6vw;
+      border-width:1px ;
+    
+  }
+  .display-flex{
+      display: flex;
+      float: left;
+      gap: 2px;
+  }
+  .bars{
+      display: none;
+  }
+  .icon-slider{
+      display: flexs;
+      font-size: 12px;
+  }
+  .link_text{
+      display: block;
+       
+   }
+   .link_text-none{
+      display: flex;
+      font-size: 1vw;
+   }
+} 

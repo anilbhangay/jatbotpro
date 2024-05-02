@@ -4,9 +4,29 @@
 .sidbar-container{
     display: flex;
     justify-content: flex-start;
+    flex-direction: row;
     float: left;
    
 }
 .side-container{
     margin: 0px 20px ;
+    margin-right: 20px;
 }
+
+
+
+/* @media screen and (min-width:360px) and (max-width:800px) {
+    .sidbar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    margin: 0px;    
+    }
+    .side-container {
+        margin: 0px;
+        margin-right: 20px;
+    }
+    .sidebar-main {
+        margin: 0px;
+    }
+} */

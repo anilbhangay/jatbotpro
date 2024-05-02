@@ -32,8 +32,7 @@ const Mainside = () => {
             <Route path='/templating' element={<Templating />} />
             <Route path='/calender' element={<Calender />} />
             <Route path='/translator' element={<Translator />} />
-            <Route path="/" element={<Loginform />} />
-            <Route path="/loginform" element={<Loginform />} />
+            <Route path="/Loginform" element={<Loginform />} />
             <Route path="/Signupform" element={<Signupform />} />
             <Route path='/Forgotpass' element={<Forgotpass />} />
             <Route path="/password" element={<Password />} />
