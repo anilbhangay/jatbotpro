@@ -110,7 +110,9 @@ const Grammar = () => {
 
   const parseGrammarCheck = (text) => {
     // Replace escape sequences and symbols with an empty string
-    const cleanedText = text.replace(/\\[.*?m/g, "").replace(/\[.*?[\s]/g, "");
+    const cleanedText = text
+      .replace(/\033\[.*?m/g, "")
+      .replace(/\033\[.*?[\s]/g, "");
 
     // Remove leading and trailing spaces
     const trimmedText = cleanedText.trim();
