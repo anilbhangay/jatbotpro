@@ -111,7 +111,7 @@ const Password = () => {
   return (
     <div className='header-pass'>
       <div className='header-text'>
-        <h2>Reset your jackBot password</h2>
+        <h2>Reset your JatBot Password</h2>
       </div>
       <div className='container'>
         <h3>Reset password </h3>
