@@ -25,12 +25,25 @@ const Loginform = () => {
     const validationError = {};
 
     if (!email.trim()) {
-      validationError.email = "Email is required";
+      validationError.Email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      validationError.Email = "Invalid email format";
     }
 
     if (!password.trim()) {
       validationError.password = "Password is required";
+    } else if (!/^(?=.*[A-Z])/.test(password)) {
+      validationError.password = "At least enter one Capital letter";
+    } else if (!/^(?=.*[a-z])/.test(password)) {
+      validationError.password = "At least enter one small letter";
+    } else if (!/^(?=.*[!@#/$%^&/*])/.test(password)) {
+      validationError.password = "At least enter one special symbol";
+    } else if (!/^(?=.*[0-9])/.test(password)) {
+      validationError.password = "At least enter one digit";
+    } else if (!/^(?=.{8,14})/.test(password)) {
+      validationError.password = "Password must be between 8 and 14 characters";
     }
+
 
     setErrors(validationError);
 
